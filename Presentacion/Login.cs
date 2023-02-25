@@ -16,5 +16,21 @@ namespace Presentacion
         {
             InitializeComponent();
         }
+
+        private void txtUser_Enter(object sender, EventArgs e)
+        {
+            if (txtUser.Text == "Usuario")
+            {
+                txtUser.Text = "";
+            }
+        }
+
+        private void txtUser_Leave(object sender, EventArgs e)
+        {
+            if (txtUser.Text == "")
+            {
+                txtUser.Text = "Usuario";
+            }
+        }
     }
 }
