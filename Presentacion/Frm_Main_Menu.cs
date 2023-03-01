@@ -128,13 +128,15 @@ namespace Presentacion
 
         private void button2_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<Frm_Pacientes>();
+           
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            AbrirFormulario<Frm_MiPerfil>();
+            AbrirFormulario<Frm_Pacientes>();
             button1.BackColor = Color.FromArgb(0, 129, 64);
+            
+            
         }
 
         private void pnl_titulo_Paint(object sender, PaintEventArgs e)
@@ -172,7 +174,7 @@ namespace Presentacion
                 pnl_hijo.Tag = formulario;
                 formulario.Show();
                 formulario.BringToFront();
-                
+                formulario.FormClosed += new FormClosedEventHandler(CloseForms);
             }
             //si el formulario/instancia existe
             else
@@ -181,6 +183,14 @@ namespace Presentacion
             }
         }
 
+        //Funcion para cerrar el formulario
+        private void CloseForms(object sender, FormClosedEventArgs e)
+        {
+            if (Application.OpenForms["Frm_Pacientes"] == null)
+            {
+                button1.BackColor = Color.FromArgb(4, 41, 68);
+            }
+        }
        
     }
 }
