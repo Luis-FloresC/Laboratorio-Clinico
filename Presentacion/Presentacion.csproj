@@ -186,5 +186,23 @@
   <ItemGroup>
     <None Include="Resources\project_25px.png" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\User_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\name_100px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\43051523dd67963c7c7f72d1b269a815.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\43051523dd67963c7c7f72d1b269a8151.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\43051523dd67963c7c7f72d1b269a8152.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\test_account_100px.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

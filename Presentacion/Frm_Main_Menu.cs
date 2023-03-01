@@ -154,10 +154,32 @@ namespace Presentacion
 
         private void btn_close_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            DialogResult result = MessageBox.Show("¿Desea Salir del Sistema?", "Cerrar Sesión", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                Application.Exit();
+            }
         }
 
         #endregion
+
+        //Boton de Cerrar Sesion
+        private void button5_Click(object sender, EventArgs e)
+        {
+            DialogResult result = MessageBox.Show("¿Desea Cerrar Sesión?", "Cerrar Sesión", MessageBoxButtons.YesNo,MessageBoxIcon.Question);
+            if (result == DialogResult.Yes)
+            {
+                //Application.Exit();
+                this.Close();
+                
+            }
+        }
+
+        private void Link_Perfil_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            AbrirFormulario<Frm_MiPerfil>();
+            Link_Perfil.BackColor = Color.FromArgb(0, 129, 64);
+        }
 
         private void AbrirFormulario<MiForm>() where MiForm : Form, new()
         {
@@ -189,6 +211,10 @@ namespace Presentacion
             if (Application.OpenForms["Frm_Pacientes"] == null)
             {
                 button1.BackColor = Color.FromArgb(4, 41, 68);
+            }
+            if (Application.OpenForms["Frm_MiPerfil"] == null)
+            {
+                Link_Perfil.BackColor = Color.FromArgb(4, 41, 68);
             }
         }
        

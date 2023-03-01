@@ -33,7 +33,12 @@ namespace Presentacion
             this.pnl_hijo = new System.Windows.Forms.Panel();
             this.pnl_Lateral = new System.Windows.Forms.Panel();
             this.pnl_titulo = new System.Windows.Forms.Panel();
+            this.lbl_nombre = new System.Windows.Forms.Label();
+            this.lbl_cargo = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Link_Perfil = new System.Windows.Forms.LinkLabel();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
@@ -51,6 +56,7 @@ namespace Presentacion
             this.pnl_Lateral.SuspendLayout();
             this.pnl_titulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_nornal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_min)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_max)).BeginInit();
@@ -84,6 +90,11 @@ namespace Presentacion
             // pnl_Lateral
             // 
             this.pnl_Lateral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
+            this.pnl_Lateral.Controls.Add(this.Link_Perfil);
+            this.pnl_Lateral.Controls.Add(this.label1);
+            this.pnl_Lateral.Controls.Add(this.lbl_cargo);
+            this.pnl_Lateral.Controls.Add(this.lbl_nombre);
+            this.pnl_Lateral.Controls.Add(this.pictureBox2);
             this.pnl_Lateral.Controls.Add(this.button5);
             this.pnl_Lateral.Controls.Add(this.button8);
             this.pnl_Lateral.Controls.Add(this.button7);
@@ -114,6 +125,53 @@ namespace Presentacion
             this.pnl_titulo.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_titulo_Paint);
             this.pnl_titulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnl_titulo_MouseDown);
             // 
+            // lbl_nombre
+            // 
+            this.lbl_nombre.AutoSize = true;
+            this.lbl_nombre.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_nombre.ForeColor = System.Drawing.Color.White;
+            this.lbl_nombre.Location = new System.Drawing.Point(71, 6);
+            this.lbl_nombre.Name = "lbl_nombre";
+            this.lbl_nombre.Size = new System.Drawing.Size(152, 16);
+            this.lbl_nombre.TabIndex = 1;
+            this.lbl_nombre.Text = "Nombre del Usuario";
+            // 
+            // lbl_cargo
+            // 
+            this.lbl_cargo.AutoSize = true;
+            this.lbl_cargo.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbl_cargo.ForeColor = System.Drawing.Color.White;
+            this.lbl_cargo.Location = new System.Drawing.Point(71, 22);
+            this.lbl_cargo.Name = "lbl_cargo";
+            this.lbl_cargo.Size = new System.Drawing.Size(135, 16);
+            this.lbl_cargo.TabIndex = 9;
+            this.lbl_cargo.Text = "Cargo del Usuario";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(71, 40);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(146, 16);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Correo Electronico";
+            // 
+            // Link_Perfil
+            // 
+            this.Link_Perfil.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(129)))), ((int)(((byte)(64)))));
+            this.Link_Perfil.AutoSize = true;
+            this.Link_Perfil.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Link_Perfil.LinkColor = System.Drawing.Color.White;
+            this.Link_Perfil.Location = new System.Drawing.Point(71, 56);
+            this.Link_Perfil.Name = "Link_Perfil";
+            this.Link_Perfil.Size = new System.Drawing.Size(111, 18);
+            this.Link_Perfil.TabIndex = 1;
+            this.Link_Perfil.TabStop = true;
+            this.Link_Perfil.Text = "Editar Perfil";
+            this.Link_Perfil.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Link_Perfil_LinkClicked);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -127,6 +185,16 @@ namespace Presentacion
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Image = global::Presentacion.Properties.Resources.test_account_100px;
+            this.pictureBox2.Location = new System.Drawing.Point(3, 6);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(62, 68);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox2.TabIndex = 1;
+            this.pictureBox2.TabStop = false;
+            // 
             // button5
             // 
             this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
@@ -138,12 +206,13 @@ namespace Presentacion
             this.button5.ForeColor = System.Drawing.Color.White;
             this.button5.Image = global::Presentacion.Properties.Resources.logout_25px;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(1, 431);
+            this.button5.Location = new System.Drawing.Point(3, 463);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(250, 45);
             this.button5.TabIndex = 8;
             this.button5.Text = "Cerrar Sesión";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button8
             // 
@@ -156,7 +225,7 @@ namespace Presentacion
             this.button8.ForeColor = System.Drawing.Color.White;
             this.button8.Image = global::Presentacion.Properties.Resources.saddle_stitched_booklet_25px;
             this.button8.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button8.Location = new System.Drawing.Point(0, 278);
+            this.button8.Location = new System.Drawing.Point(3, 346);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(250, 45);
             this.button8.TabIndex = 7;
@@ -174,7 +243,7 @@ namespace Presentacion
             this.button7.ForeColor = System.Drawing.Color.White;
             this.button7.Image = global::Presentacion.Properties.Resources.report_file_25px;
             this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(1, 380);
+            this.button7.Location = new System.Drawing.Point(3, 421);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(250, 45);
             this.button7.TabIndex = 6;
@@ -192,7 +261,7 @@ namespace Presentacion
             this.button6.ForeColor = System.Drawing.Color.White;
             this.button6.Image = global::Presentacion.Properties.Resources.project_25px;
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button6.Location = new System.Drawing.Point(-3, 329);
+            this.button6.Location = new System.Drawing.Point(3, 382);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(250, 45);
             this.button6.TabIndex = 5;
@@ -210,7 +279,7 @@ namespace Presentacion
             this.button4.ForeColor = System.Drawing.Color.White;
             this.button4.Image = global::Presentacion.Properties.Resources.scorecard_25px;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(1, 227);
+            this.button4.Location = new System.Drawing.Point(3, 305);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(250, 45);
             this.button4.TabIndex = 3;
@@ -228,7 +297,7 @@ namespace Presentacion
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Image = global::Presentacion.Properties.Resources.user_25px;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(0, 176);
+            this.button3.Location = new System.Drawing.Point(3, 263);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(250, 45);
             this.button3.TabIndex = 2;
@@ -246,7 +315,7 @@ namespace Presentacion
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Image = global::Presentacion.Properties.Resources.Calendar_7_25px;
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button2.Location = new System.Drawing.Point(1, 125);
+            this.button2.Location = new System.Drawing.Point(3, 212);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(250, 45);
             this.button2.TabIndex = 1;
@@ -265,7 +334,7 @@ namespace Presentacion
             this.button1.ForeColor = System.Drawing.Color.White;
             this.button1.Image = global::Presentacion.Properties.Resources.person_24px;
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(1, 74);
+            this.button1.Location = new System.Drawing.Point(3, 161);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(250, 45);
             this.button1.TabIndex = 0;
@@ -344,8 +413,10 @@ namespace Presentacion
             this.pnl_contenedor.ResumeLayout(false);
             this.pnl_hijo.ResumeLayout(false);
             this.pnl_Lateral.ResumeLayout(false);
+            this.pnl_Lateral.PerformLayout();
             this.pnl_titulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_nornal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_min)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_max)).EndInit();
@@ -373,5 +444,10 @@ namespace Presentacion
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label lbl_cargo;
+        private System.Windows.Forms.Label lbl_nombre;
+        private System.Windows.Forms.LinkLabel Link_Perfil;
     }
 }

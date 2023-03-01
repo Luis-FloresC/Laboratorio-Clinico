@@ -63,6 +63,36 @@ namespace Presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _43051523dd67963c7c7f72d1b269a815 {
+            get {
+                object obj = ResourceManager.GetObject("43051523dd67963c7c7f72d1b269a815", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _43051523dd67963c7c7f72d1b269a8151 {
+            get {
+                object obj = ResourceManager.GetObject("43051523dd67963c7c7f72d1b269a8151", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _43051523dd67963c7c7f72d1b269a8152 {
+            get {
+                object obj = ResourceManager.GetObject("43051523dd67963c7c7f72d1b269a8152", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Calendar_7_25px {
             get {
                 object obj = ResourceManager.GetObject("Calendar 7_25px", resourceCulture);
@@ -173,6 +203,16 @@ namespace Presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap name_100px {
+            get {
+                object obj = ResourceManager.GetObject("name_100px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap normal_screen_32px {
             get {
                 object obj = ResourceManager.GetObject("normal_screen_32px", resourceCulture);
@@ -233,9 +273,29 @@ namespace Presentacion.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap test_account_100px {
+            get {
+                object obj = ResourceManager.GetObject("test_account_100px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap user_25px {
             get {
                 object obj = ResourceManager.GetObject("user_25px", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap User_logo {
+            get {
+                object obj = ResourceManager.GetObject("User_logo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

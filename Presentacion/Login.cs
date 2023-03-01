@@ -105,12 +105,23 @@ namespace Presentacion
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            
             Frm_Bienvenida welcome = new Frm_Bienvenida();
             welcome.ShowDialog();
             Frm_Main_Menu mainMenu = new Frm_Main_Menu();
             mainMenu.Show();
+            mainMenu.FormClosed += Logout;
+            this.Hide();
 
+        }
+
+        private void Logout(object sender, FormClosedEventArgs e)
+        {
+            txtPassword.Text = "Contraseña";
+            txtPassword.UseSystemPasswordChar = false;
+            txtUser.Text = "Usuario";
+           // lblErrorMessage.Visible = false;
+            this.Show();
         }
     }
 }
