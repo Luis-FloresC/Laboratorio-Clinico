@@ -55,6 +55,30 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Frm_Bienvenida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Bienvenida.Designer.cs">
+      <DependentUpon>Frm_Bienvenida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Main_Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Main_Menu.Designer.cs">
+      <DependentUpon>Frm_Main_Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_MiPerfil.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_MiPerfil.Designer.cs">
+      <DependentUpon>Frm_MiPerfil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Pacientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Pacientes.Designer.cs">
+      <DependentUpon>Frm_Pacientes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +87,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Frm_Bienvenida.resx">
+      <DependentUpon>Frm_Bienvenida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Main_Menu.resx">
+      <DependentUpon>Frm_Main_Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_MiPerfil.resx">
+      <DependentUpon>Frm_MiPerfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Pacientes.resx">
+      <DependentUpon>Frm_Pacientes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -98,6 +134,57 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Imagen de WhatsApp 2023-02-24 a las 19.44.29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\minimize_window_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\laboratorio_clinico_banner_920.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Imagen de WhatsApp 2023-02-26 a las 09.25.51.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\laboratorio_clinico_banner_9202.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-maximize-window-25.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-maximize-window-251.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icons8-maximize-window-252.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\normal_screen_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\person_24px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calendar 7_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\scorecard_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\saddle_stitched_booklet_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\report_file_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout_25px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\project_25px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

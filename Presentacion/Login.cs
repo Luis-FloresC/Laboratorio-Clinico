@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Runtime.InteropServices;
 
 namespace Presentacion
 {
@@ -16,6 +17,12 @@ namespace Presentacion
         {
             InitializeComponent();
         }
+
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hwnd, int wmsg, int wparam, int lparam);
 
         private void txtUser_Enter(object sender, EventArgs e)
         {
@@ -31,6 +38,79 @@ namespace Presentacion
             {
                 txtUser.Text = "Usuario";
             }
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        /*
+         *  Evento para cuando el usuario ingrese al textbox se elimine la palabra
+         */
+        private void txtPassword_Enter(object sender, EventArgs e)
+        {
+            if (txtPassword.Text == "Contraseña")
+            {
+                txtPassword.Text = "";
+                txtPassword.UseSystemPasswordChar = true;
+            }
+        }
+
+        /*
+         * Evento para cuando el usuario salga del textbox y deje el campo vacio se agregue la palabra Contraseña
+         */
+        private void txtPassword_Leave(object sender, EventArgs e)
+        {
+            if (txtPassword.Text == "")
+            {
+                txtPassword.Text = "Contraseña";
+                txtPassword.UseSystemPasswordChar = false;
+            }
+        }
+
+        /*
+         * Evento para minimizar el formulario
+         */
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void pictureBox2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
+        /*
+         * Evento para mover el formulario del login
+         */
+        private void Login_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void pictureBox1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void btnLogin_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Frm_Bienvenida welcome = new Frm_Bienvenida();
+            welcome.ShowDialog();
+            Frm_Main_Menu mainMenu = new Frm_Main_Menu();
+            mainMenu.Show();
+
         }
     }
 }
