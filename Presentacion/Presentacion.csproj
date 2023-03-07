@@ -61,6 +61,12 @@
     <Compile Include="Frm_Bienvenida.Designer.cs">
       <DependentUpon>Frm_Bienvenida.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_Editar_Perfil_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Editar_Perfil_Main.Designer.cs">
+      <DependentUpon>Frm_Editar_Perfil_Main.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_Main_Menu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +95,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Frm_Bienvenida.resx">
       <DependentUpon>Frm_Bienvenida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Editar_Perfil_Main.resx">
+      <DependentUpon>Frm_Editar_Perfil_Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Main_Menu.resx">
       <DependentUpon>Frm_Main_Menu.cs</DependentUpon>
@@ -130,6 +139,10 @@
     <ProjectReference Include="..\Negocio\Negocio.csproj">
       <Project>{f6a6b0ad-0e01-425b-834f-b7228dfc3254}</Project>
       <Name>Negocio</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Soporte\Soporte.csproj">
+      <Project>{2d891ae8-4a52-4cf7-b537-04c6dff0a312}</Project>
+      <Name>Soporte</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -1,22 +1,29 @@
 CREATE DATABASE LaboratorioClinico;
 
-CREATE TABLE Roles_Usuario (
+CREATE TABLE Roles (
   Id_Rol INT PRIMARY KEY,
   Nombre_rol VARCHAR(255)
 );
 
-CREATE TABLE Usuarios (
-  Id_usuario INT PRIMARY KEY,
-  Nombre_us VARCHAR(255),
-  Contraseña_us VARCHAR(255),
-  Estatus_us BIT,
-  Correo_us VARCHAR(255),
-  Id_Rol INT,
-  FOREIGN KEY (Id_Rol) REFERENCES Roles_Usuario (Id_Rol)
+create table Permisos(
+Id_Permiso int primary key,
+nombre_permiso nvarchar(50)
 );
 
 
-CREATE TABLE Especialidad (
+
+CREATE TABLE Usuarios (
+  Id_usuario INT PRIMARY KEY,
+  Nombre_us VARCHAR(255),
+  Contrasenia_us VARCHAR(255),
+  Estatus_us BIT,
+  Correo_us VARCHAR(255),
+  Id_Rol INT,
+  FOREIGN KEY (Id_Rol) REFERENCES Roles (Id_Rol)
+);
+
+
+CREATE TABLE Especialidades (
   Id_Especialidad INT PRIMARY KEY,
   Nombre_Esp VARCHAR(255),
   Fecha_Esp DATE,

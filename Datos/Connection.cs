@@ -8,28 +8,18 @@ using System.Threading.Tasks;
 
 namespace Datos
 {
-    class Connection
+    public abstract class Connection
     {
-        public SqlConnection ConnectionSQl = new SqlConnection("Server=localhost;Database=master;Trusted_Connection=True;");
+        //public SqlConnection ConnectionSQl = new SqlConnection("Server=localhost;Database=Laboratorio_clinico;Trusted_Connection=True;");
 
-        public SqlConnection OpenConnection()
+        private readonly string connectionString;
+        public Connection()
         {
-            if (ConnectionSQl.State == ConnectionState.Closed)
-            {
-                ConnectionSQl.Open();
-            }
-
-            return ConnectionSQl;
+            connectionString = "Server=localhost;Database=Laboratorio_clinico;Trusted_Connection=True;";
         }
-
-        public SqlConnection CloseConnection()
+        protected SqlConnection GetConnection()
         {
-            if (ConnectionSQl.State == ConnectionState.Open)
-            {
-                ConnectionSQl.Close();
-            }
-
-            return ConnectionSQl;
+            return new SqlConnection(connectionString);
         }
 
 

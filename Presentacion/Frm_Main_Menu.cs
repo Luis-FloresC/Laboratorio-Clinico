@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
-
+using Soporte.Cache;
 namespace Presentacion
 {
     public partial class Frm_Main_Menu : Form
@@ -21,6 +21,15 @@ namespace Presentacion
         private void Frm_Main_Menu_Load(object sender, EventArgs e)
         {
             btn_nornal.Visible = false;
+            lbl_nombre.Text = Cache_Usuario.NombreEmpleado + " " + Cache_Usuario.ApellidoEmpleado;
+            lbl_cargo.Text = Cache_Usuario.Cargo;
+            lbl_email.Text = Cache_Usuario.CorreoElectronicoUsuario;
+
+            foreach (var cargos in Cache_Cargos.ListaCargos )
+            {
+                Console.WriteLine(cargos);
+            }
+            
         }
 
         #region Funcionalida_Form

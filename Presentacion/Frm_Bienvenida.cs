@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Soporte.Cache;
 
 namespace Presentacion
 {
@@ -43,6 +44,7 @@ namespace Presentacion
         {
             
             this.Opacity = 0.0;
+            lblNombre.Text = Cache_Usuario.NombreEmpleado + " " + Cache_Usuario.ApellidoEmpleado;
             //Inicializamos estas propiedades de la barra de progreso, mediante codigo.(Opcional)
             circularProgressBar1.Value = 0;
             circularProgressBar1.Minimum = 0;

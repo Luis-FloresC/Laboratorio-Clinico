@@ -51,9 +51,16 @@
   <ItemGroup>
     <Compile Include="Connection.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserDao.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Soporte\Soporte.csproj">
+      <Project>{2d891ae8-4a52-4cf7-b537-04c6dff0a312}</Project>
+      <Name>Soporte</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

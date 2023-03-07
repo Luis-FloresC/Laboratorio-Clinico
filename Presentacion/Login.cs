@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using Negocio;
+using Soporte.Cache;
 
 namespace Presentacion
 {
@@ -16,6 +18,7 @@ namespace Presentacion
         public Login()
         {
             InitializeComponent();
+            lblError.Visible = false;
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -105,14 +108,43 @@ namespace Presentacion
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            
-            Frm_Bienvenida welcome = new Frm_Bienvenida();
-            welcome.ShowDialog();
-            Frm_Main_Menu mainMenu = new Frm_Main_Menu();
-            mainMenu.Show();
-            mainMenu.FormClosed += Logout;
-            this.Hide();
 
+            if (txtUser.Text != "Usuario" && txtPassword.TextLength > 2)
+            {
+                if (txtPassword.Text != "Contraseña")
+                {
+                    UserModel user = new UserModel();
+                    var validLogin = user.LoginUser(txtUser.Text, txtPassword.Text);
+                    if (validLogin == true)
+                    {
+                        user.ObtenerCargos();
+                        Frm_Bienvenida welcome = new Frm_Bienvenida();
+                        welcome.ShowDialog();
+                        Frm_Main_Menu mainMenu = new Frm_Main_Menu();
+                        mainMenu.Show();
+                        mainMenu.FormClosed += Logout;
+                        this.Hide();
+                    }
+                    else
+                    {
+                        msgError("Incorrect username or password entered. \n   Please try again.");
+                        txtPassword.Text = "Contraseña";
+                        txtPassword.UseSystemPasswordChar = false;
+                        txtUser.Focus();
+                    }
+                }
+                else msgError("Please enter password.");
+            }
+            else msgError("Please enter username.");
+
+           
+
+        }
+
+        private void msgError(string msg)
+        {
+            lblError.Text = "    " + msg;
+            lblError.Visible = true;
         }
 
         private void Logout(object sender, FormClosedEventArgs e)
