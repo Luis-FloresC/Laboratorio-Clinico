@@ -71,33 +71,33 @@ namespace Presentacion
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Georgia", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(29, 3);
+            this.label1.Location = new System.Drawing.Point(29, 4);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(212, 23);
+            this.label1.Size = new System.Drawing.Size(177, 22);
             this.label1.TabIndex = 2;
             this.label1.Text = "Mi Perfil De Usuario";
             // 
             // Lbl_Nombre_Us
             // 
             this.Lbl_Nombre_Us.AutoSize = true;
-            this.Lbl_Nombre_Us.Font = new System.Drawing.Font("Georgia", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Nombre_Us.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Nombre_Us.ForeColor = System.Drawing.Color.White;
-            this.Lbl_Nombre_Us.Location = new System.Drawing.Point(110, 3);
+            this.Lbl_Nombre_Us.Location = new System.Drawing.Point(109, 7);
             this.Lbl_Nombre_Us.Name = "Lbl_Nombre_Us";
-            this.Lbl_Nombre_Us.Size = new System.Drawing.Size(231, 25);
+            this.Lbl_Nombre_Us.Size = new System.Drawing.Size(187, 22);
             this.Lbl_Nombre_Us.TabIndex = 5;
             this.Lbl_Nombre_Us.Text = "Nombre del Usuario";
             // 
             // linkLabel1
             // 
             this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Georgia", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.linkLabel1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.linkLabel1.LinkColor = System.Drawing.Color.RoyalBlue;
-            this.linkLabel1.Location = new System.Drawing.Point(112, 84);
+            this.linkLabel1.Location = new System.Drawing.Point(109, 73);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(95, 16);
+            this.linkLabel1.Size = new System.Drawing.Size(108, 22);
             this.linkLabel1.TabIndex = 6;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Editar Perfil";
@@ -109,10 +109,10 @@ namespace Presentacion
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(53, 178);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(158, 18);
+            this.label3.Size = new System.Drawing.Size(239, 30);
             this.label3.TabIndex = 7;
             this.label3.Text = "Nombre Completo";
             // 
@@ -122,10 +122,10 @@ namespace Presentacion
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(53, 219);
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(53, 232);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 18);
+            this.label4.Size = new System.Drawing.Size(74, 30);
             this.label4.TabIndex = 8;
             this.label4.Text = "Edad";
             // 
@@ -135,10 +135,10 @@ namespace Presentacion
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(53, 264);
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(53, 286);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(81, 18);
+            this.label5.Size = new System.Drawing.Size(117, 30);
             this.label5.TabIndex = 9;
             this.label5.Text = "Telefono";
             // 
@@ -148,11 +148,11 @@ namespace Presentacion
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Lbl_Nombre.AutoSize = true;
-            this.Lbl_Nombre.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Nombre.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Nombre.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.Lbl_Nombre.Location = new System.Drawing.Point(61, 196);
+            this.Lbl_Nombre.Location = new System.Drawing.Point(72, 208);
             this.Lbl_Nombre.Name = "Lbl_Nombre";
-            this.Lbl_Nombre.Size = new System.Drawing.Size(173, 18);
+            this.Lbl_Nombre.Size = new System.Drawing.Size(234, 24);
             this.Lbl_Nombre.TabIndex = 12;
             this.Lbl_Nombre.Text = "Luis Fernando Ramirez";
             // 
@@ -162,11 +162,11 @@ namespace Presentacion
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Lbl_Edad.AutoSize = true;
-            this.Lbl_Edad.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Edad.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Edad.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.Lbl_Edad.Location = new System.Drawing.Point(61, 237);
+            this.Lbl_Edad.Location = new System.Drawing.Point(72, 262);
             this.Lbl_Edad.Name = "Lbl_Edad";
-            this.Lbl_Edad.Size = new System.Drawing.Size(61, 18);
+            this.Lbl_Edad.Size = new System.Drawing.Size(89, 24);
             this.Lbl_Edad.TabIndex = 13;
             this.Lbl_Edad.Text = "21 años";
             // 
@@ -176,11 +176,11 @@ namespace Presentacion
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Lbl_Telefono.AutoSize = true;
-            this.Lbl_Telefono.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Telefono.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Telefono.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.Lbl_Telefono.Location = new System.Drawing.Point(60, 284);
+            this.Lbl_Telefono.Location = new System.Drawing.Point(72, 316);
             this.Lbl_Telefono.Name = "Lbl_Telefono";
-            this.Lbl_Telefono.Size = new System.Drawing.Size(73, 19);
+            this.Lbl_Telefono.Size = new System.Drawing.Size(106, 24);
             this.Lbl_Telefono.TabIndex = 14;
             this.Lbl_Telefono.Text = "87654321";
             // 
@@ -190,11 +190,11 @@ namespace Presentacion
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Lbl_Correo.AutoSize = true;
-            this.Lbl_Correo.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Correo.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Correo.ForeColor = System.Drawing.Color.White;
-            this.Lbl_Correo.Location = new System.Drawing.Point(112, 28);
+            this.Lbl_Correo.Location = new System.Drawing.Point(109, 29);
             this.Lbl_Correo.Name = "Lbl_Correo";
-            this.Lbl_Correo.Size = new System.Drawing.Size(185, 18);
+            this.Lbl_Correo.Size = new System.Drawing.Size(241, 22);
             this.Lbl_Correo.TabIndex = 15;
             this.Lbl_Correo.Text = "fernandoR21@gmail.com";
             // 
@@ -204,11 +204,11 @@ namespace Presentacion
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Lbl_Cargo.AutoSize = true;
-            this.Lbl_Cargo.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Cargo.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Cargo.ForeColor = System.Drawing.Color.White;
-            this.Lbl_Cargo.Location = new System.Drawing.Point(112, 46);
+            this.Lbl_Cargo.Location = new System.Drawing.Point(109, 51);
             this.Lbl_Cargo.Name = "Lbl_Cargo";
-            this.Lbl_Cargo.Size = new System.Drawing.Size(111, 18);
+            this.Lbl_Cargo.Size = new System.Drawing.Size(137, 22);
             this.Lbl_Cargo.TabIndex = 16;
             this.Lbl_Cargo.Text = "Adminsitrador";
             // 
@@ -218,11 +218,11 @@ namespace Presentacion
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Lbl_Dni.AutoSize = true;
-            this.Lbl_Dni.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Dni.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Dni.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.Lbl_Dni.Location = new System.Drawing.Point(61, 325);
+            this.Lbl_Dni.Location = new System.Drawing.Point(72, 370);
             this.Lbl_Dni.Name = "Lbl_Dni";
-            this.Lbl_Dni.Size = new System.Drawing.Size(111, 18);
+            this.Lbl_Dni.Size = new System.Drawing.Size(148, 24);
             this.Lbl_Dni.TabIndex = 18;
             this.Lbl_Dni.Text = "Adminsitrador";
             // 
@@ -232,10 +232,10 @@ namespace Presentacion
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label14.AutoSize = true;
-            this.label14.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(53, 307);
+            this.label14.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(53, 340);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(92, 18);
+            this.label14.Size = new System.Drawing.Size(128, 30);
             this.label14.TabIndex = 17;
             this.label14.Text = "Identidad";
             // 
@@ -259,11 +259,11 @@ namespace Presentacion
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Lbl_Genero.AutoSize = true;
-            this.Lbl_Genero.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Genero.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Genero.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.Lbl_Genero.Location = new System.Drawing.Point(61, 370);
+            this.Lbl_Genero.Location = new System.Drawing.Point(72, 424);
             this.Lbl_Genero.Name = "Lbl_Genero";
-            this.Lbl_Genero.Size = new System.Drawing.Size(111, 18);
+            this.Lbl_Genero.Size = new System.Drawing.Size(148, 24);
             this.Lbl_Genero.TabIndex = 21;
             this.Lbl_Genero.Text = "Adminsitrador";
             // 
@@ -273,10 +273,10 @@ namespace Presentacion
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(53, 352);
+            this.label7.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(53, 394);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(68, 18);
+            this.label7.Size = new System.Drawing.Size(104, 30);
             this.label7.TabIndex = 20;
             this.label7.Text = "Genero";
             // 
@@ -286,13 +286,14 @@ namespace Presentacion
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Lbl_Fecha_Reg.AutoSize = true;
-            this.Lbl_Fecha_Reg.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Fecha_Reg.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Fecha_Reg.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.Lbl_Fecha_Reg.Location = new System.Drawing.Point(61, 412);
+            this.Lbl_Fecha_Reg.Location = new System.Drawing.Point(72, 478);
             this.Lbl_Fecha_Reg.Name = "Lbl_Fecha_Reg";
-            this.Lbl_Fecha_Reg.Size = new System.Drawing.Size(111, 18);
+            this.Lbl_Fecha_Reg.Size = new System.Drawing.Size(148, 24);
             this.Lbl_Fecha_Reg.TabIndex = 23;
             this.Lbl_Fecha_Reg.Text = "Adminsitrador";
+            this.Lbl_Fecha_Reg.Click += new System.EventHandler(this.Lbl_Fecha_Reg_Click);
             // 
             // label15
             // 
@@ -300,10 +301,10 @@ namespace Presentacion
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label15.AutoSize = true;
-            this.label15.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.Location = new System.Drawing.Point(53, 394);
+            this.label15.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.Location = new System.Drawing.Point(53, 448);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(155, 18);
+            this.label15.Size = new System.Drawing.Size(228, 30);
             this.label15.TabIndex = 22;
             this.label15.Text = "Fecha de Registro";
             // 
@@ -313,11 +314,11 @@ namespace Presentacion
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.Lbl_Fecha_Act.AutoSize = true;
-            this.Lbl_Fecha_Act.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Lbl_Fecha_Act.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Lbl_Fecha_Act.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.Lbl_Fecha_Act.Location = new System.Drawing.Point(61, 453);
+            this.Lbl_Fecha_Act.Location = new System.Drawing.Point(72, 532);
             this.Lbl_Fecha_Act.Name = "Lbl_Fecha_Act";
-            this.Lbl_Fecha_Act.Size = new System.Drawing.Size(111, 18);
+            this.Lbl_Fecha_Act.Size = new System.Drawing.Size(148, 24);
             this.Lbl_Fecha_Act.TabIndex = 25;
             this.Lbl_Fecha_Act.Text = "Adminsitrador";
             // 
@@ -327,10 +328,10 @@ namespace Presentacion
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Georgia", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label17.Location = new System.Drawing.Point(53, 435);
+            this.label17.Font = new System.Drawing.Font("Century Gothic", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label17.Location = new System.Drawing.Point(53, 502);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(248, 18);
+            this.label17.Size = new System.Drawing.Size(355, 30);
             this.label17.TabIndex = 24;
             this.label17.Text = "Última Vez de Actualización ";
             // 

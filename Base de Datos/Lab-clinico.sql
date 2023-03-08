@@ -4,16 +4,17 @@ use Laboratorio_clinico;
 Go
 
 create table Pacientes(
-Id_Paciente int primary key identity(1,1),
-Nombre_Paciente nvarchar(50) not null,
-Apellido_Paciente nvarchar(50) not null,
-Dni_Paciente nvarchar(50) not null,
-Fecha_Nacimiento date not null,
-Direccion_Paciente nvarchar(250) null,
-Telefono_Paciente nvarchar(8) null,
-Genero nvarchar(50) not null,
-Fecha_Registro datetime default getdate(),
-Fecha_Actualizacion datetime default getdate()
+	Id_Paciente int primary key identity(1,1),
+	Nombre_Paciente nvarchar(50) not null,
+	Apellido_Paciente nvarchar(50) not null,
+	Dni_Paciente nvarchar(50) not null,
+	Fecha_Nacimiento date not null,
+	Direccion_Paciente nvarchar(250) null,
+	Telefono_Paciente nvarchar(8) null,
+	Genero nvarchar(50) check(Genero in ('Masculino','Femenino')) not null,
+	Estatus_Us BIT,
+	Fecha_Registro datetime default getdate(),
+	Fecha_Actualizacion datetime default getdate()
 );
 
 create table Empleados(
@@ -24,7 +25,8 @@ create table Empleados(
 	Fecha_Nacimiento date not null,
 	Direccion_Empleado nvarchar(250) null,
 	Telefono_Empleado nvarchar(8) null,
-	Genero nvarchar(50) not null,
+	Estatus_Us BIT,
+	Genero nvarchar(50) check(Genero in ('Masculino','Femenino')) not null,
 	Fecha_Registro datetime default getdate(),
 	Fecha_Actualizacion datetime default getdate()
 );
@@ -74,6 +76,10 @@ CREATE TABLE Usuarios (
   Pin_Recuperacion nvarchar(6),
   Fecha_Gen_Pin datetime,
   Id_Rol INT,
+  Fecha_Bloqueo datetime,
+  Motivo_Bloqueo nvarchar(50) check (Motivo_Bloqueo in ('Bloqueo Temporal','Bloqueo Permanente')),
+  Fecha_Desbloqueo datetime,
+  Descripcion_Bloqueo nvarchar(250),
   Fecha_Registro datetime default getdate(),
   Fecha_Actualizacion datetime default getdate()
   FOREIGN KEY (Id_Rol) REFERENCES Roles (Id_Rol)
@@ -95,9 +101,11 @@ CREATE TABLE Medicos (
   Nombres VARCHAR(255),
   Apellidos VARCHAR(255),
   Dni Varchar(30),
+  Fecha_Nacimiento date not null,
   Direccion VARCHAR(255),
   Telefono VARCHAR(255),
   Estatus_us bit,
+  Genero nvarchar(50) check(Genero in ('Masculino','Femenino')) not null,
   Fecha_Registro datetime default getdate(),
   Fecha_Actualizacion datetime default getdate()
 );

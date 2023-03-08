@@ -15,6 +15,7 @@ namespace Soporte.Cache
         public static DateTime FechaNacimientoEmpleado { get; set; }
         public static string GeneroEmpleado { get; set; }
         public static string TelefonoEmpleado { get; set; }
+        public static string DireccionEmpleado { get; set; }
         public static DateTime FechaRegistroEmpleado { get; set; }
         public static DateTime FechaActualizacionEmpleado { get; set; }
 

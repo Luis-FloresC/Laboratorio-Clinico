@@ -45,6 +45,12 @@ namespace Presentacion
         {
             Frm_Editar_Perfil_Main editarPerfilMain = new Frm_Editar_Perfil_Main();
                 editarPerfilMain.Show();
+               
+        }
+
+        private void Lbl_Fecha_Reg_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

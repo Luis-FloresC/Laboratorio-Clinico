@@ -21,7 +21,27 @@ update Usuarios set Intentos_Us = 0, Fecha_Actualizacion = GETDATE()  where Dni_
 IF(exists (Select * from Medicos where Dni = @Dni))
 begin 
 
-Select * from Medicos m
+Select 
+m.Id_Medico as 'id_Empleado',
+m.Nombres as 'nombres',
+m.Apellidos as 'apellidos',
+m.Dni as 'dni_emp',
+m.Fecha_Nacimiento as 'fecha_nac',
+m.Genero as 'genero',
+m.Telefono  'telefono',
+m.Direccion 'direccion',
+m.Fecha_Registro as 'fecha_reg',
+m.Fecha_Actualizacion as 'fecha_act',
+u.Nombre_us as 'nombre_us',
+u.Dni_Us as 'dni_us',
+@Contra as 'contrasenia_us',
+u.Estatus_Us as 'estado_us',
+u.Fecha_Registro as 'fecha_reg_us',
+u.Fecha_Actualizacion as 'fecha_act_us',
+u.Correo_Us as 'correo_us',
+r.Id_Rol as 'id_rol',
+r.Nombre_rol as 'cargo'
+from Medicos m
 join Usuarios u on u.Dni_Us = m.Dni
 join Roles r on r.Id_Rol = u.Id_Rol
 where m.Dni = @Dni
@@ -37,6 +57,7 @@ e.Dni_Empleado as 'dni_emp',
 e.Fecha_Nacimiento as 'fecha_nac',
 e.Genero as 'genero',
 e.Telefono_Empleado  'telefono',
+e.Direccion_Empleado 'direccion',
 e.Fecha_Registro as 'fecha_reg',
 e.Fecha_Actualizacion as 'fecha_act',
 u.Nombre_us as 'nombre_us',

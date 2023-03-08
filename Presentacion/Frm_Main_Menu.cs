@@ -137,7 +137,8 @@ namespace Presentacion
 
         private void button2_Click(object sender, EventArgs e)
         {
-           
+            AbrirFormulario<Frm_Calendario>();
+            button2.BackColor = Color.FromArgb(0, 129, 64);
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -190,6 +191,12 @@ namespace Presentacion
             Link_Perfil.BackColor = Color.FromArgb(0, 129, 64);
         }
 
+        private void button3_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Frm_Empleados>();
+            button3.BackColor = Color.FromArgb(0, 129, 64);
+        }
+
         private void AbrirFormulario<MiForm>() where MiForm : Form, new()
         {
             Form formulario;
@@ -224,6 +231,14 @@ namespace Presentacion
             if (Application.OpenForms["Frm_MiPerfil"] == null)
             {
                 Link_Perfil.BackColor = Color.FromArgb(4, 41, 68);
+            }
+            if (Application.OpenForms["Frm_Calendario"] == null)
+            {
+                button2.BackColor = Color.FromArgb(4, 41, 68);
+            }
+            if (Application.OpenForms["Frm_Empleados"] == null)
+            {
+                button3.BackColor = Color.FromArgb(4, 41, 68);
             }
         }
        

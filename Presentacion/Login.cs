@@ -127,15 +127,15 @@ namespace Presentacion
                     }
                     else
                     {
-                        msgError("Incorrect username or password entered. \n   Please try again.");
+                        msgError("Nombre de usuario o contraseña ingresados ​​incorrectamente. \n   Intenta de nuevo.");
                         txtPassword.Text = "Contraseña";
                         txtPassword.UseSystemPasswordChar = false;
                         txtUser.Focus();
                     }
                 }
-                else msgError("Please enter password.");
+                else msgError("Credenciales no validas.");
             }
-            else msgError("Please enter username.");
+            else msgError("Credenciales no validas.");
 
            
 

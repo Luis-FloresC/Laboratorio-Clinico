@@ -37,17 +37,18 @@ namespace Datos
                             Cache_Usuario.FechaNacimientoEmpleado = reader.GetDateTime(4);
                             Cache_Usuario.GeneroEmpleado = reader.GetString(5);
                             Cache_Usuario.TelefonoEmpleado = reader.GetString(6);
-                            Cache_Usuario.FechaRegistroEmpleado = reader.GetDateTime(7);
-                            Cache_Usuario.FechaActualizacionEmpleado = reader.GetDateTime(8);
-                            Cache_Usuario.NombreUsuario = reader.GetString(9);
-                            Cache_Usuario.DniUsuario = reader.GetString(10);
-                            Cache_Usuario.ContraseniaUsuario = reader.GetString(11);
-                            Cache_Usuario.EstadoUsuario = reader.GetBoolean(12);
-                            Cache_Usuario.FechaRegistroUsuario = reader.GetDateTime(13);
-                            Cache_Usuario.FechaActualizacionUsuario = reader.GetDateTime(14);
-                            Cache_Usuario.CorreoElectronicoUsuario = reader.GetString(15);
-                            Cache_Usuario.IdRol = reader.GetInt32(16);
-                            Cache_Usuario.Cargo = reader.GetString(17);
+                            Cache_Usuario.DireccionEmpleado = reader.GetString(7);
+                            Cache_Usuario.FechaRegistroEmpleado = reader.GetDateTime(8);
+                            Cache_Usuario.FechaActualizacionEmpleado = reader.GetDateTime(9);
+                            Cache_Usuario.NombreUsuario = reader.GetString(10);
+                            Cache_Usuario.DniUsuario = reader.GetString(11);
+                            Cache_Usuario.ContraseniaUsuario = reader.GetString(12);
+                            Cache_Usuario.EstadoUsuario = reader.GetBoolean(13);
+                            Cache_Usuario.FechaRegistroUsuario = reader.GetDateTime(14);
+                            Cache_Usuario.FechaActualizacionUsuario = reader.GetDateTime(15);
+                            Cache_Usuario.CorreoElectronicoUsuario = reader.GetString(16);
+                            Cache_Usuario.IdRol = reader.GetInt32(17);
+                            Cache_Usuario.Cargo = reader.GetString(18);
                             
                         }
                         return true;
