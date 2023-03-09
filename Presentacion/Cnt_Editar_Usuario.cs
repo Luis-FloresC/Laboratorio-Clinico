@@ -29,13 +29,27 @@ namespace Presentacion
 
         private void iconButton2_Click(object sender, EventArgs e)
         {
-            Form frm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_Editar_Perfil_Main);
-
-            if (frm != null)
+            if (this.Accion == "Mi Perfil")
             {
-                //si la instancia existe la cierro
-                frm.Close();
-                return;
+                Form frm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_Editar_Perfil_Main);
+
+                if (frm != null)
+                {
+                    //si la instancia existe la cierro
+                    frm.Close();
+                    return;
+                }
+            }
+            else if (this.Accion == "Nuevo")
+            {
+                Form frm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_Nuevo_Empleado_Main);
+
+                if (frm != null)
+                {
+                    //si la instancia existe la cierro
+                    frm.Close();
+                    return;
+                }
             }
         }
 

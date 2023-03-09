@@ -33,8 +33,8 @@ namespace Presentacion
             this.label1 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.pnl_contenedor = new System.Windows.Forms.Panel();
             this.pnl_Titulo.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -48,7 +48,7 @@ namespace Presentacion
             this.pnl_Titulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_Titulo.Location = new System.Drawing.Point(0, 0);
             this.pnl_Titulo.Name = "pnl_Titulo";
-            this.pnl_Titulo.Size = new System.Drawing.Size(901, 30);
+            this.pnl_Titulo.Size = new System.Drawing.Size(700, 30);
             this.pnl_Titulo.TabIndex = 5;
             // 
             // label1
@@ -71,11 +71,12 @@ namespace Presentacion
             this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Image = global::Presentacion.Properties.Resources.delete_25px;
-            this.button2.Location = new System.Drawing.Point(875, 2);
+            this.button2.Location = new System.Drawing.Point(674, 2);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(26, 26);
             this.button2.TabIndex = 1;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel1
             // 
@@ -85,27 +86,8 @@ namespace Presentacion
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 30);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(901, 30);
+            this.panel1.Size = new System.Drawing.Size(700, 30);
             this.panel1.TabIndex = 6;
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.ForeColor = System.Drawing.Color.White;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.User;
-            this.iconButton1.IconColor = System.Drawing.Color.White;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 20;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(0, 0);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(350, 30);
-            this.iconButton1.TabIndex = 0;
-            this.iconButton1.Text = "Mi Usuario";
-            this.iconButton1.UseVisualStyleBackColor = false;
             // 
             // iconButton3
             // 
@@ -119,12 +101,33 @@ namespace Presentacion
             this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton3.IconSize = 20;
             this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton3.Location = new System.Drawing.Point(344, 0);
+            this.iconButton3.Location = new System.Drawing.Point(2, 0);
             this.iconButton3.Name = "iconButton3";
             this.iconButton3.Size = new System.Drawing.Size(350, 30);
             this.iconButton3.TabIndex = 9;
-            this.iconButton3.Text = "Datos Personales";
+            this.iconButton3.Text = "Registrar Empleado";
             this.iconButton3.UseVisualStyleBackColor = false;
+            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton1.ForeColor = System.Drawing.Color.White;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.User;
+            this.iconButton1.IconColor = System.Drawing.Color.White;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 20;
+            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton1.Location = new System.Drawing.Point(347, 0);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(350, 30);
+            this.iconButton1.TabIndex = 0;
+            this.iconButton1.Text = "Registrar Usuario";
+            this.iconButton1.UseVisualStyleBackColor = false;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // pnl_contenedor
             // 
@@ -132,18 +135,21 @@ namespace Presentacion
             this.pnl_contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_contenedor.Location = new System.Drawing.Point(0, 60);
             this.pnl_contenedor.Name = "pnl_contenedor";
-            this.pnl_contenedor.Size = new System.Drawing.Size(901, 390);
+            this.pnl_contenedor.Size = new System.Drawing.Size(700, 281);
             this.pnl_contenedor.TabIndex = 7;
+            this.pnl_contenedor.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_contenedor_Paint);
             // 
             // Frm_Nuevo_Empleado_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(901, 450);
+            this.ClientSize = new System.Drawing.Size(700, 341);
             this.Controls.Add(this.pnl_contenedor);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnl_Titulo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_Nuevo_Empleado_Main";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_Nuevo_Empleado_Main";
             this.Load += new System.EventHandler(this.Frm_Nuevo_Empleado_Main_Load);
             this.pnl_Titulo.ResumeLayout(false);

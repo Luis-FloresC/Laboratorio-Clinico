@@ -92,17 +92,41 @@
     <Compile Include="Frm_Calendario.Designer.cs">
       <DependentUpon>Frm_Calendario.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_Catalogo_Examenes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Catalogo_Examenes.Designer.cs">
+      <DependentUpon>Frm_Catalogo_Examenes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Catalogo_Examen_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Catalogo_Examen_Main.Designer.cs">
+      <DependentUpon>Frm_Catalogo_Examen_Main.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_Editar_Perfil_Main.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Frm_Editar_Perfil_Main.Designer.cs">
       <DependentUpon>Frm_Editar_Perfil_Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_Examenes_Medicos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Examenes_Medicos.Designer.cs">
+      <DependentUpon>Frm_Examenes_Medicos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_Empleados.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Frm_Empleados.Designer.cs">
       <DependentUpon>Frm_Empleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Examen_Med_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Examen_Med_Main.Designer.cs">
+      <DependentUpon>Frm_Examen_Med_Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm_Main_Menu.cs">
       <SubType>Form</SubType>
@@ -151,11 +175,23 @@
     <EmbeddedResource Include="Frm_Calendario.resx">
       <DependentUpon>Frm_Calendario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Catalogo_Examenes.resx">
+      <DependentUpon>Frm_Catalogo_Examenes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Catalogo_Examen_Main.resx">
+      <DependentUpon>Frm_Catalogo_Examen_Main.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_Editar_Perfil_Main.resx">
       <DependentUpon>Frm_Editar_Perfil_Main.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Examenes_Medicos.resx">
+      <DependentUpon>Frm_Examenes_Medicos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_Empleados.resx">
       <DependentUpon>Frm_Empleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Examen_Med_Main.resx">
+      <DependentUpon>Frm_Examen_Med_Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Main_Menu.resx">
       <DependentUpon>Frm_Main_Menu.cs</DependentUpon>

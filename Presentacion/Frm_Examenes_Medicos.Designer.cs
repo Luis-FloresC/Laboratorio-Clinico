@@ -1,7 +1,7 @@
 ﻿
 namespace Presentacion
 {
-    partial class Frm_Empleados
+    partial class Frm_Examenes_Medicos
     {
         /// <summary>
         /// Required designer variable.
@@ -40,10 +40,10 @@ namespace Presentacion
             this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pnl_Titulo = new System.Windows.Forms.Panel();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
+            this.button1 = new System.Windows.Forms.Button();
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
@@ -80,7 +80,7 @@ namespace Presentacion
             this.Column6});
             this.dg_pacientes.EnableHeadersVisualStyles = false;
             this.dg_pacientes.GridColor = System.Drawing.Color.SteelBlue;
-            this.dg_pacientes.Location = new System.Drawing.Point(5, 46);
+            this.dg_pacientes.Location = new System.Drawing.Point(25, 36);
             this.dg_pacientes.Name = "dg_pacientes";
             this.dg_pacientes.ReadOnly = true;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -99,8 +99,8 @@ namespace Presentacion
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             this.dg_pacientes.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dg_pacientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dg_pacientes.Size = new System.Drawing.Size(641, 342);
-            this.dg_pacientes.TabIndex = 24;
+            this.dg_pacientes.Size = new System.Drawing.Size(734, 331);
+            this.dg_pacientes.TabIndex = 29;
             // 
             // Column1
             // 
@@ -111,38 +111,38 @@ namespace Presentacion
             // 
             // Column2
             // 
-            this.Column2.HeaderText = "Nombre Completo";
+            this.Column2.HeaderText = "Nombre del Examen";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
-            this.Column2.Width = 203;
+            this.Column2.Width = 218;
             // 
             // Column3
             // 
-            this.Column3.HeaderText = "Dni";
+            this.Column3.HeaderText = "Paciente";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
-            this.Column3.Width = 62;
+            this.Column3.Width = 115;
             // 
             // Column4
             // 
-            this.Column4.HeaderText = "Edad";
+            this.Column4.HeaderText = "Fecha";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
-            this.Column4.Width = 82;
+            this.Column4.Width = 91;
             // 
             // Column5
             // 
-            this.Column5.HeaderText = "Genero";
+            this.Column5.HeaderText = "Estado";
             this.Column5.Name = "Column5";
             this.Column5.ReadOnly = true;
-            this.Column5.Width = 104;
+            this.Column5.Width = 95;
             // 
             // Column6
             // 
-            this.Column6.HeaderText = "Telefono";
+            this.Column6.HeaderText = "Tipo de Analisis";
             this.Column6.Name = "Column6";
             this.Column6.ReadOnly = true;
-            this.Column6.Width = 110;
+            this.Column6.Width = 167;
             // 
             // pnl_Titulo
             // 
@@ -154,8 +154,29 @@ namespace Presentacion
             this.pnl_Titulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_Titulo.Location = new System.Drawing.Point(0, 0);
             this.pnl_Titulo.Name = "pnl_Titulo";
-            this.pnl_Titulo.Size = new System.Drawing.Size(848, 30);
-            this.pnl_Titulo.TabIndex = 23;
+            this.pnl_Titulo.Size = new System.Drawing.Size(800, 30);
+            this.pnl_Titulo.TabIndex = 33;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(31, 5);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(225, 24);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "Listado de Examenes";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(509, 2);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(250, 27);
+            this.textBox1.TabIndex = 3;
+            this.textBox1.Text = "Buscar Examen Medico";
             // 
             // iconButton1
             // 
@@ -167,22 +188,11 @@ namespace Presentacion
             this.iconButton1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(121)))), ((int)(((byte)(186)))));
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.IconSize = 25;
-            this.iconButton1.Location = new System.Drawing.Point(813, 0);
+            this.iconButton1.Location = new System.Drawing.Point(765, 0);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Size = new System.Drawing.Size(30, 30);
             this.iconButton1.TabIndex = 9;
             this.iconButton1.UseVisualStyleBackColor = false;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(31, 5);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(235, 24);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "Listado de Empleados";
             // 
             // button1
             // 
@@ -199,16 +209,6 @@ namespace Presentacion
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(557, 2);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(250, 27);
-            this.textBox1.TabIndex = 3;
-            this.textBox1.Text = "Buscar Empleado";
-            // 
             // iconButton4
             // 
             this.iconButton4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
@@ -221,11 +221,11 @@ namespace Presentacion
             this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton4.IconSize = 30;
             this.iconButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton4.Location = new System.Drawing.Point(229, 425);
+            this.iconButton4.Location = new System.Drawing.Point(435, 431);
             this.iconButton4.Name = "iconButton4";
             this.iconButton4.Size = new System.Drawing.Size(211, 47);
-            this.iconButton4.TabIndex = 27;
-            this.iconButton4.Text = "  Eliminar Empleado";
+            this.iconButton4.TabIndex = 32;
+            this.iconButton4.Text = "  Eliminar Examen";
             this.iconButton4.UseVisualStyleBackColor = false;
             // 
             // iconButton2
@@ -240,11 +240,11 @@ namespace Presentacion
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton2.IconSize = 30;
             this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.Location = new System.Drawing.Point(12, 425);
+            this.iconButton2.Location = new System.Drawing.Point(218, 431);
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Size = new System.Drawing.Size(211, 47);
-            this.iconButton2.TabIndex = 26;
-            this.iconButton2.Text = "Editar Empleado";
+            this.iconButton2.TabIndex = 31;
+            this.iconButton2.Text = "Editar Examen";
             this.iconButton2.UseVisualStyleBackColor = false;
             this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
             // 
@@ -260,26 +260,26 @@ namespace Presentacion
             this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton3.IconSize = 30;
             this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton3.Location = new System.Drawing.Point(632, 46);
+            this.iconButton3.Location = new System.Drawing.Point(1, 431);
             this.iconButton3.Name = "iconButton3";
             this.iconButton3.Size = new System.Drawing.Size(211, 47);
-            this.iconButton3.TabIndex = 25;
-            this.iconButton3.Text = "Nuevo Empleado";
+            this.iconButton3.TabIndex = 30;
+            this.iconButton3.Text = "Nuevo Examen";
             this.iconButton3.UseVisualStyleBackColor = false;
             this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
             // 
-            // Frm_Empleados
+            // Frm_Examenes_Medicos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(848, 484);
+            this.ClientSize = new System.Drawing.Size(800, 490);
+            this.Controls.Add(this.pnl_Titulo);
             this.Controls.Add(this.iconButton4);
             this.Controls.Add(this.iconButton2);
             this.Controls.Add(this.iconButton3);
             this.Controls.Add(this.dg_pacientes);
-            this.Controls.Add(this.pnl_Titulo);
-            this.Name = "Frm_Empleados";
-            this.Text = "Frm_Empleados";
+            this.Name = "Frm_Examenes_Medicos";
+            this.Text = "Frm_Emamenes_Medicos";
             ((System.ComponentModel.ISupportInitialize)(this.dg_pacientes)).EndInit();
             this.pnl_Titulo.ResumeLayout(false);
             this.pnl_Titulo.PerformLayout();

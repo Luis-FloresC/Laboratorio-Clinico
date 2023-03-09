@@ -5,6 +5,7 @@ using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Configuration;
 
 namespace Datos
 {
@@ -15,7 +16,8 @@ namespace Datos
         private readonly string connectionString;
         public Connection()
         {
-            connectionString = "Server=localhost;Database=Laboratorio_clinico;Trusted_Connection=True;";
+           connectionString = "Server=localhost;Database=Laboratorio_clinico;Trusted_Connection=True;";
+         
         }
         protected SqlConnection GetConnection()
         {

@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Presentacion
 {
-    public partial class Frm_Empleados : Form
+    public partial class Frm_Examenes_Medicos : Form
     {
-        public Frm_Empleados()
+        public Frm_Examenes_Medicos()
         {
             InitializeComponent();
         }
@@ -24,14 +24,14 @@ namespace Presentacion
 
         private void iconButton3_Click(object sender, EventArgs e)
         {
-            Frm_Nuevo_Empleado_Main nuevoEmpleado = new Frm_Nuevo_Empleado_Main();
-            nuevoEmpleado.Show();
+            Frm_Examen_Med_Main realizarExamenMedMain = new Frm_Examen_Med_Main();
+            realizarExamenMedMain.Show();
         }
 
         private void iconButton2_Click(object sender, EventArgs e)
         {
-            Frm_Nuevo_Empleado_Main nuevoEmpleado = new Frm_Nuevo_Empleado_Main("Editar Empleado");
-            nuevoEmpleado.Show();
+            Frm_Examen_Med_Main realizarExamenMedMain = new Frm_Examen_Med_Main("Editar","Editar Examen Medico");
+            realizarExamenMedMain.Show();
         }
     }
 }

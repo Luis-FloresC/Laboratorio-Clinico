@@ -31,14 +31,16 @@ namespace Presentacion
         {
             this.pnl_contenedor = new System.Windows.Forms.Panel();
             this.pnl_hijo = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pnl_Lateral = new System.Windows.Forms.Panel();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
             this.Link_Perfil = new System.Windows.Forms.LinkLabel();
             this.lbl_email = new System.Windows.Forms.Label();
             this.lbl_cargo = new System.Windows.Forms.Label();
             this.lbl_nombre = new System.Windows.Forms.Label();
+            this.pnl_titulo = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.button11 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.button5 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
@@ -48,17 +50,16 @@ namespace Presentacion
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.pnl_titulo = new System.Windows.Forms.Panel();
             this.btn_nornal = new System.Windows.Forms.PictureBox();
             this.btn_min = new System.Windows.Forms.PictureBox();
             this.btn_max = new System.Windows.Forms.PictureBox();
             this.btn_close = new System.Windows.Forms.PictureBox();
             this.pnl_contenedor.SuspendLayout();
             this.pnl_hijo.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.pnl_Lateral.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.pnl_titulo.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_nornal)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_min)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_max)).BeginInit();
@@ -89,22 +90,10 @@ namespace Presentacion
             this.pnl_hijo.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_hijo_Paint);
             this.pnl_hijo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnl_hijo_MouseDown);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = global::Presentacion.Properties.Resources.Imagen_de_WhatsApp_2023_02_24_a_las_19_44_29;
-            this.pictureBox1.Location = new System.Drawing.Point(219, 161);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(465, 218);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
             // pnl_Lateral
             // 
             this.pnl_Lateral.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
+            this.pnl_Lateral.Controls.Add(this.button11);
             this.pnl_Lateral.Controls.Add(this.button10);
             this.pnl_Lateral.Controls.Add(this.button9);
             this.pnl_Lateral.Controls.Add(this.Link_Perfil);
@@ -127,42 +116,6 @@ namespace Presentacion
             this.pnl_Lateral.Size = new System.Drawing.Size(250, 610);
             this.pnl_Lateral.TabIndex = 1;
             this.pnl_Lateral.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnl_Lateral_MouseDown);
-            // 
-            // button10
-            // 
-            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
-            this.button10.FlatAppearance.BorderSize = 0;
-            this.button10.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(106)))), ((int)(((byte)(170)))));
-            this.button10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(130)))), ((int)(((byte)(235)))));
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.ForeColor = System.Drawing.Color.White;
-            this.button10.Image = global::Presentacion.Properties.Resources.saddle_stitched_booklet_25px;
-            this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button10.Location = new System.Drawing.Point(0, 477);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(250, 45);
-            this.button10.TabIndex = 12;
-            this.button10.Text = "Bitacora";
-            this.button10.UseVisualStyleBackColor = false;
-            // 
-            // button9
-            // 
-            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
-            this.button9.FlatAppearance.BorderSize = 0;
-            this.button9.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(106)))), ((int)(((byte)(170)))));
-            this.button9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(130)))), ((int)(((byte)(235)))));
-            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.ForeColor = System.Drawing.Color.White;
-            this.button9.Image = global::Presentacion.Properties.Resources.user_25px;
-            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button9.Location = new System.Drawing.Point(0, 383);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(250, 45);
-            this.button9.TabIndex = 11;
-            this.button9.Text = "Medicos";
-            this.button9.UseVisualStyleBackColor = false;
             // 
             // Link_Perfil
             // 
@@ -211,6 +164,88 @@ namespace Presentacion
             this.lbl_nombre.TabIndex = 1;
             this.lbl_nombre.Text = "Nombre del Usuario";
             // 
+            // pnl_titulo
+            // 
+            this.pnl_titulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(130)))), ((int)(((byte)(235)))));
+            this.pnl_titulo.Controls.Add(this.btn_nornal);
+            this.pnl_titulo.Controls.Add(this.btn_min);
+            this.pnl_titulo.Controls.Add(this.btn_max);
+            this.pnl_titulo.Controls.Add(this.btn_close);
+            this.pnl_titulo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.pnl_titulo.Location = new System.Drawing.Point(0, 0);
+            this.pnl_titulo.Name = "pnl_titulo";
+            this.pnl_titulo.Size = new System.Drawing.Size(1100, 40);
+            this.pnl_titulo.TabIndex = 0;
+            this.pnl_titulo.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_titulo_Paint);
+            this.pnl_titulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnl_titulo_MouseDown);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = global::Presentacion.Properties.Resources.Imagen_de_WhatsApp_2023_02_24_a_las_19_44_29;
+            this.pictureBox1.Location = new System.Drawing.Point(219, 161);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(465, 218);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
+            // 
+            // button11
+            // 
+            this.button11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
+            this.button11.FlatAppearance.BorderSize = 0;
+            this.button11.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(106)))), ((int)(((byte)(170)))));
+            this.button11.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(130)))), ((int)(((byte)(235)))));
+            this.button11.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button11.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button11.ForeColor = System.Drawing.Color.White;
+            this.button11.Image = global::Presentacion.Properties.Resources.user_25px;
+            this.button11.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button11.Location = new System.Drawing.Point(-3, 518);
+            this.button11.Name = "button11";
+            this.button11.Size = new System.Drawing.Size(250, 45);
+            this.button11.TabIndex = 13;
+            this.button11.Text = "Usuarios";
+            this.button11.UseVisualStyleBackColor = false;
+            // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
+            this.button10.FlatAppearance.BorderSize = 0;
+            this.button10.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(106)))), ((int)(((byte)(170)))));
+            this.button10.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(130)))), ((int)(((byte)(235)))));
+            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button10.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button10.ForeColor = System.Drawing.Color.White;
+            this.button10.Image = global::Presentacion.Properties.Resources.saddle_stitched_booklet_25px;
+            this.button10.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button10.Location = new System.Drawing.Point(0, 477);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(250, 45);
+            this.button10.TabIndex = 12;
+            this.button10.Text = "Bitacora";
+            this.button10.UseVisualStyleBackColor = false;
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
+            this.button9.FlatAppearance.BorderSize = 0;
+            this.button9.FlatAppearance.CheckedBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(106)))), ((int)(((byte)(170)))));
+            this.button9.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(130)))), ((int)(((byte)(235)))));
+            this.button9.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button9.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.ForeColor = System.Drawing.Color.White;
+            this.button9.Image = global::Presentacion.Properties.Resources.user_25px;
+            this.button9.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button9.Location = new System.Drawing.Point(0, 383);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(250, 45);
+            this.button9.TabIndex = 11;
+            this.button9.Text = "Medicos";
+            this.button9.UseVisualStyleBackColor = false;
+            // 
             // pictureBox2
             // 
             this.pictureBox2.Image = global::Presentacion.Properties.Resources.test_account_100px;
@@ -232,7 +267,7 @@ namespace Presentacion
             this.button5.ForeColor = System.Drawing.Color.White;
             this.button5.Image = global::Presentacion.Properties.Resources.logout_25px;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button5.Location = new System.Drawing.Point(0, 524);
+            this.button5.Location = new System.Drawing.Point(-3, 563);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(250, 45);
             this.button5.TabIndex = 8;
@@ -257,6 +292,7 @@ namespace Presentacion
             this.button8.TabIndex = 7;
             this.button8.Text = "Catalogo de Examenes";
             this.button8.UseVisualStyleBackColor = false;
+            this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
             // button7
             // 
@@ -311,6 +347,7 @@ namespace Presentacion
             this.button4.TabIndex = 3;
             this.button4.Text = "Examenes Medicos";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button3
             // 
@@ -368,21 +405,6 @@ namespace Presentacion
             this.button1.Text = "Pacientes";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // pnl_titulo
-            // 
-            this.pnl_titulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(130)))), ((int)(((byte)(235)))));
-            this.pnl_titulo.Controls.Add(this.btn_nornal);
-            this.pnl_titulo.Controls.Add(this.btn_min);
-            this.pnl_titulo.Controls.Add(this.btn_max);
-            this.pnl_titulo.Controls.Add(this.btn_close);
-            this.pnl_titulo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.pnl_titulo.Location = new System.Drawing.Point(0, 0);
-            this.pnl_titulo.Name = "pnl_titulo";
-            this.pnl_titulo.Size = new System.Drawing.Size(1100, 40);
-            this.pnl_titulo.TabIndex = 0;
-            this.pnl_titulo.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_titulo_Paint);
-            this.pnl_titulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnl_titulo_MouseDown);
             // 
             // btn_nornal
             // 
@@ -454,11 +476,11 @@ namespace Presentacion
             this.Load += new System.EventHandler(this.Frm_Main_Menu_Load);
             this.pnl_contenedor.ResumeLayout(false);
             this.pnl_hijo.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.pnl_Lateral.ResumeLayout(false);
             this.pnl_Lateral.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.pnl_titulo.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_nornal)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_min)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btn_max)).EndInit();
@@ -493,5 +515,6 @@ namespace Presentacion
         private System.Windows.Forms.LinkLabel Link_Perfil;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button11;
     }
 }

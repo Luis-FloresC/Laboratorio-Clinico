@@ -197,6 +197,18 @@ namespace Presentacion
             button3.BackColor = Color.FromArgb(0, 129, 64);
         }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Frm_Examenes_Medicos>();
+            button4.BackColor = Color.FromArgb(0, 129, 64);
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Frm_Catalogo_Examenes>();
+            button8.BackColor = Color.FromArgb(0, 129, 64);
+        }
+
         private void AbrirFormulario<MiForm>() where MiForm : Form, new()
         {
             Form formulario;
@@ -240,6 +252,15 @@ namespace Presentacion
             {
                 button3.BackColor = Color.FromArgb(4, 41, 68);
             }
+            if (Application.OpenForms["Frm_Examenes_Medicos"] == null)
+            {
+                button4.BackColor = Color.FromArgb(4, 41, 68);
+            }
+            if (Application.OpenForms["Frm_Catalogo_Examenes"] == null)
+            {
+                button8.BackColor = Color.FromArgb(4, 41, 68);
+            }
+           
         }
        
     }
