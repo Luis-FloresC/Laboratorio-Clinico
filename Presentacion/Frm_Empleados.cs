@@ -21,5 +21,11 @@ namespace Presentacion
         {
             this.Close();
         }
+
+        private void iconButton3_Click(object sender, EventArgs e)
+        {
+            Frm_Nuevo_Empleado_Main nuevoEmpleado = new Frm_Nuevo_Empleado_Main();
+            nuevoEmpleado.Show();
+        }
     }
 }

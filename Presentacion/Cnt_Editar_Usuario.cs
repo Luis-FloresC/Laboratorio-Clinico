@@ -13,8 +13,17 @@ namespace Presentacion
 {
     public partial class Cnt_Editar_Usuario : UserControl
     {
+        private string Accion = "Mi Perfil";
+
         public Cnt_Editar_Usuario()
         {
+            InitializeComponent();
+            this.Accion = "Mi Perfil";
+        }
+
+        public Cnt_Editar_Usuario(string Mode)
+        {
+            this.Accion = Mode;
             InitializeComponent();
         }
 
@@ -32,10 +41,21 @@ namespace Presentacion
 
         private void Cnt_Editar_Usuario_Load(object sender, EventArgs e)
         {
-            txtPassword.Text = Cache_Usuario.ContraseniaUsuario;
-            txtConfirmarPassword.Text = Cache_Usuario.ContraseniaUsuario;
-            txtNombreUser.Text = Cache_Usuario.NombreUsuario;
-            txtCorreoElectronico.Text = Cache_Usuario.CorreoElectronicoUsuario;
+            if (this.Accion == "Mi Perfil")
+            {
+                txtPassword.Text = Cache_Usuario.ContraseniaUsuario;
+                txtConfirmarPassword.Text = Cache_Usuario.ContraseniaUsuario;
+                txtNombreUser.Text = Cache_Usuario.NombreUsuario;
+                txtCorreoElectronico.Text = Cache_Usuario.CorreoElectronicoUsuario;
+            }
+            else if (this.Accion == "Nuevo")
+            {
+                txtPassword.Text = "";
+                txtConfirmarPassword.Text = "";
+                txtNombreUser.Text = "";
+                txtCorreoElectronico.Text = "";
+            }
+            
         }
     }
 }

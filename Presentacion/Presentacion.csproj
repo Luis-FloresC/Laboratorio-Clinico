@@ -116,6 +116,12 @@
     <Compile Include="Frm_MiPerfil.Designer.cs">
       <DependentUpon>Frm_MiPerfil.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_Nuevo_Empleado_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Nuevo_Empleado_Main.Designer.cs">
+      <DependentUpon>Frm_Nuevo_Empleado_Main.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_Pacientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -156,6 +162,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_MiPerfil.resx">
       <DependentUpon>Frm_MiPerfil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Nuevo_Empleado_Main.resx">
+      <DependentUpon>Frm_Nuevo_Empleado_Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Pacientes.resx">
       <DependentUpon>Frm_Pacientes.cs</DependentUpon>

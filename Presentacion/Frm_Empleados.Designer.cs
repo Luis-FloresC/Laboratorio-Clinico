@@ -234,6 +234,7 @@ namespace Presentacion
             this.iconButton3.TabIndex = 25;
             this.iconButton3.Text = "Nuevo Empleado";
             this.iconButton3.UseVisualStyleBackColor = false;
+            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
             // 
             // iconButton1
             // 
