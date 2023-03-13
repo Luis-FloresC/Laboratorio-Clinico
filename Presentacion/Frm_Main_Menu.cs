@@ -209,6 +209,36 @@ namespace Presentacion
             button8.BackColor = Color.FromArgb(0, 129, 64);
         }
 
+        private void button6_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Frm_Facturacion>();
+            button6.BackColor = Color.FromArgb(0, 129, 64);
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Frm_Bitacora_Main>();
+            button10.BackColor = Color.FromArgb(0, 129, 64);
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Frm_Medicos_Main>();
+            button9.BackColor = Color.FromArgb(0, 129, 64);
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Frm_Reportes>();
+            button7.BackColor = Color.FromArgb(0, 129, 64);
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            AbrirFormulario<Frm_Usuarios_Main>();
+            button11.BackColor = Color.FromArgb(0, 129, 64);
+        }
+
         private void AbrirFormulario<MiForm>() where MiForm : Form, new()
         {
             Form formulario;
@@ -260,7 +290,29 @@ namespace Presentacion
             {
                 button8.BackColor = Color.FromArgb(4, 41, 68);
             }
-           
+            
+            if (Application.OpenForms["Frm_Facturacion"] == null)
+            {
+                button6.BackColor = Color.FromArgb(4, 41, 68);
+            }
+            if (Application.OpenForms["Frm_Medicos_Main"] == null)
+            {
+                button9.BackColor = Color.FromArgb(4, 41, 68);
+            }
+            if (Application.OpenForms["Frm_Reportes"] == null)
+            {
+                button7.BackColor = Color.FromArgb(4, 41, 68);
+            }
+            if (Application.OpenForms["Frm_Bitacora_Main"] == null)
+            {
+                button10.BackColor = Color.FromArgb(4, 41, 68);
+            }
+            if (Application.OpenForms["Frm_Usuarios_Main"] == null)
+            {
+                button11.BackColor = Color.FromArgb(4, 41, 68);
+            }
+
+
         }
        
     }

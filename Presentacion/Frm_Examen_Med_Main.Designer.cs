@@ -31,6 +31,7 @@ namespace Presentacion
         {
             this.pnl_Titulo = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.cmbGenero = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -42,7 +43,9 @@ namespace Presentacion
             this.txtNombre = new System.Windows.Forms.TextBox();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.button2 = new System.Windows.Forms.Button();
+            this.iconButton3 = new FontAwesome.Sharp.IconButton();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.pnl_Titulo.SuspendLayout();
             this.SuspendLayout();
@@ -69,6 +72,22 @@ namespace Presentacion
             this.label1.TabIndex = 2;
             this.label1.Text = "Realizar Examen";
             // 
+            // button2
+            // 
+            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Image = global::Presentacion.Properties.Resources.delete_25px;
+            this.button2.Location = new System.Drawing.Point(658, 2);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(26, 26);
+            this.button2.TabIndex = 1;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // cmbGenero
             // 
             this.cmbGenero.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -87,9 +106,9 @@ namespace Presentacion
             this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.Location = new System.Drawing.Point(318, 108);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(134, 21);
+            this.label7.Size = new System.Drawing.Size(89, 21);
             this.label7.TabIndex = 42;
-            this.label7.Text = "Tipo de Examen";
+            this.label7.Text = "Examenes";
             // 
             // label5
             // 
@@ -115,9 +134,9 @@ namespace Presentacion
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(318, 41);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(205, 21);
+            this.label3.Size = new System.Drawing.Size(141, 21);
             this.label3.TabIndex = 32;
-            this.label3.Text = "Indicaciones del examen";
+            this.label3.Text = "Area de Examen";
             // 
             // label2
             // 
@@ -191,36 +210,61 @@ namespace Presentacion
             this.iconButton1.Text = "Guardar";
             this.iconButton1.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // iconButton3
             // 
-            this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Image = global::Presentacion.Properties.Resources.delete_25px;
-            this.button2.Location = new System.Drawing.Point(658, 2);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(26, 26);
-            this.button2.TabIndex = 1;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.iconButton3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.iconButton3.BackColor = System.Drawing.Color.White;
+            this.iconButton3.FlatAppearance.BorderSize = 0;
+            this.iconButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton3.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.iconButton3.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(121)))), ((int)(((byte)(186)))));
+            this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton3.IconSize = 25;
+            this.iconButton3.Location = new System.Drawing.Point(250, 59);
+            this.iconButton3.Name = "iconButton3";
+            this.iconButton3.Size = new System.Drawing.Size(30, 30);
+            this.iconButton3.TabIndex = 45;
+            this.iconButton3.UseVisualStyleBackColor = false;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Urucultivo",
+            "Hemograma"});
+            this.comboBox1.Location = new System.Drawing.Point(322, 62);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(334, 29);
+            this.comboBox1.TabIndex = 46;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(318, 172);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(109, 21);
+            this.label4.TabIndex = 48;
+            this.label4.Text = "Indicaciones";
             // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(322, 65);
+            this.textBox1.Location = new System.Drawing.Point(321, 193);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(334, 27);
-            this.textBox1.TabIndex = 44;
+            this.textBox1.Size = new System.Drawing.Size(335, 27);
+            this.textBox1.TabIndex = 47;
             // 
             // Frm_Examen_Med_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(684, 302);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.iconButton3);
             this.Controls.Add(this.cmbGenero);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label5);
@@ -261,6 +305,9 @@ namespace Presentacion
         private System.Windows.Forms.TextBox txtApellido;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.TextBox txtNombre;
+        private FontAwesome.Sharp.IconButton iconButton3;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.TextBox textBox1;
     }
 }
