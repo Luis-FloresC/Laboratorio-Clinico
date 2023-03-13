@@ -261,12 +261,31 @@ insert into Empleados(
 	Telefono_Empleado ,
 	Genero 
 )values(
-	'Luis Adolfo',
-	'Flores',
-	'0703200003793',
-	'2000-06-07',
-	'Residencial Vereda Real',
-	'96362917',
+	'Jose Daniel',
+	'Rodriguez',
+	'0703199704555',
+	'2000-10-04',
+	'La Reforma',
+	'98765432',
 	'Masculino'
 );
 go
+
+
+
+DECLARE	@return_value int,
+		@mensaje nvarchar(150)
+
+EXEC	@return_value = [dbo].[Registrar_Usuario]
+		@Nombre_us = N'Daniel',
+		@Dni_Us = N'0703199704555',
+		@Contrasenia_Us = N'Admin1234',
+		@Correo_Us = N'Jose-DanielR@unicah.edu',
+		@Id_Rol = 1,
+		@mensaje = @mensaje OUTPUT
+
+SELECT	@mensaje as N'@mensaje'
+
+SELECT	'Return Value' = @return_value
+
+GO

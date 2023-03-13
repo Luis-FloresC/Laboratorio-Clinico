@@ -21,3 +21,16 @@
 # Reportes Opcionales 
 * 1. Listado de Pacientes por Examen Especifico
 * 2. Examenes medicos por estado
+
+
+# Instrucciones
+
+* Ejecutar El Backup
+
+Si no funciona el Backup
+* Ejecutar Base de datos (Laboratorio-Clinico-Base-Datos.sql)
+* Ejecutar Las consultas para crear el usuario (Querys.sql)
+* si presenta problema de conexion cambiar la cadena de conexion en el archivo de connection.cs en la capa de datos.
+
+Credenciales 
+Usuario: Daniel Contraseña: Admin1234
