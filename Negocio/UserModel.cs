@@ -4,6 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Datos;
+using Soporte.Cache;
+
 namespace Negocio
 {
     public class UserModel
@@ -16,9 +18,37 @@ namespace Negocio
             return userDao.Login(user, pass);
         }
 
+        public string recoverPassword(string userRequesting)
+        {
+            return userDao.recoverPassword(userRequesting);
+        }
+
+        public bool securityLogin()
+        {
+            if (Cache_Usuario.IdUsuario >= 1)
+            {
+                if (userDao.existsUser(Cache_Usuario.IdUsuario, Cache_Usuario.NombreUsuario, Cache_Usuario.ContraseniaUsuario) == true)
+                    return true;
+                else
+                    return false;
+            }
+            else
+                return false;
+        }
+
         public void ObtenerCargos()
         {
             userDao.obtenerCargos();
+        }
+
+        public void ObtenerPermisos()
+        {
+            userDao.obtenerPermisos();
+        }
+
+        public void ObtenerPermisosRol(int idRol)
+        {
+            userDao.obtenerPermisosUsuario(idRol);
         }
     }
 }

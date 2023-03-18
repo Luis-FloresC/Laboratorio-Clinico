@@ -118,6 +118,8 @@ namespace Presentacion
                     if (validLogin == true)
                     {
                         user.ObtenerCargos();
+                        user.ObtenerPermisos();
+                        user.ObtenerPermisosRol(Cache_Usuario.IdRol);
                         Frm_Bienvenida welcome = new Frm_Bienvenida();
                         welcome.ShowDialog();
                         Frm_Main_Menu mainMenu = new Frm_Main_Menu();
@@ -154,6 +156,12 @@ namespace Presentacion
             txtUser.Text = "Usuario";
            // lblErrorMessage.Visible = false;
             this.Show();
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            var recoverPassword = new Frm_Recuperar_Password();
+            recoverPassword.ShowDialog();
         }
     }
 }

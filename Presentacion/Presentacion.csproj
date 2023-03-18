@@ -224,6 +224,12 @@
     <Compile Include="Frm_Pacientes.Designer.cs">
       <DependentUpon>Frm_Pacientes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_Recuperar_Password.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Recuperar_Password.Designer.cs">
+      <DependentUpon>Frm_Recuperar_Password.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_Reportes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -324,6 +330,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Pacientes.resx">
       <DependentUpon>Frm_Pacientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Recuperar_Password.resx">
+      <DependentUpon>Frm_Recuperar_Password.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm_Reportes.resx">
       <DependentUpon>Frm_Reportes.cs</DependentUpon>

@@ -9,6 +9,7 @@ namespace Soporte.Cache
     public static class Cache_Usuario
     {
         public static int IdEmpleado { get; set; }
+        public static int IdUsuario { get; set; }
         public static string NombreEmpleado { get; set; }
         public static string ApellidoEmpleado { get; set; }
         public static string DniEmpleado { get; set; }
@@ -30,5 +31,9 @@ namespace Soporte.Cache
 
         public static int IdRol { get; set; }
         public static string Cargo { get; set; }
+        public static List<String> Permisos = new List<String>();
+
+
+
     }
 }

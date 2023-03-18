@@ -8,27 +8,140 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using Negocio;
 using Soporte.Cache;
 namespace Presentacion
 {
     public partial class Frm_Main_Menu : Form
     {
+    
+
+        private int[,] locationButton = new int[, ]
+        {
+            {0,99},
+            {0,146},
+            {0,193},
+            {0,240},
+            {0,335},
+            {0,430},
+            {0,287},
+            {-3,563},
+            {0,383},
+            {0,477},
+            {0,525},
+        };
+        private int TotalBotones = 0;
         public Frm_Main_Menu()
         {
             InitializeComponent();
+            security();
+        
+            if (Cache_Usuario.Cargo != "Administrador")
+            {
+                
+                ManagePermissions();
+            }
+
+            
+
+          
+
         }
+
+        private void security()
+        {
+            var userModel = new UserModel();
+            if (userModel.securityLogin() == false)
+            {
+                MessageBox.Show("Error Fatal, se detectó que está intentando acceder al sistema sin credenciales, por favor inicie sesión e indentifiquese");
+                Application.Exit();
+            }
+        }
+
+        private int CantidadBotonesAct = 0;
+        private void ActivarBotonesAutorizados()
+        {
+            int totalBotoon = 0;
+            
+            foreach (var Permiso in Cache_Usuario.Permisos)
+            {
+                foreach (Control c in pnl_Lateral.Controls)
+                {
+                    if (c is Button)
+                    {
+                        Button boton = (Button)c;
+                        if (boton.Name == Permiso)
+                        {
+                            boton.Visible = true;
+                            boton.Location = new Point(locationButton[totalBotoon, 0], locationButton[totalBotoon, 1]);
+                            CantidadBotonesAct++;
+                            totalBotoon++;
+                        }
+                        
+                        
+                    }
+                }
+            }
+            btn_Cerrar.Location = new Point(locationButton[CantidadBotonesAct,0], locationButton[CantidadBotonesAct, 1]);
+        }
+
+        private int LxB, LyB;
+
+        private void ManagePermissions()
+        {
+            CantidadBotonesAct = 0;
+            DesactivadosBotones();
+            ActivarBotonesAutorizados();
+        }
+
+        private void DesactivadosBotones()
+        {
+            int totalBotoon = 0;
+            
+            foreach (Control c in pnl_Lateral.Controls)
+            {
+                if (c is Button)
+                {
+                    Button boton = (Button)c;
+
+                  
+                        boton.Visible = false;
+                        totalBotoon++;
+                    
+                      
+                    
+                        
+                        
+                    
+                }
+            }
+            TotalBotones = totalBotoon;
+        }
+
+     
+
+        
 
         private void Frm_Main_Menu_Load(object sender, EventArgs e)
         {
             btn_nornal.Visible = false;
+            
             lbl_nombre.Text = Cache_Usuario.NombreEmpleado + " " + Cache_Usuario.ApellidoEmpleado;
             lbl_cargo.Text = Cache_Usuario.Cargo;
-            lbl_email.Text = Cache_Usuario.CorreoElectronicoUsuario;
-
-            foreach (var cargos in Cache_Cargos.ListaCargos )
+            int offset = 0;
+            if (Cache_Usuario.CorreoElectronicoUsuario.Length > 19)
             {
-                Console.WriteLine(cargos);
+                offset = (19 - 3) - Cache_Usuario.CorreoElectronicoUsuario.Length;
+
+                String s = Cache_Usuario.CorreoElectronicoUsuario.Replace(Cache_Usuario.CorreoElectronicoUsuario,"..." );
+
+               
+
+
             }
+
+
+            
             
         }
 
@@ -138,13 +251,13 @@ namespace Presentacion
         private void button2_Click(object sender, EventArgs e)
         {
             AbrirFormulario<Frm_Calendario>();
-            button2.BackColor = Color.FromArgb(0, 129, 64);
+            Frm_Calendario.BackColor = Color.FromArgb(0, 129, 64);
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
             AbrirFormulario<Frm_Pacientes>();
-            button1.BackColor = Color.FromArgb(0, 129, 64);
+            Frm_Pacientes.BackColor = Color.FromArgb(0, 129, 64);
             
             
         }
@@ -180,6 +293,7 @@ namespace Presentacion
             if (result == DialogResult.Yes)
             {
                 //Application.Exit();
+                DesactivadosBotones();
                 this.Close();
                 
             }
@@ -194,49 +308,49 @@ namespace Presentacion
         private void button3_Click(object sender, EventArgs e)
         {
             AbrirFormulario<Frm_Empleados>();
-            button3.BackColor = Color.FromArgb(0, 129, 64);
+            Frm_Empleados.BackColor = Color.FromArgb(0, 129, 64);
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             AbrirFormulario<Frm_Examenes_Medicos>();
-            button4.BackColor = Color.FromArgb(0, 129, 64);
+            Frm_Examenes_Med.BackColor = Color.FromArgb(0, 129, 64);
         }
 
         private void button8_Click(object sender, EventArgs e)
         {
             AbrirFormulario<Frm_Catalogo_Examenes>();
-            button8.BackColor = Color.FromArgb(0, 129, 64);
+            Frm_Catalogo.BackColor = Color.FromArgb(0, 129, 64);
         }
 
         private void button6_Click(object sender, EventArgs e)
         {
             AbrirFormulario<Frm_Facturacion>();
-            button6.BackColor = Color.FromArgb(0, 129, 64);
+            Frm_Facturacion.BackColor = Color.FromArgb(0, 129, 64);
         }
 
         private void button10_Click(object sender, EventArgs e)
         {
             AbrirFormulario<Frm_Bitacora_Main>();
-            button10.BackColor = Color.FromArgb(0, 129, 64);
+            Frm_Bitacora.BackColor = Color.FromArgb(0, 129, 64);
         }
 
         private void button9_Click(object sender, EventArgs e)
         {
             AbrirFormulario<Frm_Medicos_Main>();
-            button9.BackColor = Color.FromArgb(0, 129, 64);
+            Frm_Medico.BackColor = Color.FromArgb(0, 129, 64);
         }
 
         private void button7_Click(object sender, EventArgs e)
         {
             AbrirFormulario<Frm_Reportes>();
-            button7.BackColor = Color.FromArgb(0, 129, 64);
+            Frm_Reportes.BackColor = Color.FromArgb(0, 129, 64);
         }
 
         private void button11_Click(object sender, EventArgs e)
         {
             AbrirFormulario<Frm_Usuarios_Main>();
-            button11.BackColor = Color.FromArgb(0, 129, 64);
+            Frm_Usuarios_Main.BackColor = Color.FromArgb(0, 129, 64);
         }
 
         private void AbrirFormulario<MiForm>() where MiForm : Form, new()
@@ -266,9 +380,10 @@ namespace Presentacion
         //Funcion para cerrar el formulario
         private void CloseForms(object sender, FormClosedEventArgs e)
         {
+           
             if (Application.OpenForms["Frm_Pacientes"] == null)
             {
-                button1.BackColor = Color.FromArgb(4, 41, 68);
+                Frm_Pacientes.BackColor = Color.FromArgb(4, 41, 68);
             }
             if (Application.OpenForms["Frm_MiPerfil"] == null)
             {
@@ -276,43 +391,47 @@ namespace Presentacion
             }
             if (Application.OpenForms["Frm_Calendario"] == null)
             {
-                button2.BackColor = Color.FromArgb(4, 41, 68);
+                Frm_Calendario.BackColor = Color.FromArgb(4, 41, 68);
             }
             if (Application.OpenForms["Frm_Empleados"] == null)
             {
-                button3.BackColor = Color.FromArgb(4, 41, 68);
+                Frm_Empleados.BackColor = Color.FromArgb(4, 41, 68);
             }
             if (Application.OpenForms["Frm_Examenes_Medicos"] == null)
             {
-                button4.BackColor = Color.FromArgb(4, 41, 68);
+                Frm_Examenes_Med.BackColor = Color.FromArgb(4, 41, 68);
             }
             if (Application.OpenForms["Frm_Catalogo_Examenes"] == null)
             {
-                button8.BackColor = Color.FromArgb(4, 41, 68);
+                Frm_Catalogo.BackColor = Color.FromArgb(4, 41, 68);
             }
             
             if (Application.OpenForms["Frm_Facturacion"] == null)
             {
-                button6.BackColor = Color.FromArgb(4, 41, 68);
+                Frm_Facturacion.BackColor = Color.FromArgb(4, 41, 68);
             }
             if (Application.OpenForms["Frm_Medicos_Main"] == null)
             {
-                button9.BackColor = Color.FromArgb(4, 41, 68);
+                Frm_Medico.BackColor = Color.FromArgb(4, 41, 68);
             }
             if (Application.OpenForms["Frm_Reportes"] == null)
             {
-                button7.BackColor = Color.FromArgb(4, 41, 68);
+                Frm_Reportes.BackColor = Color.FromArgb(4, 41, 68);
             }
             if (Application.OpenForms["Frm_Bitacora_Main"] == null)
             {
-                button10.BackColor = Color.FromArgb(4, 41, 68);
+                Frm_Bitacora.BackColor = Color.FromArgb(4, 41, 68);
             }
             if (Application.OpenForms["Frm_Usuarios_Main"] == null)
             {
-                button11.BackColor = Color.FromArgb(4, 41, 68);
+                Frm_Usuarios_Main.BackColor = Color.FromArgb(4, 41, 68);
             }
 
-
+            if (Cache_Usuario.Cargo != "Administrador")
+            {
+                ManagePermissions();
+            }
+    
         }
        
     }
