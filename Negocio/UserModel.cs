@@ -18,6 +18,11 @@ namespace Negocio
             return userDao.Login(user, pass);
         }
 
+        public bool buscarUsuarioPorPin(string pin)
+        {
+            return userDao.buscarUsuarioPorPin(pin);
+        }
+
         public string recoverPassword(string userRequesting)
         {
             return userDao.recoverPassword(userRequesting);

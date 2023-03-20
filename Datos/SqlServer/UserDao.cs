@@ -22,30 +22,33 @@ namespace Datos
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = "select * from Usuarios where Nombre_Us=@user or Dni_Us=@mail";
-                    command.Parameters.AddWithValue("@user", userRequesting);
-                    command.Parameters.AddWithValue("@mail", userRequesting);
-                    command.CommandType = CommandType.Text;
+                    command.CommandText = "RecoverPassword";
+                    command.Parameters.AddWithValue("@Nombre_user", userRequesting);
+                    
+                    command.CommandType = CommandType.StoredProcedure;
                     SqlDataReader reader = command.ExecuteReader();
                     if (reader.Read() == true)
                     {
-                        string userName = reader.GetString(1);
-                        string userMail = reader.GetString(5);
-                        string accountPassword = reader.GetString(1);
+                        string userName = reader.GetString(0);
+                        string userMail = reader.GetString(1);
+                        string accountPassword = reader.GetString(2);
+
+                       
+                        
+                        
                         var mailService = new MailServices.SystemSupportMail();
                         mailService.sendMail(
-                            subject: "SYSTEM: Password recovery request",
-                            body: "Hi, " + userName + "\nYou Requested to Recover your password.\n" +
-                                  "your current password is: " + accountPassword +
-                                  "\nHowever, we ask that you change your password inmediately once you enter the system.",
+                            subject: "Laboratorio Clínico de Oriente: Recuperar Contraseña",
+                            body: "Hola, " + userName + "\nUsted solicitó recuperar su contraseña.\n" +
+                                  "Tu pin de recuperación es: " + accountPassword +
+                                  "\nUtilice este pin para restablecer su contraseña.",
                             recipientMail: new List<string> { userMail }
                         );
-                        return "Hi, " + userName + "\nYou Requested to Recover your password.\n" +
-                               "Please check your mail: " + userMail +
-                               "\nHowever, we ask that you change your password inmediately once you enter the system.";
+                        return "Hola, " + userName + "\nUsted solicitó recuperar su contraseña.\n" +
+                               "Por favor revise su correo electrónico: " + userMail ;
                     }
                     else
-                        return "Sorry, you do not have an account with that mail or username";
+                        return "Lo sentimos, no tiene una cuenta con  ese nombre de usuario o número de identidad";
                 }
             }
         }
@@ -154,6 +157,37 @@ namespace Datos
 
                     }
 
+                }
+            }
+        }
+
+        public bool buscarUsuarioPorPin(string pin)
+        {
+           
+            using (var connection = GetConnection())
+            {
+                connection.Open();
+                using (var command = new SqlCommand())
+                {
+                    command.Connection = connection;
+                    command.CommandText = "select id_usuario,Pin_Recuperacion,Fecha_Gen_Pin from Usuarios where Pin_Recuperacion = @pin";
+                    command.Parameters.AddWithValue("@user", pin);
+                    command.CommandType = CommandType.Text;
+                    SqlDataReader reader = command.ExecuteReader();
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            Recuperar_Contraseña.pin = reader.GetString(1);
+                            Recuperar_Contraseña.fecha_gen_pin = reader.GetDateTime(2);
+                            Recuperar_Contraseña.IdUsuario = reader.GetInt32(0);
+                        }
+
+                        return true;
+
+                    }
+
+                    return false;
                 }
             }
         }

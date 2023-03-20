@@ -51,6 +51,7 @@
   <ItemGroup>
     <Compile Include="Cache\Cache_Cargos.cs" />
     <Compile Include="Cache\Cache_Usuario.cs" />
+    <Compile Include="Cache\Recuperar_Contraseña.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
