@@ -1,4 +1,4 @@
-create procedure Login_Lab
+create procedure [dbo].[Login_Lab]
 (
 @user nvarchar(50),
 @contrasenia nvarchar(50)
@@ -40,7 +40,8 @@ u.Fecha_Registro as 'fecha_reg_us',
 u.Fecha_Actualizacion as 'fecha_act_us',
 u.Correo_Us as 'correo_us',
 r.Id_Rol as 'id_rol',
-r.Nombre_rol as 'cargo'
+r.Nombre_rol as 'cargo',
+u.id_usuario as 'id_Usuario'
 from Medicos m
 join Usuarios u on u.Dni_Us = m.Dni
 join Roles r on r.Id_Rol = u.Id_Rol
@@ -68,7 +69,8 @@ u.Fecha_Registro as 'fecha_reg_us',
 u.Fecha_Actualizacion as 'fecha_act_us',
 u.Correo_Us as 'correo_us',
 r.Id_Rol as 'id_rol',
-r.Nombre_rol as 'cargo'
+r.Nombre_rol as 'cargo',
+u.id_usuario as 'id_Usuario'
 from Empleados e
 join Usuarios u on u.Dni_Us = e.Dni_Empleado
 join Roles r on r.Id_Rol = u.Id_Rol
