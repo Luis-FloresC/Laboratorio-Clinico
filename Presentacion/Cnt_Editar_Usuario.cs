@@ -7,7 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Negocio;
 using Soporte.Cache;
+using Soporte.Utilidades;
 
 namespace Presentacion
 {
@@ -70,6 +72,56 @@ namespace Presentacion
                 txtCorreoElectronico.Text = "";
             }
             
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            if (this.Accion == "Mi Perfil")
+            {
+                Utilidades utilidades = new Utilidades();
+                if (utilidades.CampoVacio(txtNombreUser.Text) || utilidades.CampoVacio(txtPassword.Text) || utilidades.CampoVacio(txtCorreoElectronico.Text))
+                {
+                    utilidades.AlertMessage("Los Campos son Obligatorios","A");
+                }
+                else
+                {
+                    if (utilidades.AlgoritmoContraseñaSegura(txtPassword.Text))
+                    {
+                        if (txtPassword.Text == txtConfirmarPassword.Text)
+                        {
+                            
+                            UserModel user = new UserModel();
+                            var result = user.EditarUsuario(txtPassword.Text, Cache_Usuario.DniEmpleado, txtCorreoElectronico.Text, txtNombreUser.Text);
+                          
+                            utilidades.AlertMessage(result, "I");
+                            var res = user.LoginUser(Cache_Usuario.DniEmpleado, txtPassword.Text);
+                            if (res)
+                            {
+                                Form frm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_Editar_Perfil_Main);
+                                if (frm != null)
+                                {
+                                    //si la instancia existe la cierro
+                                    frm.Close();
+                                    return;
+                                }
+                            }
+                          
+                          
+                            
+                            
+                        }
+                        else
+                        {
+                            utilidades.AlertMessage("Las contraseñas deben coincidir", "A");
+                        }
+                    }
+                    else
+                    {
+                        utilidades.AlertMessage("La Contraseña debe contener:\n1 carcter especial\nal menos 1 letra Mayuscula y \nal menos 1 número\ny debe contener al menos 8 caracteres", "A");
+                    }
+                }
+               
+            }
         }
     }
 }

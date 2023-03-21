@@ -33,6 +33,7 @@ namespace Presentacion
             {
                 txtUser.Text = "";
             }
+            lblError.Visible = false;
         }
 
         private void txtUser_Leave(object sender, EventArgs e)
@@ -58,6 +59,7 @@ namespace Presentacion
                 txtPassword.Text = "";
                 txtPassword.UseSystemPasswordChar = true;
             }
+            lblError.Visible = false;
         }
 
         /*
@@ -154,13 +156,14 @@ namespace Presentacion
             txtPassword.Text = "Contraseña";
             txtPassword.UseSystemPasswordChar = false;
             txtUser.Text = "Usuario";
-           // lblErrorMessage.Visible = false;
+            lblError.Visible = false;
             this.Show();
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             var recoverPassword = new Frm_Recuperar_Password();
+            this.Hide();
             recoverPassword.ShowDialog();
         }
     }

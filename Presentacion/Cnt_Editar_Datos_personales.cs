@@ -7,7 +7,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Negocio;
 using Soporte.Cache;
+using Soporte.Utilidades;
 
 namespace Presentacion
 {
@@ -79,6 +81,42 @@ namespace Presentacion
 
           
 
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            if (this.Mode == "Mi Perfil")
+            {
+                Utilidades utilidades = new Utilidades();
+                if (utilidades.CampoVacio(txtNombre.Text) || utilidades.CampoVacio(txtApellido.Text) ||
+                    utilidades.CampoVacio(txtTelefono.Text) || utilidades.CampoVacio(TxtDireccion.Text) ||
+                    utilidades.CampoVacio(DtpFechaNac.Text) || utilidades.CampoVacio(cmbGenero.Text))
+                {
+                    utilidades.AlertMessage("Todos los campos son obligatorios","A");
+                }
+                else
+                {
+                    if (Cache_Usuario.Cargo == "Medico")
+                    {
+                        UserModel user = new UserModel();
+                        var result = user.EditarDatosMedico(txtNombre.Text, txtApellido.Text, DtpFechaNac.Value,
+                            TxtDireccion.Text, txtTelefono.Text, cmbGenero.Text, Cache_Usuario.IdEmpleado);
+                        utilidades.AlertMessage(result, "I");
+                        var res = user.LoginUser(Cache_Usuario.DniEmpleado, Cache_Usuario.ContraseniaUsuario);
+                        if (res)
+                        {
+                            Form frm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_Editar_Perfil_Main);
+                            if (frm != null)
+                            {
+                                //si la instancia existe la cierro
+                                frm.Close();
+                                return;
+                            }
+                        }
+                    }
+                }
+                
+            }
         }
     }
 }

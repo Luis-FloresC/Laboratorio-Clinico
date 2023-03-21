@@ -1,7 +1,7 @@
 ﻿
 namespace Presentacion
 {
-    partial class Frm_Recuperar_Password
+    partial class Frm_Validar_Pin
     {
         /// <summary>
         /// Required designer variable.
@@ -29,34 +29,35 @@ namespace Presentacion
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.pnl_Titulo = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
             this.pnl_Titulo.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // textBox1
-            // 
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(19, 79);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(534, 31);
-            this.textBox1.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(15, 54);
+            this.label1.Location = new System.Drawing.Point(12, 52);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(297, 22);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Nombre de Usuario o Identidad";
+            this.label1.Size = new System.Drawing.Size(202, 22);
+            this.label1.TabIndex = 40;
+            this.label1.Text = "Pin de Recuperación";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.textBox1.Location = new System.Drawing.Point(16, 77);
+            this.textBox1.MaxLength = 4;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(534, 31);
+            this.textBox1.TabIndex = 39;
             // 
             // pnl_Titulo
             // 
@@ -66,9 +67,8 @@ namespace Presentacion
             this.pnl_Titulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_Titulo.Location = new System.Drawing.Point(0, 0);
             this.pnl_Titulo.Name = "pnl_Titulo";
-            this.pnl_Titulo.Size = new System.Drawing.Size(565, 30);
-            this.pnl_Titulo.TabIndex = 4;
-            this.pnl_Titulo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnl_Titulo_MouseDown);
+            this.pnl_Titulo.Size = new System.Drawing.Size(586, 30);
+            this.pnl_Titulo.TabIndex = 43;
             // 
             // label3
             // 
@@ -77,9 +77,20 @@ namespace Presentacion
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(30, 3);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(154, 24);
+            this.label3.Size = new System.Drawing.Size(224, 24);
             this.label3.TabIndex = 2;
-            this.label3.Text = "Buscar Usuario";
+            this.label3.Text = "Pin de Recuperación";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Red;
+            this.label2.Location = new System.Drawing.Point(12, 111);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(202, 22);
+            this.label2.TabIndex = 44;
+            this.label2.Text = "Pin de Recuperación";
             // 
             // button2
             // 
@@ -107,10 +118,10 @@ namespace Presentacion
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton2.IconSize = 30;
             this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.Location = new System.Drawing.Point(289, 167);
+            this.iconButton2.Location = new System.Drawing.Point(286, 165);
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Size = new System.Drawing.Size(264, 47);
-            this.iconButton2.TabIndex = 38;
+            this.iconButton2.TabIndex = 42;
             this.iconButton2.Text = "Cancelar";
             this.iconButton2.UseVisualStyleBackColor = false;
             this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
@@ -126,45 +137,29 @@ namespace Presentacion
             this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton1.IconSize = 30;
             this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(19, 167);
+            this.iconButton1.Location = new System.Drawing.Point(16, 165);
             this.iconButton1.Name = "iconButton1";
             this.iconButton1.Size = new System.Drawing.Size(264, 47);
-            this.iconButton1.TabIndex = 37;
+            this.iconButton1.TabIndex = 41;
             this.iconButton1.Text = "Aceptar";
             this.iconButton1.UseVisualStyleBackColor = false;
             this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
-            // linkLabel1
-            // 
-            this.linkLabel1.ActiveLinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(106)))), ((int)(((byte)(170)))));
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Century Gothic", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.linkLabel1.LinkColor = System.Drawing.Color.Black;
-            this.linkLabel1.Location = new System.Drawing.Point(15, 113);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(229, 20);
-            this.linkLabel1.TabIndex = 39;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "¿Tengo Pin de Recuperación?";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
-            // Frm_Recuperar_Password
+            // Frm_Validar_Pin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(565, 236);
-            this.Controls.Add(this.linkLabel1);
+            this.ClientSize = new System.Drawing.Size(586, 232);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.pnl_Titulo);
             this.Controls.Add(this.iconButton2);
             this.Controls.Add(this.iconButton1);
-            this.Controls.Add(this.pnl_Titulo);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.textBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "Frm_Recuperar_Password";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Frm_Recuperar_Password";
-            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Frm_Recuperar_Password_MouseDown);
+            this.Name = "Frm_Validar_Pin";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Frm_Validar_Pin";
             this.pnl_Titulo.ResumeLayout(false);
             this.pnl_Titulo.PerformLayout();
             this.ResumeLayout(false);
@@ -174,13 +169,13 @@ namespace Presentacion
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private FontAwesome.Sharp.IconButton iconButton2;
+        private FontAwesome.Sharp.IconButton iconButton1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Panel pnl_Titulo;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button button2;
-        private FontAwesome.Sharp.IconButton iconButton2;
-        private FontAwesome.Sharp.IconButton iconButton1;
-        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Label label2;
     }
 }

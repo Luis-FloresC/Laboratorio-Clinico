@@ -53,9 +53,11 @@
     <Compile Include="Cache\Cache_Usuario.cs" />
     <Compile Include="Cache\Recuperar_Contraseña.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Utilidades\Utilidades.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

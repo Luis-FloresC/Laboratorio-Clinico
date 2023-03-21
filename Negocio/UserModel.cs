@@ -18,9 +18,31 @@ namespace Negocio
             return userDao.Login(user, pass);
         }
 
+        public string EditarDatosMedico(string nombre, string apellido, DateTime fechaNac, string direccion,
+            string telefono, string genero, int id)
+        {
+            return userDao.EditarDatosMedico(nombre, apellido, fechaNac, direccion, telefono, genero, id);
+        }
+
+        public string EditarDatosEmpleado(string nombre, string apellido, DateTime fechaNac, string direccion,
+            string telefono, string genero, int id)
+        {
+            return userDao.EditarDatosEmpleado(nombre, apellido, fechaNac, direccion, telefono, genero, id);
+        }
+
+        public string EditarUsuario(string Contraseña, string dni, string correo, string user)
+        {
+            return userDao.EditarUsuario(Contraseña, dni, correo, user);
+        }
+
         public bool buscarUsuarioPorPin(string pin)
         {
             return userDao.buscarUsuarioPorPin(pin);
+        }
+
+        public string cambiarContraseña(string password, int id)
+        {
+            return userDao.CambiarContraseña(password, id);
         }
 
         public string recoverPassword(string userRequesting)

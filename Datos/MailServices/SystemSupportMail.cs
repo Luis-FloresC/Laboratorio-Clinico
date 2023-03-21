@@ -12,8 +12,8 @@ namespace Datos.MailServices
         {
             
             senderMail = "LaboratorioClinicoSupport@gmail.com";
-            user = "319e92345f67a7";
-            password = "0a110133da1ab6";
+            user = "d8475b7531e4b8";
+            password = "5b42c657fe47ce";
             host = "sandbox.smtp.mailtrap.io";
             port = 2525;
             ssl = true;

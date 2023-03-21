@@ -120,10 +120,10 @@ namespace Presentacion
             this.circularProgressBar1.Size = new System.Drawing.Size(226, 221);
             this.circularProgressBar1.StartAngle = 270;
             this.circularProgressBar1.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
-            this.circularProgressBar1.SubscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.circularProgressBar1.SubscriptColor = System.Drawing.Color.White;
             this.circularProgressBar1.SubscriptMargin = new System.Windows.Forms.Padding(10, -35, 0, 0);
             this.circularProgressBar1.SubscriptText = "";
-            this.circularProgressBar1.SuperscriptColor = System.Drawing.Color.FromArgb(((int)(((byte)(166)))), ((int)(((byte)(166)))), ((int)(((byte)(166)))));
+            this.circularProgressBar1.SuperscriptColor = System.Drawing.Color.White;
             this.circularProgressBar1.SuperscriptMargin = new System.Windows.Forms.Padding(10, 35, 0, 0);
             this.circularProgressBar1.SuperscriptText = "%";
             this.circularProgressBar1.TabIndex = 5;

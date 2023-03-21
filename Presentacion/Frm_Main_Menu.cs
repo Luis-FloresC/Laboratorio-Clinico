@@ -128,21 +128,9 @@ namespace Presentacion
             
             lbl_nombre.Text = Cache_Usuario.NombreEmpleado + " " + Cache_Usuario.ApellidoEmpleado;
             lbl_cargo.Text = Cache_Usuario.Cargo;
-            int offset = 0;
-            if (Cache_Usuario.CorreoElectronicoUsuario.Length > 19)
-            {
-                offset = (19 - 3) - Cache_Usuario.CorreoElectronicoUsuario.Length;
-
-                String s = Cache_Usuario.CorreoElectronicoUsuario.Replace(Cache_Usuario.CorreoElectronicoUsuario,"..." );
-
-               
+            lbl_email.Text = Cache_Usuario.CorreoElectronicoUsuario;
 
 
-            }
-
-
-            
-            
         }
 
         #region Funcionalida_Form
@@ -431,7 +419,10 @@ namespace Presentacion
             {
                 ManagePermissions();
             }
-    
+
+            lbl_nombre.Text = Cache_Usuario.NombreEmpleado + " " + Cache_Usuario.ApellidoEmpleado;
+            lbl_cargo.Text = Cache_Usuario.Cargo;
+            lbl_email.Text = Cache_Usuario.CorreoElectronicoUsuario;
         }
        
     }

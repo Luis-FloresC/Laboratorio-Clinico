@@ -83,6 +83,7 @@ namespace Presentacion
             this.iconButton1.TabIndex = 18;
             this.iconButton1.Text = "Guardar";
             this.iconButton1.UseVisualStyleBackColor = false;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // label4
             // 
@@ -168,6 +169,7 @@ namespace Presentacion
             // 
             // txtDni
             // 
+            this.txtDni.Enabled = false;
             this.txtDni.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDni.Location = new System.Drawing.Point(23, 172);
             this.txtDni.Name = "txtDni";

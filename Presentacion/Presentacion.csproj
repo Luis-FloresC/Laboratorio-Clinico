@@ -236,11 +236,23 @@
     <Compile Include="Frm_Reportes.Designer.cs">
       <DependentUpon>Frm_Reportes.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm_Restablecer_Password.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Restablecer_Password.Designer.cs">
+      <DependentUpon>Frm_Restablecer_Password.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm_Usuarios_Main.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Frm_Usuarios_Main.Designer.cs">
       <DependentUpon>Frm_Usuarios_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Validar_Pin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Validar_Pin.Designer.cs">
+      <DependentUpon>Frm_Validar_Pin.cs</DependentUpon>
     </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
@@ -337,8 +349,14 @@
     <EmbeddedResource Include="Frm_Reportes.resx">
       <DependentUpon>Frm_Reportes.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Restablecer_Password.resx">
+      <DependentUpon>Frm_Restablecer_Password.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm_Usuarios_Main.resx">
       <DependentUpon>Frm_Usuarios_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Validar_Pin.resx">
+      <DependentUpon>Frm_Validar_Pin.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>

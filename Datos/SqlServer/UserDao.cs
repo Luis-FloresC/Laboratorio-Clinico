@@ -171,7 +171,7 @@ namespace Datos
                 {
                     command.Connection = connection;
                     command.CommandText = "select id_usuario,Pin_Recuperacion,Fecha_Gen_Pin from Usuarios where Pin_Recuperacion = @pin";
-                    command.Parameters.AddWithValue("@user", pin);
+                    command.Parameters.AddWithValue("@pin", pin);
                     command.CommandType = CommandType.Text;
                     SqlDataReader reader = command.ExecuteReader();
                     if (reader.HasRows)
@@ -191,6 +191,157 @@ namespace Datos
                 }
             }
         }
+
+
+        public string CambiarContraseña(string Contraseña,int id)
+        {
+
+            try
+            {
+                using (var CN = GetConnection())
+                {
+                    CN.Open();
+                    using (var CMD = new SqlCommand())
+                    {
+                        CMD.Connection = CN;
+                        CMD.CommandText = "CambiarPassword";
+                        CMD.Parameters.AddWithValue("@password", Contraseña);
+                        CMD.Parameters.AddWithValue("@id", id);
+                        CMD.Parameters.Add("@mensaje", SqlDbType.NVarChar, 150).Direction = ParameterDirection.Output;
+                        CMD.CommandType = CommandType.StoredProcedure;
+                        CMD.ExecuteNonQuery();
+                        return CMD.Parameters["@mensaje"].Value.ToString();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                return ex.Message.ToString();
+            }
+
+        }
+
+        public string EditarUsuario(string Contraseña, string dni ,string correo,string user)
+        {
+
+            try
+            {
+                using (var CN = GetConnection())
+                {
+                    CN.Open();
+                    using (var CMD = new SqlCommand())
+                    {
+                        CMD.Connection = CN;
+                        CMD.CommandText = "Editar_Usuario";
+                        CMD.Parameters.AddWithValue("@Contrasenia_Us", Contraseña);
+                        CMD.Parameters.AddWithValue("@Nombre_us", user);
+                        CMD.Parameters.AddWithValue("@Dni_Us", dni);
+
+                        CMD.Parameters.AddWithValue("@Correo_Us", correo);
+                        CMD.Parameters.Add("@mensaje", SqlDbType.NVarChar, 150).Direction = ParameterDirection.Output;
+                        CMD.CommandType = CommandType.StoredProcedure;
+                        CMD.ExecuteNonQuery();
+                        return CMD.Parameters["@mensaje"].Value.ToString();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                return ex.Message.ToString();
+            }
+
+        }
+
+        public string EditarDatosEmpleado(string nombre, string apellido, DateTime fechaNac, string direccion, string telefono, string genero,int id)
+        {
+
+            try
+            {
+                using (var CN = GetConnection())
+                {
+                    CN.Open();
+                    using (var CMD = new SqlCommand())
+                    {
+                        CMD.Connection = CN;
+                        CMD.CommandText = @"Update Empleados 
+                                            set Nombre_Empleado = @nombre,
+                                            Apellido_Empleado = @apellido,
+                                            Genero = @gen,
+                                            Fecha_Nacimiento = @fecha,
+                                            Direccion_Empleado = @direccion,
+                                            Telefono_Empleado = @tel,
+                                            Fecha_Actualizacion = GETDATE()
+                                            where Id_Empleado = @id";
+                        CMD.Parameters.AddWithValue("@nombre", nombre);
+                        CMD.Parameters.AddWithValue("@apellido", apellido);
+                        CMD.Parameters.AddWithValue("@fecha", fechaNac);
+                        CMD.Parameters.AddWithValue("@direccion", direccion);
+                        CMD.Parameters.AddWithValue("@tel", telefono);
+                        CMD.Parameters.AddWithValue("@gen", genero);
+                        CMD.Parameters.AddWithValue("@id", id);
+
+
+                        CMD.CommandType = CommandType.Text;
+                        CMD.ExecuteNonQuery();
+                        return "Datos del Empleado Actualizados";
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                return ex.Message.ToString();
+            }
+
+        }
+
+
+        public string EditarDatosMedico(string nombre, string apellido, DateTime fechaNac, string direccion, string telefono, string genero, int id)
+        {
+
+            try
+            {
+                using (var CN = GetConnection())
+                {
+                    CN.Open();
+                    using (var CMD = new SqlCommand())
+                    {
+                        CMD.Connection = CN;
+                        CMD.CommandText = @"Update Medicos 
+                                            set Nombres = @nombre,
+                                            Apellidos = @apellido,
+                                            Genero = @gen,
+                                            Fecha_Nacimiento = @fecha,
+                                            Direccion = @direccion,
+                                            Telefono = @tel,
+                                            Fecha_Actualizacion = GETDATE()
+                                            where Id_Medico = @id";
+                        CMD.Parameters.AddWithValue("@nombre", nombre);
+                        CMD.Parameters.AddWithValue("@apellido", apellido);
+                        CMD.Parameters.AddWithValue("@fecha", fechaNac);
+                        CMD.Parameters.AddWithValue("@direccion", direccion);
+                        CMD.Parameters.AddWithValue("@tel", telefono);
+                        CMD.Parameters.AddWithValue("@id", id);
+                        CMD.Parameters.AddWithValue("@gen", genero);
+
+
+                        CMD.CommandType = CommandType.Text;
+                        CMD.ExecuteNonQuery();
+                        return "Datos del Medico Actualizados";
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                return ex.Message.ToString();
+            }
+
+        }
+
+
 
         public void obtenerPermisosUsuario(int idRol)
         {
