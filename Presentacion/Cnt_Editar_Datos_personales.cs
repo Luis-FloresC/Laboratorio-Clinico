@@ -114,6 +114,24 @@ namespace Presentacion
                             }
                         }
                     }
+                    else
+                    {
+                        UserModel user = new UserModel();
+                        var result = user.EditarDatosEmpleado(txtNombre.Text, txtApellido.Text, DtpFechaNac.Value,
+                            TxtDireccion.Text, txtTelefono.Text, cmbGenero.Text, Cache_Usuario.IdEmpleado);
+                        utilidades.AlertMessage(result, "I");
+                        var res = user.LoginUser(Cache_Usuario.DniEmpleado, Cache_Usuario.ContraseniaUsuario);
+                        if (res)
+                        {
+                            Form frm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_Editar_Perfil_Main);
+                            if (frm != null)
+                            {
+                                //si la instancia existe la cierro
+                                frm.Close();
+                                return;
+                            }
+                        }
+                    }
                 }
                 
             }
