@@ -191,6 +191,7 @@ namespace Presentacion
             this.iconButton1.TabIndex = 35;
             this.iconButton1.Text = "Guardar";
             this.iconButton1.UseVisualStyleBackColor = false;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // label4
             // 

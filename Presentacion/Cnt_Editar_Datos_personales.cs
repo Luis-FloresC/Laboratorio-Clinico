@@ -24,6 +24,13 @@ namespace Presentacion
         public Cnt_Editar_Datos_personales(string mode)
         {
             this.Mode = mode;
+            var empleados = new EmpleadosModel();
+            var result = empleados.BuscarPacienteId(Cache_Empleado.IdEmpleado);
+            if (result)
+            {
+
+            }
+
             InitializeComponent();
         }
 
@@ -41,7 +48,7 @@ namespace Presentacion
                     return;
                 }
             }
-            else if (this.Mode == "Nuevo")
+            else
             {
                 Form frm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_Nuevo_Empleado_Main);
 
@@ -75,8 +82,19 @@ namespace Presentacion
                 txtDni.Text = "";
                 txtTelefono.Text = "";
                 cmbGenero.SelectedText = "";
-               
+                txtDni.Enabled = true;
                 TxtDireccion.Text = "";
+            }
+            else
+            {
+                txtApellido.Text = Cache_Empleado.ApellidoEmpleado;
+                txtNombre.Text = Cache_Empleado.NombreEmpleado;
+                txtDni.Text = Cache_Empleado.DniEmpleado;
+                txtDni.Enabled = true;
+                txtTelefono.Text = Cache_Empleado.TelefonoEmpleado;
+                cmbGenero.SelectedText = Cache_Empleado.GeneroEmpleado;
+                DtpFechaNac.Value = Cache_Empleado.FechaNacimientoEmpleado;
+                TxtDireccion.Text = Cache_Empleado.DireccionEmpleado;
             }
 
           
@@ -134,6 +152,54 @@ namespace Presentacion
                     }
                 }
                 
+            }
+            else if (this.Mode == "Nuevo")
+            {
+                Utilidades utilidades = new Utilidades();
+                if (utilidades.CampoVacio(txtNombre.Text) || utilidades.CampoVacio(txtApellido.Text) ||
+                    utilidades.CampoVacio(txtTelefono.Text) || utilidades.CampoVacio(TxtDireccion.Text) ||
+                    utilidades.CampoVacio(DtpFechaNac.Text) || utilidades.CampoVacio(cmbGenero.Text))
+                {
+                    utilidades.AlertMessage("Todos los campos son obligatorios", "A");
+                }
+                else
+                {
+                    EmpleadosModel emp = new EmpleadosModel();
+                   var resultado =  emp.NuevoEmpleado(txtNombre.Text, txtApellido.Text, txtDni.Text, cmbGenero.Text,DtpFechaNac.Value,
+                        TxtDireccion.Text, txtTelefono.Text);
+                    utilidades.AlertMessage(resultado,"I");
+                    Form frm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_Nuevo_Empleado_Main);
+                    if (frm != null)
+                    {
+                        //si la instancia existe la cierro
+                        frm.Close();
+                        return;
+                    }
+                }
+            }
+            else
+            {
+                Utilidades utilidades = new Utilidades();
+                if (utilidades.CampoVacio(txtNombre.Text) || utilidades.CampoVacio(txtApellido.Text) ||
+                    utilidades.CampoVacio(txtTelefono.Text) || utilidades.CampoVacio(TxtDireccion.Text) ||
+                    utilidades.CampoVacio(DtpFechaNac.Text) || utilidades.CampoVacio(cmbGenero.Text))
+                {
+                    utilidades.AlertMessage("Todos los campos son obligatorios", "A");
+                }
+                else
+                {
+                    EmpleadosModel emp = new EmpleadosModel();
+                    var resultado = emp.EditarEmpleado(txtNombre.Text, txtApellido.Text, txtDni.Text, cmbGenero.Text, DtpFechaNac.Value,
+                        TxtDireccion.Text, txtTelefono.Text,Cache_Empleado.EstadoEmpleado,Cache_Empleado.IdEmpleado);
+                    utilidades.AlertMessage(resultado, "I");
+                    Form frm = Application.OpenForms.Cast<Form>().FirstOrDefault(x => x is Frm_Nuevo_Empleado_Main);
+                    if (frm != null)
+                    {
+                        //si la instancia existe la cierro
+                        frm.Close();
+                        return;
+                    }
+                }
             }
         }
     }

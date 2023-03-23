@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +14,20 @@ namespace Negocio
 
         UserDao userDao = new UserDao();
 
+        public DataTable DataTableUsuarios()
+        {
+            return userDao.DataTableUsuarios();
+        }
+
+        public string NuevoUsuario(string Contraseña, string dni, string correo, string user, int id_rol)
+        {
+            return userDao.NuevoUsuario(Contraseña, dni, correo, user, id_rol);
+        }
+
+        public DataTable ComboBoxCargo()
+        {
+            return userDao.ComboBoxCargo();
+        }
         public bool LoginUser(string user, string pass)
         {
             return userDao.Login(user, pass);

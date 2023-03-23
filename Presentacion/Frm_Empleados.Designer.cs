@@ -32,13 +32,7 @@ namespace Presentacion
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.dg_pacientes = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dg_empleados = new System.Windows.Forms.DataGridView();
             this.pnl_Titulo = new System.Windows.Forms.Panel();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.label1 = new System.Windows.Forms.Label();
@@ -47,21 +41,21 @@ namespace Presentacion
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dg_pacientes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dg_empleados)).BeginInit();
             this.pnl_Titulo.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dg_pacientes
+            // dg_empleados
             // 
-            this.dg_pacientes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dg_empleados.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dg_pacientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dg_pacientes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dg_pacientes.BackgroundColor = System.Drawing.Color.White;
-            this.dg_pacientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dg_pacientes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dg_pacientes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dg_empleados.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dg_empleados.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dg_empleados.BackgroundColor = System.Drawing.Color.White;
+            this.dg_empleados.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dg_empleados.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dg_empleados.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -69,20 +63,13 @@ namespace Presentacion
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(72)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dg_pacientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dg_pacientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dg_pacientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3,
-            this.Column4,
-            this.Column5,
-            this.Column6});
-            this.dg_pacientes.EnableHeadersVisualStyles = false;
-            this.dg_pacientes.GridColor = System.Drawing.Color.SteelBlue;
-            this.dg_pacientes.Location = new System.Drawing.Point(5, 46);
-            this.dg_pacientes.Name = "dg_pacientes";
-            this.dg_pacientes.ReadOnly = true;
+            this.dg_empleados.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dg_empleados.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dg_empleados.EnableHeadersVisualStyles = false;
+            this.dg_empleados.GridColor = System.Drawing.Color.SteelBlue;
+            this.dg_empleados.Location = new System.Drawing.Point(5, 46);
+            this.dg_empleados.Name = "dg_empleados";
+            this.dg_empleados.ReadOnly = true;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -90,59 +77,17 @@ namespace Presentacion
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dg_pacientes.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dg_pacientes.RowHeadersVisible = false;
+            this.dg_empleados.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dg_empleados.RowHeadersVisible = false;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            this.dg_pacientes.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dg_pacientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dg_pacientes.Size = new System.Drawing.Size(641, 342);
-            this.dg_pacientes.TabIndex = 24;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "#";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 47;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Nombre Completo";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 203;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Dni";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 62;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Edad";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 82;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Genero";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 104;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Telefono";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Width = 110;
+            this.dg_empleados.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dg_empleados.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dg_empleados.Size = new System.Drawing.Size(621, 342);
+            this.dg_empleados.TabIndex = 24;
             // 
             // pnl_Titulo
             // 
@@ -221,12 +166,13 @@ namespace Presentacion
             this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton4.IconSize = 30;
             this.iconButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton4.Location = new System.Drawing.Point(229, 425);
+            this.iconButton4.Location = new System.Drawing.Point(632, 152);
             this.iconButton4.Name = "iconButton4";
             this.iconButton4.Size = new System.Drawing.Size(211, 47);
             this.iconButton4.TabIndex = 27;
             this.iconButton4.Text = "  Eliminar Empleado";
             this.iconButton4.UseVisualStyleBackColor = false;
+            this.iconButton4.Click += new System.EventHandler(this.iconButton4_Click);
             // 
             // iconButton2
             // 
@@ -240,7 +186,7 @@ namespace Presentacion
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton2.IconSize = 30;
             this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.Location = new System.Drawing.Point(12, 425);
+            this.iconButton2.Location = new System.Drawing.Point(632, 99);
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Size = new System.Drawing.Size(211, 47);
             this.iconButton2.TabIndex = 26;
@@ -276,11 +222,12 @@ namespace Presentacion
             this.Controls.Add(this.iconButton4);
             this.Controls.Add(this.iconButton2);
             this.Controls.Add(this.iconButton3);
-            this.Controls.Add(this.dg_pacientes);
+            this.Controls.Add(this.dg_empleados);
             this.Controls.Add(this.pnl_Titulo);
             this.Name = "Frm_Empleados";
             this.Text = "Frm_Empleados";
-            ((System.ComponentModel.ISupportInitialize)(this.dg_pacientes)).EndInit();
+            this.Load += new System.EventHandler(this.Frm_Empleados_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dg_empleados)).EndInit();
             this.pnl_Titulo.ResumeLayout(false);
             this.pnl_Titulo.PerformLayout();
             this.ResumeLayout(false);
@@ -292,13 +239,7 @@ namespace Presentacion
         private FontAwesome.Sharp.IconButton iconButton4;
         private FontAwesome.Sharp.IconButton iconButton2;
         private FontAwesome.Sharp.IconButton iconButton3;
-        private System.Windows.Forms.DataGridView dg_pacientes;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
+        private System.Windows.Forms.DataGridView dg_empleados;
         private System.Windows.Forms.Panel pnl_Titulo;
         private FontAwesome.Sharp.IconButton iconButton1;
         private System.Windows.Forms.Label label1;

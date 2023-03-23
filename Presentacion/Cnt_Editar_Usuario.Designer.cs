@@ -37,8 +37,8 @@ namespace Presentacion
             this.txtPassword = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.txtConfirmarPassword = new System.Windows.Forms.TextBox();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.SuspendLayout();
             // 
             // txtNombreUser
@@ -48,6 +48,7 @@ namespace Presentacion
             this.txtNombreUser.Name = "txtNombreUser";
             this.txtNombreUser.Size = new System.Drawing.Size(223, 27);
             this.txtNombreUser.TabIndex = 0;
+            this.txtNombreUser.TextChanged += new System.EventHandler(this.txtNombreUser_TextChanged);
             // 
             // label1
             // 
@@ -58,6 +59,7 @@ namespace Presentacion
             this.label1.Size = new System.Drawing.Size(158, 21);
             this.label1.TabIndex = 1;
             this.label1.Text = "Nombre de Usuario";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -68,6 +70,7 @@ namespace Presentacion
             this.label2.Size = new System.Drawing.Size(154, 21);
             this.label2.TabIndex = 3;
             this.label2.Text = "Correo Electrónico";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtCorreoElectronico
             // 
@@ -76,6 +79,7 @@ namespace Presentacion
             this.txtCorreoElectronico.Name = "txtCorreoElectronico";
             this.txtCorreoElectronico.Size = new System.Drawing.Size(223, 27);
             this.txtCorreoElectronico.TabIndex = 2;
+            this.txtCorreoElectronico.TextChanged += new System.EventHandler(this.txtCorreoElectronico_TextChanged);
             // 
             // label3
             // 
@@ -86,6 +90,7 @@ namespace Presentacion
             this.label3.Size = new System.Drawing.Size(103, 21);
             this.label3.TabIndex = 5;
             this.label3.Text = "Contraseña";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // txtPassword
             // 
@@ -95,6 +100,7 @@ namespace Presentacion
             this.txtPassword.Size = new System.Drawing.Size(223, 27);
             this.txtPassword.TabIndex = 4;
             this.txtPassword.UseSystemPasswordChar = true;
+            this.txtPassword.TextChanged += new System.EventHandler(this.txtPassword_TextChanged);
             // 
             // label4
             // 
@@ -105,6 +111,7 @@ namespace Presentacion
             this.label4.Size = new System.Drawing.Size(184, 21);
             this.label4.TabIndex = 7;
             this.label4.Text = "Confirmar Contraseña";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // txtConfirmarPassword
             // 
@@ -114,25 +121,7 @@ namespace Presentacion
             this.txtConfirmarPassword.Size = new System.Drawing.Size(223, 27);
             this.txtConfirmarPassword.TabIndex = 6;
             this.txtConfirmarPassword.UseSystemPasswordChar = true;
-            // 
-            // iconButton1
-            // 
-            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(154)))), ((int)(((byte)(76)))));
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton1.ForeColor = System.Drawing.Color.White;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.CheckCircle;
-            this.iconButton1.IconColor = System.Drawing.Color.White;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 30;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(133, 201);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(197, 47);
-            this.iconButton1.TabIndex = 8;
-            this.iconButton1.Text = "Guardar";
-            this.iconButton1.UseVisualStyleBackColor = false;
-            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
+            this.txtConfirmarPassword.TextChanged += new System.EventHandler(this.txtConfirmarPassword_TextChanged);
             // 
             // iconButton2
             // 
@@ -152,6 +141,25 @@ namespace Presentacion
             this.iconButton2.Text = "Cancelar";
             this.iconButton2.UseVisualStyleBackColor = false;
             this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(154)))), ((int)(((byte)(76)))));
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton1.ForeColor = System.Drawing.Color.White;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.CheckCircle;
+            this.iconButton1.IconColor = System.Drawing.Color.White;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 30;
+            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton1.Location = new System.Drawing.Point(133, 201);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(197, 47);
+            this.iconButton1.TabIndex = 8;
+            this.iconButton1.Text = "Guardar";
+            this.iconButton1.UseVisualStyleBackColor = false;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // Cnt_Editar_Usuario
             // 

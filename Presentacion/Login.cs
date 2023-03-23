@@ -33,7 +33,7 @@ namespace Presentacion
             {
                 txtUser.Text = "";
             }
-            lblError.Visible = false;
+            
         }
 
         private void txtUser_Leave(object sender, EventArgs e)
@@ -59,7 +59,7 @@ namespace Presentacion
                 txtPassword.Text = "";
                 txtPassword.UseSystemPasswordChar = true;
             }
-            lblError.Visible = false;
+           
         }
 
         /*

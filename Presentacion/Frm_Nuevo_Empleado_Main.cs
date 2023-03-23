@@ -30,8 +30,7 @@ namespace Presentacion
             InitializeComponent();
             bordeInferior = new Panel();
             bordeInferior.Size = new Size(350, 3);
-            panel1.Controls.Add(bordeInferior);
-            activarBoton(iconButton3);
+         
             Cnt_Editar_Datos_personales datosPersonales = new Cnt_Editar_Datos_personales("Nuevo");
             aplicarFiltro(datosPersonales);
         }
@@ -40,13 +39,11 @@ namespace Presentacion
         {
             InitializeComponent();
             label1.Text = titulo;
-            iconButton3.Text = "Editar Datos Personales";
-            iconButton1.Text = "Editar Usuario";
+       
             bordeInferior = new Panel();
             bordeInferior.Size = new Size(350, 3);
-            panel1.Controls.Add(bordeInferior);
-            activarBoton(iconButton3);
-            Cnt_Editar_Datos_personales datosPersonales = new Cnt_Editar_Datos_personales("Nuevo");
+          
+            Cnt_Editar_Datos_personales datosPersonales = new Cnt_Editar_Datos_personales("Editar Empleado");
             aplicarFiltro(datosPersonales);
         }
 
@@ -94,23 +91,13 @@ namespace Presentacion
             this.Close();
         }
 
-        private void iconButton1_Click(object sender, EventArgs e)
-        {
-            activarBoton(sender);
-            Cnt_Editar_Usuario editarUsuario = new Cnt_Editar_Usuario("Nuevo");
-            aplicarFiltro(editarUsuario);
-        }
+       
 
         private void pnl_contenedor_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void iconButton3_Click(object sender, EventArgs e)
-        {
-            activarBoton(sender);
-            Cnt_Editar_Datos_personales datosPersonales = new Cnt_Editar_Datos_personales("Nuevo");
-            aplicarFiltro(datosPersonales);
-        }
+       
     }
 }

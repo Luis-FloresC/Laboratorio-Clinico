@@ -13,6 +13,69 @@ namespace Datos
 {
     public class UserDao:Connection
     {
+        public int Id { get; set; }
+        
+        public string Cargo { get; set; }
+
+
+        public DataTable ComboBoxCargo()
+        {
+            try
+            {
+                DataTable dataTable = new DataTable();
+                using (var conexion = GetConnection())
+                {
+                    string query = @"SELECT  [Id_Rol],[Nombre_Rol] FROM [Laboratorio_clinico].[dbo].[Roles]";
+
+                    SqlCommand cmd = new SqlCommand(query, conexion);
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dataTable);
+                    return dataTable;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+        }
+
+
+        
+
+
+        public DataTable DataTableUsuarios()
+        {
+            try
+            {
+                DataTable dataTable = new DataTable();
+                using (var conexion = GetConnection())
+                {
+                    string query = @"SELECT u.[id_usuario] 'Código'
+                                  ,u.[Nombre_Us] 'Nombre de Usuario'
+                                  ,u.[Dni_Us] 'Identidad'
+                                  ,u.[Estatus_Us] 'Activo'
+                                  ,u.[Correo_Us] 'Correo Electrónico'
+                                  ,r.Nombre_Rol 'Cargo'
+                                  ,u.[Fecha_Registro] 'Registro'
+                                  ,u.[Fecha_Actualizacion] 'Actualización'
+                              FROM [Laboratorio_clinico].[dbo].[Usuarios] u
+                              join Roles r on u.Id_Rol = r.Id_Rol;";
+
+                    SqlCommand cmd = new SqlCommand(query, conexion);
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dataTable);
+                    return dataTable;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+        }
 
         public string recoverPassword(string userRequesting)
         {
@@ -207,6 +270,38 @@ namespace Datos
                         CMD.CommandText = "CambiarPassword";
                         CMD.Parameters.AddWithValue("@password", Contraseña);
                         CMD.Parameters.AddWithValue("@id", id);
+                        CMD.Parameters.Add("@mensaje", SqlDbType.NVarChar, 150).Direction = ParameterDirection.Output;
+                        CMD.CommandType = CommandType.StoredProcedure;
+                        CMD.ExecuteNonQuery();
+                        return CMD.Parameters["@mensaje"].Value.ToString();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                return ex.Message.ToString();
+            }
+
+        }
+
+        public string NuevoUsuario(string Contraseña, string dni, string correo, string user,int id_rol)
+        {
+
+            try
+            {
+                using (var CN = GetConnection())
+                {
+                    CN.Open();
+                    using (var CMD = new SqlCommand())
+                    {
+                        CMD.Connection = CN;
+                        CMD.CommandText = "[Registrar_Usuario]";
+                        CMD.Parameters.AddWithValue("@Contrasenia_Us", Contraseña);
+                        CMD.Parameters.AddWithValue("@Nombre_us", user);
+                        CMD.Parameters.AddWithValue("@Dni_Us", dni);
+                        CMD.Parameters.AddWithValue("@Id_Rol", id_rol);
+                        CMD.Parameters.AddWithValue("@Correo_Us", correo);
                         CMD.Parameters.Add("@mensaje", SqlDbType.NVarChar, 150).Direction = ParameterDirection.Output;
                         CMD.CommandType = CommandType.StoredProcedure;
                         CMD.ExecuteNonQuery();

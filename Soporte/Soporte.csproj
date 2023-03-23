@@ -50,6 +50,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Cache\Cache_Cargos.cs" />
+    <Compile Include="Cache\Cache_Empleado.cs" />
+    <Compile Include="Cache\Cache_Pacientes.cs" />
     <Compile Include="Cache\Cache_Usuario.cs" />
     <Compile Include="Cache\Recuperar_Contraseña.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

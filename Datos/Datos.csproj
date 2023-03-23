@@ -83,6 +83,8 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="SqlServer\EmpleadosDao.cs" />
+    <Compile Include="SqlServer\PacientesDao.cs" />
     <Compile Include="SqlServer\UserDao.cs" />
   </ItemGroup>
   <ItemGroup>

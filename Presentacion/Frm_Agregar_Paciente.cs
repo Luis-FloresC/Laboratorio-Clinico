@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
+using Negocio;
+using Soporte.Cache;
+using Soporte.Utilidades;
 
 namespace Presentacion
 {
@@ -24,10 +27,37 @@ namespace Presentacion
             InitializeComponent();
         }
 
+        private string Titulo = "Nuevo Paciente";
         public Frm_Agregar_Paciente(string titulo)
         {
             InitializeComponent();
             label1.Text = titulo;
+            Titulo = titulo;
+            CargarDatos();
+
+
+        }
+
+        private void CargarDatos()
+        {
+            PacientesModel paciente = new PacientesModel();
+
+            var result = paciente.BuscarPacienteId(Cache_Pacientes.IdPaciente);
+            if (result)
+            {
+                txtNombre.Text = Cache_Pacientes.NombrePaciente;
+                txtApellido.Text = Cache_Pacientes.ApellidoPaciente;
+                txtTelefono.Text = Cache_Pacientes.TelefonoPaciente;
+                txtDni.Text = Cache_Pacientes.DniPaciente;
+                TxtDireccion.Text = Cache_Pacientes.DireccionPaciente;
+                cmbGenero.Text = Cache_Pacientes.GeneroPaciente;
+                DtpFechaNac.Value = Cache_Pacientes.FechaNacimientoPaciente;
+            }
+            else
+            {
+                this.Close();
+            }
+           
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -55,6 +85,44 @@ namespace Presentacion
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            var utilidades = new Utilidades();
+
+            if (utilidades.CampoVacio(txtNombre.Text) || utilidades.CampoVacio(txtApellido.Text) || utilidades.CampoVacio(txtDni.Text) || utilidades.CampoVacio(txtTelefono.Text) || utilidades.CampoVacio(TxtDireccion.Text) || utilidades.CampoVacio(cmbGenero.Text) || utilidades.CampoVacio(DtpFechaNac.Text))
+            {
+                utilidades.AlertMessage("Todos los campos son Obligatorios","A");
+            }
+            else
+            {
+
+                
+                var pacientesModel = new PacientesModel();
+
+                if (Titulo == "Editar Paciente")
+                {
+                    var result = pacientesModel.EditarPaciente(txtNombre.Text, txtApellido.Text, txtDni.Text, cmbGenero.Text,
+                        DtpFechaNac.Value, TxtDireccion.Text, txtTelefono.Text,true,Cache_Pacientes.IdPaciente);
+                    utilidades.AlertMessage(result, "I");
+                }
+                else
+                {
+                    /*
+                    var result = pacientesModel.NuevoPaciente(txtNombre.Text, txtApellido.Text, txtDni.Text, cmbGenero.Text,
+                        DtpFechaNac.Value, TxtDireccion.Text, txtTelefono.Text);
+                    utilidades.AlertMessage(result, "I");*/
+                }
+
+              
+                this.Close();
+               
+                
+            }
+
+            
+
         }
     }
 }
