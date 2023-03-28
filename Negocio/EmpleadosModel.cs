@@ -38,9 +38,9 @@ namespace Negocio
                 direccion, telefono);
         }
 
-        public string EstadoPaciente(bool estado, int id)
+        public string EstadoEmpelado(bool estado, int id)
         {
-            return empleadosDao.EstadoPaciente(estado, id);
+            return empleadosDao.EstadoEmpleado(estado, id);
         }
     }
 }

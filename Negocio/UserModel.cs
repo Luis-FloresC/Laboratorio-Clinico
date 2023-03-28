@@ -19,6 +19,15 @@ namespace Negocio
             return userDao.DataTableUsuarios();
         }
 
+        public bool BuscarUsuarioPorId(int id)
+        {
+            return userDao.BuscarUsuarioPorId(id);
+        }
+        public DataTable BuscarPersonal(string filtro = "All")
+        {
+            return userDao.BuscarPersonal(filtro);
+        }
+
         public string NuevoUsuario(string Contraseña, string dni, string correo, string user, int id_rol)
         {
             return userDao.NuevoUsuario(Contraseña, dni, correo, user, id_rol);
@@ -45,9 +54,9 @@ namespace Negocio
             return userDao.EditarDatosEmpleado(nombre, apellido, fechaNac, direccion, telefono, genero, id);
         }
 
-        public string EditarUsuario(string Contraseña, string dni, string correo, string user)
+        public string EditarUsuario(string Contraseña, string dni, string correo, string user,int id_Rol)
         {
-            return userDao.EditarUsuario(Contraseña, dni, correo, user);
+            return userDao.EditarUsuario(Contraseña, dni, correo, user,id_Rol);
         }
 
         public bool buscarUsuarioPorPin(string pin)

@@ -12,6 +12,10 @@ namespace Datos.SqlServer
 {
     public class EmpleadosDao : Connection
     {
+        /// <summary>
+        /// Funcion para lista todos los empleados y mostrar en el datagridview
+        /// </summary>
+        /// <returns></returns>
         public DataTable DataTableEmpleados()
         {
             try
@@ -45,7 +49,11 @@ namespace Datos.SqlServer
 
         }
 
-
+        /// <summary>
+        /// Funcion para buscar un empleado por id
+        /// </summary>
+        /// <param name="id">Id del Empleado</param>
+        /// <returns></returns>
         public bool BuscarEmpleadoId(int id)
         {
             try
@@ -93,6 +101,17 @@ namespace Datos.SqlServer
 
         }
 
+        /// <summary>
+        /// Función para registrar un nuevo Empleado
+        /// </summary>
+        /// <param name="nombre"></param>
+        /// <param name="apellido"></param>
+        /// <param name="dni"></param>
+        /// <param name="genero"></param>
+        /// <param name="fechaNac"></param>
+        /// <param name="direccion"></param>
+        /// <param name="telefono"></param>
+        /// <returns></returns>
         public string NuevoEmpleado(string nombre, string apellido, string dni, string genero, DateTime fechaNac, string direccion, string telefono)
         {
 
@@ -143,6 +162,19 @@ namespace Datos.SqlServer
 
         }
 
+        /// <summary>
+        /// Funcion para editar un Empleado
+        /// </summary>
+        /// <param name="nombre"></param>
+        /// <param name="apellido"></param>
+        /// <param name="dni"></param>
+        /// <param name="genero"></param>
+        /// <param name="fechaNac"></param>
+        /// <param name="direccion"></param>
+        /// <param name="telefono"></param>
+        /// <param name="estado"></param>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public string EditarEmpleado(string nombre, string apellido, string dni, string genero, DateTime fechaNac, string direccion, string telefono, bool estado, int id)
         {
 
@@ -189,7 +221,13 @@ namespace Datos.SqlServer
         }
 
 
-        public string EstadoPaciente(bool estado, int id)
+        /// <summary>
+        /// Funcion para cambiar el estado de un empleado
+        /// </summary>
+        /// <param name="estado"></param>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public string EstadoEmpleado(bool estado, int id)
         {
 
             try

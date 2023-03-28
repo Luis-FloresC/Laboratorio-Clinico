@@ -56,7 +56,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AnalisisModel.cs" />
+    <Compile Include="BitacoraModel.cs" />
     <Compile Include="EmpleadosModel.cs" />
+    <Compile Include="ExamenesModel.cs" />
     <Compile Include="PacientesModel.cs" />
     <Compile Include="UserModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -133,8 +133,14 @@
   <data name="User_logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\User_logo.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="eye_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\eye_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="report_file_25px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\report_file_25px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="normal_screen_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\normal_screen_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="43051523dd67963c7c7f72d1b269a8152" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\43051523dd67963c7c7f72d1b269a8152.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -169,8 +175,8 @@
   <data name="43051523dd67963c7c7f72d1b269a815" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\43051523dd67963c7c7f72d1b269a815.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="project_25px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\project_25px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="cancel_12px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\cancel_12px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="Imagen de WhatsApp 2023-02-26 a las 09.25.51" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Imagen de WhatsApp 2023-02-26 a las 09.25.51.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -178,8 +184,8 @@
   <data name="user_25px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user_25px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="normal_screen_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\normal_screen_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="project_25px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\project_25px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="delete_25px" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\delete_25px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -190,7 +196,7 @@
   <data name="laboratorio_clinico_banner_920" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\laboratorio_clinico_banner_920.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="cancel_12px" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\cancel_12px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="hide_32px" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\hide_32px.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

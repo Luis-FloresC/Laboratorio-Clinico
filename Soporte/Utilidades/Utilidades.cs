@@ -22,6 +22,70 @@ namespace Soporte.Utilidades
             return false;
         }
 
+        public bool ValidarPrecio(decimal precio)
+        {
+            if (precio < 0)
+            {
+                return false; // Precio no puede ser negativo
+            }
+            else if (precio == 0)
+            {
+                return false; // Precio no puede ser cero
+            }
+            else
+            {
+                return true; // Precio válido
+            }
+        }
+
+        public bool EsSoloLetras(string texto)
+        {
+            foreach (char c in texto)
+            {
+                if (!char.IsLetter(c))
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        public bool EsSoloNumeros(string texto,bool isDecimal)
+        {
+            if (isDecimal)
+            {
+                try
+                {
+                    decimal numero;
+                    bool isNum = Decimal.TryParse(texto, out numero);
+                    return isNum;
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+
+                    return false;
+                }
+            }
+            else
+            {
+                try
+                {
+                    int numero;
+                    bool isNum = Int32.TryParse(texto, out numero);
+                    return isNum;
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+
+                    return false;
+                }
+            }
+        }
+
+    
+
         public bool AlgoritmoContraseñaSegura(string password)
         {
             bool mayuscula = false;
@@ -71,5 +135,33 @@ namespace Soporte.Utilidades
             }
         }
 
+
+        /*
+         *
+         *    $max_description_length = 50;
+        
+        foreach($_data as $key => $value)
+        {
+            if(strlen($_data[$key]["ProdDescripcion"]) > $max_description_length)
+            {
+                $string = $value["ProdDescripcion"];
+                $offset = ($max_description_length - 3) - strlen($string);
+                $_data[$key]["ProdDescripcion"] = substr($string, 0, strrpos($string, ' ', $offset)) . '...';
+            }
+
+            $precioFinal = ($value["ProdPrecioVenta"]) + ($value["ProdPrecioVenta"] * 0.15); 
+            $_data[$key]["ProdPrecioVenta"] = number_format($precioFinal, 2);
+        }
+         */
+
+
+        public string LimitarCadena(string cadena, int maxCaracteres)
+        {
+            
+            string nuevaCadena = "";
+            nuevaCadena = cadena.Substring(0,maxCaracteres);
+
+            return nuevaCadena + "...";
+        }
     }
 }

@@ -8,6 +8,8 @@ namespace Soporte.Cache
 {
     public static class Cache_Usuario
     {
+
+        //Prpiedades del usuario que inicio sesion
         public static int IdEmpleado { get; set; }
         public static int IdUsuario { get; set; }
         public static string NombreEmpleado { get; set; }
@@ -33,6 +35,47 @@ namespace Soporte.Cache
         public static string Cargo { get; set; }
         public static List<String> Permisos = new List<String>();
 
+
+
+        //Prpiedades para editar un Usuario
+
+        /*
+         * [id_usuario]
+                                                  ,[Nombre_Us]
+                                                  ,[Dni_Us]
+                                                  ,CONVERT(nvarchar(MAX), DECRYPTBYPASSPHRASE('password', Contrasenia_Us)) 'Contrasenia'
+                                                  ,[Estatus_Us]
+                                                  ,[Correo_Us]
+                                                  ,[Intentos_Us]
+                                                  ,[Pin_Recuperacion]
+                                                  ,[Fecha_Gen_Pin]
+                                                  ,[Id_Rol]
+                                                  ,[Fecha_Bloqueo]
+                                                  ,[Motivo_Bloqueo]
+                                                  ,[Fecha_Desbloqueo]
+                                                  ,[Descripcion_Bloqueo]
+                                                  ,[Fecha_Registro]
+                                                  ,[Fecha_Actualizacion]
+         */
+
+
+        public static int IdUsuarioEdit { get; set; }
+        public static string NombreUs { get; set; }
+        public static string DniUs { get; set; }
+        public static string MotivoBloqueoUs { get; set; }
+        public static string DescripcionBloqueoUs { get; set; }
+        public static bool EstadoUs { get; set; }
+        public static int IntentosUs { get; set; }
+        public static string PinUs { get; set; }
+        public static DateTime FechaGenPinUs { get; set; }
+        public static DateTime FechaBloqueoUs { get; set; }
+        public static DateTime FechaDesbloqueoUs { get; set; }
+        public static string CorreoElectronicoUs { get; set; }
+        public static string ContraseniaUs { get; set; }
+        
+        public static DateTime FechaRegistroUs  { get; set; }
+        public static DateTime FechaActualizacionUs { get; set; }
+        public static int IdRolUs { get; set; }
 
 
     }

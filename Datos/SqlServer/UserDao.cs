@@ -13,11 +13,12 @@ namespace Datos
 {
     public class UserDao:Connection
     {
-        public int Id { get; set; }
-        
-        public string Cargo { get; set; }
+ 
 
-
+         /// <summary>
+         /// Funcion para obtener los roles y cargarlos a un combobox
+         /// </summary>
+         /// <returns>Lista de Roles</returns>
         public DataTable ComboBoxCargo()
         {
             try
@@ -42,9 +43,10 @@ namespace Datos
         }
 
 
-        
-
-
+        /// <summary>
+        /// Función para obtener una lista de usuarios
+        /// </summary>
+        /// <returns>Lista de todos los Usuarios</returns>
         public DataTable DataTableUsuarios()
         {
             try
@@ -77,6 +79,43 @@ namespace Datos
 
         }
 
+
+        /// <summary>
+        /// Funcion para listar todos los empleados y medicos
+        /// </summary>
+        /// <param name="filtro"></param>
+        /// <returns></returns>
+        public DataTable BuscarPersonal(string filtro = "All")
+        {
+            try
+            {
+                DataTable dataTable = new DataTable();
+                using (var conexion = GetConnection())
+                {
+                    string query = @"[BuscarPersonal]";
+
+                    SqlCommand cmd = new SqlCommand(query, conexion);
+                    cmd.Parameters.AddWithValue("@filtro", filtro);
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dataTable);
+                    return dataTable;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+        }
+
+        /// <summary>
+        /// Funcion para cuando el usuario olvide su contraseña lo cual se enviara un pin a su correo electronico que tiene registrado
+        /// en nuestra base de datos
+        /// </summary>
+        /// <param name="userRequesting">Nombre de Usuario o Identidad</param>
+        /// <returns>Mensaje de confirmación de envio de Correo</returns>
         public string recoverPassword(string userRequesting)
         {
             using (var connection = GetConnection())
@@ -116,7 +155,12 @@ namespace Datos
             }
         }
 
-
+        /// <summary>
+        /// Funcion para iniciar sesión en el sistema
+        /// </summary>
+        /// <param name="usuario"></param>
+        /// <param name="contrasenia"></param>
+        /// <returns></returns>
         public bool Login(string usuario, string contrasenia)
         {
             try
@@ -174,6 +218,85 @@ namespace Datos
            
         }
 
+        /// <summary>
+        /// Funcion para buscar un usuario por id
+        /// </summary>
+        /// <param name="id"></param>
+        /// <returns></returns>
+        public bool BuscarUsuarioPorId(int id)
+        {
+            try{
+            
+                using (var connection = GetConnection())
+                {
+                    connection.Open();
+                    using (var command = new SqlCommand())
+                    {
+                        command.Connection = connection;
+                        command.CommandText = @"SELECT [id_usuario]
+                                                  ,[Nombre_Us]
+                                                  ,[Dni_Us]
+                                                  ,CONVERT(nvarchar(MAX), DECRYPTBYPASSPHRASE('password', Contrasenia_Us)) 'Contrasenia'
+                                                  ,[Estatus_Us]
+                                                  ,[Correo_Us]
+                                                  ,[Intentos_Us]
+                                                  ,[Pin_Recuperacion]
+                                                  ,[Fecha_Gen_Pin]
+                                                  ,[Id_Rol]
+                                                  ,[Fecha_Bloqueo]
+                                                  ,[Motivo_Bloqueo]
+                                                  ,[Fecha_Desbloqueo]
+                                                  ,[Descripcion_Bloqueo]
+                                                  ,[Fecha_Registro]
+                                                  ,[Fecha_Actualizacion]
+                                              FROM [Laboratorio_clinico].[dbo].[Usuarios] where id_usuario = @id";
+                        command.Parameters.AddWithValue("@id", id);
+                        
+                        command.CommandType = CommandType.Text;
+                        SqlDataReader reader = command.ExecuteReader();
+                        if (reader.HasRows)
+                        {
+                            while (reader.Read())
+                            {
+                                Cache_Usuario.IdUsuarioEdit = reader.GetInt32(0);
+                                Cache_Usuario.NombreUs = reader.GetString(1);
+                                Cache_Usuario.DniUs = reader.GetString(2);
+                                Cache_Usuario.ContraseniaUs = reader.GetString(3);
+                                Cache_Usuario.EstadoUs = reader.GetBoolean(4);
+                                Cache_Usuario.CorreoElectronicoUs = reader.GetString(5);
+                                Cache_Usuario.IntentosUs = reader.IsDBNull(6) ? 0 : reader.GetInt32(6);
+
+                                Cache_Usuario.PinUs = reader.IsDBNull(7) ? null : reader.GetString(7);
+                                Cache_Usuario.FechaGenPinUs = reader.IsDBNull(8) ? DateTime.Now : reader.GetDateTime(8);
+                                Cache_Usuario.IdRolUs = reader.IsDBNull(9) ? -1 : reader.GetInt32(9);
+                                Cache_Usuario.FechaBloqueoUs = reader.IsDBNull(10) ? DateTime.Now : reader.GetDateTime(10);
+                                Cache_Usuario.MotivoBloqueoUs = reader.IsDBNull(11) ? null : reader.GetString(11);
+                                Cache_Usuario.FechaDesbloqueoUs = reader.IsDBNull(12) ? DateTime.Now : reader.GetDateTime(12);
+                                Cache_Usuario.DescripcionBloqueoUs = reader.IsDBNull(13) ?  null: reader.GetString(13);
+                               
+                                Cache_Usuario.FechaRegistroUs = reader.GetDateTime(14);
+                                Cache_Usuario.FechaActualizacionUs = reader.GetDateTime(15);
+                            }
+                            return true;
+                        }
+                        else
+                            return false;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e.Message.ToString());
+                MessageBox.Show(e.Message.ToString());
+                return false;
+            }
+
+
+        }
+
+        /// <summary>
+        /// Funcion para obtener todos los cargos
+        /// </summary>
         public void obtenerCargos()
         {
             Cache_Cargos.ListaCargos.Clear();
@@ -198,7 +321,9 @@ namespace Datos
                 }
             }
         }
-
+        /// <summary>
+        /// Funcion para obtener todos los permisos
+        /// </summary>
         public void obtenerPermisos()
         {
             Cache_Cargos.Permisos.Clear();
@@ -224,6 +349,11 @@ namespace Datos
             }
         }
 
+        /// <summary>
+        /// Funcion para buscar Usuario por pin de recuperacion
+        /// </summary>
+        /// <param name="pin">pin de recuperacion que recibe el usuario</param>
+        /// <returns>Respuesta verdadera si el pin esta correcto</returns>
         public bool buscarUsuarioPorPin(string pin)
         {
            
@@ -255,7 +385,12 @@ namespace Datos
             }
         }
 
-
+        /// <summary>
+        /// Función para cambiar la Contraseña
+        /// </summary>
+        /// <param name="Contraseña">Nueva Contraseña</param>
+        /// <param name="id">Id del Usuario</param>
+        /// <returns>Mensaje de Confirmación</returns>
         public string CambiarContraseña(string Contraseña,int id)
         {
 
@@ -285,6 +420,15 @@ namespace Datos
 
         }
 
+        /// <summary>
+        /// Funcion para agregar un nuevo usuario a la base de datos
+        /// </summary>
+        /// <param name="Contraseña">Contraseña</param>
+        /// <param name="dni">Identidad</param>
+        /// <param name="correo">Correo Electronico</param>
+        /// <param name="user">Nombre de Usuario</param>
+        /// <param name="id_rol">Id dell Cargo</param>
+        /// <returns>Mensaje de Confirmación</returns>
         public string NuevoUsuario(string Contraseña, string dni, string correo, string user,int id_rol)
         {
 
@@ -317,7 +461,15 @@ namespace Datos
 
         }
 
-        public string EditarUsuario(string Contraseña, string dni ,string correo,string user)
+        /// <summary>
+        /// Funcion para editar Usuario 
+        /// </summary>
+        /// <param name="Contraseña">Contraseña</param>
+        /// <param name="dni">Identidad</param>
+        /// <param name="correo">Correo Electronico</param>
+        /// <param name="user">Nombre de Usuario</param>
+        /// <returns></returns>
+        public string EditarUsuario(string Contraseña, string dni ,string correo,string user,int idRol)
         {
 
             try
@@ -332,7 +484,7 @@ namespace Datos
                         CMD.Parameters.AddWithValue("@Contrasenia_Us", Contraseña);
                         CMD.Parameters.AddWithValue("@Nombre_us", user);
                         CMD.Parameters.AddWithValue("@Dni_Us", dni);
-
+                        CMD.Parameters.AddWithValue("@id_Rol", idRol);
                         CMD.Parameters.AddWithValue("@Correo_Us", correo);
                         CMD.Parameters.Add("@mensaje", SqlDbType.NVarChar, 150).Direction = ParameterDirection.Output;
                         CMD.CommandType = CommandType.StoredProcedure;
@@ -349,6 +501,17 @@ namespace Datos
 
         }
 
+        /// <summary>
+        /// Funcion para editar los datos del usuario
+        /// </summary>
+        /// <param name="nombre"></param>
+        /// <param name="apellido"></param>
+        /// <param name="fechaNac"></param>
+        /// <param name="direccion"></param>
+        /// <param name="telefono"></param>
+        /// <param name="genero"></param>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public string EditarDatosEmpleado(string nombre, string apellido, DateTime fechaNac, string direccion, string telefono, string genero,int id)
         {
 
@@ -392,7 +555,17 @@ namespace Datos
 
         }
 
-
+        /// <summary>
+        /// Funcion para editar los datos del usuario que inicio sesión
+        /// </summary>
+        /// <param name="nombre"></param>
+        /// <param name="apellido"></param>
+        /// <param name="fechaNac"></param>
+        /// <param name="direccion"></param>
+        /// <param name="telefono"></param>
+        /// <param name="genero"></param>
+        /// <param name="id"></param>
+        /// <returns></returns>
         public string EditarDatosMedico(string nombre, string apellido, DateTime fechaNac, string direccion, string telefono, string genero, int id)
         {
 
@@ -437,7 +610,10 @@ namespace Datos
         }
 
 
-
+        /// <summary>
+        /// Funcion para obtener los permisos del usuario
+        /// </summary>
+        /// <param name="idRol"></param>
         public void obtenerPermisosUsuario(int idRol)
         {
             Cache_Usuario.Permisos.Clear();
@@ -467,6 +643,13 @@ namespace Datos
             }
         }
 
+        /// <summary>
+        /// Funcion para validar que el usuario exista
+        /// </summary>
+        /// <param name="id">id del usuario</param>
+        /// <param name="loginName">Nombre de Usuario o Dni</param>
+        /// <param name="pass">Contraseña</param>
+        /// <returns></returns>
         public bool existsUser(int id, string loginName, string pass)
         {
             using (var connection = GetConnection())

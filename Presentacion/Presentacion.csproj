@@ -62,312 +62,348 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Cnt_Bitacora.cs">
+    <Compile Include="Catalogo\Frm_Analisis_Crud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Catalogo\Frm_Analisis_Crud.Designer.cs">
+      <DependentUpon>Frm_Analisis_Crud.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\Frm_Analisis_Main.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Cnt_Bitacora.Designer.cs">
+    <Compile Include="Catalogo\Frm_Analisis_Main.Designer.cs">
+      <DependentUpon>Frm_Analisis_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Catalogo\Frm_Catalogo_Exam_Main.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Catalogo\Frm_Catalogo_Exam_Main.Designer.cs">
+      <DependentUpon>Frm_Catalogo_Exam_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Seguridad\Cnt_Bitacora.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Seguridad\Cnt_Bitacora.Designer.cs">
       <DependentUpon>Cnt_Bitacora.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cnt_Editar_Datos_personales.cs">
+    <Compile Include="Empleados\Cnt_Editar_Datos_personales.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Cnt_Editar_Datos_personales.Designer.cs">
+    <Compile Include="Empleados\Cnt_Editar_Datos_personales.Designer.cs">
       <DependentUpon>Cnt_Editar_Datos_personales.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cnt_Editar_Usuario.cs">
+    <Compile Include="Usuarios\Cnt_Editar_Usuario.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Cnt_Editar_Usuario.Designer.cs">
+    <Compile Include="Usuarios\Cnt_Editar_Usuario.Designer.cs">
       <DependentUpon>Cnt_Editar_Usuario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cnt_Especialidades.cs">
+    <Compile Include="Especialidades\Cnt_Especialidades.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Cnt_Especialidades.Designer.cs">
+    <Compile Include="Especialidades\Cnt_Especialidades.Designer.cs">
       <DependentUpon>Cnt_Especialidades.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cnt_Inventario.cs">
+    <Compile Include="Inventario\Cnt_Inventario.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Cnt_Inventario.Designer.cs">
+    <Compile Include="Inventario\Cnt_Inventario.Designer.cs">
       <DependentUpon>Cnt_Inventario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cnt_Medicos.cs">
+    <Compile Include="Medicos\Cnt_Medicos.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Cnt_Medicos.Designer.cs">
+    <Compile Include="Medicos\Cnt_Medicos.Designer.cs">
       <DependentUpon>Cnt_Medicos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cnt_Permisos.cs">
+    <Compile Include="Seguridad\Cnt_Permisos.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Cnt_Permisos.Designer.cs">
+    <Compile Include="Seguridad\Cnt_Permisos.Designer.cs">
       <DependentUpon>Cnt_Permisos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cnt_Roles.cs">
+    <Compile Include="Seguridad\Cnt_Roles.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Cnt_Roles.Designer.cs">
+    <Compile Include="Seguridad\Cnt_Roles.Designer.cs">
       <DependentUpon>Cnt_Roles.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cnt_Usuarios.cs">
+    <Compile Include="Usuarios\Cnt_Usuarios.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Cnt_Usuarios.Designer.cs">
+    <Compile Include="Usuarios\Cnt_Usuarios.Designer.cs">
       <DependentUpon>Cnt_Usuarios.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_Agregar_Paciente.cs">
+    <Compile Include="Pacientes\Frm_Agregar_Paciente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Agregar_Paciente.Designer.cs">
+    <Compile Include="Pacientes\Frm_Agregar_Paciente.Designer.cs">
       <DependentUpon>Frm_Agregar_Paciente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_Bienvenida.cs">
+    <Compile Include="Menu\Frm_Bienvenida.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Bienvenida.Designer.cs">
+    <Compile Include="Menu\Frm_Bienvenida.Designer.cs">
       <DependentUpon>Frm_Bienvenida.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_Bitacora_Main.cs">
+    <Compile Include="Seguridad\Frm_Bitacora_Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Bitacora_Main.Designer.cs">
+    <Compile Include="Seguridad\Frm_Bitacora_Main.Designer.cs">
       <DependentUpon>Frm_Bitacora_Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_Buscar_Examen_Paciente.cs">
+    <Compile Include="Pacientes\Frm_Buscar_Examen_Paciente.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Buscar_Examen_Paciente.Designer.cs">
+    <Compile Include="Pacientes\Frm_Buscar_Examen_Paciente.Designer.cs">
       <DependentUpon>Frm_Buscar_Examen_Paciente.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_Calendario.cs">
+    <Compile Include="Calendario\Frm_Calendario.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Calendario.Designer.cs">
+    <Compile Include="Calendario\Frm_Calendario.Designer.cs">
       <DependentUpon>Frm_Calendario.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_Catalogo_Examenes.cs">
+    <Compile Include="Catalogo\Frm_Catalogo_Examenes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Catalogo_Examenes.Designer.cs">
+    <Compile Include="Catalogo\Frm_Catalogo_Examenes.Designer.cs">
       <DependentUpon>Frm_Catalogo_Examenes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_Catalogo_Examen_Main.cs">
+    <Compile Include="Catalogo\Frm_Catalogo_Examen_Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Catalogo_Examen_Main.Designer.cs">
+    <Compile Include="Catalogo\Frm_Catalogo_Examen_Main.Designer.cs">
       <DependentUpon>Frm_Catalogo_Examen_Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_Editar_Perfil_Main.cs">
+    <Compile Include="Menu\Frm_Editar_Perfil_Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Editar_Perfil_Main.Designer.cs">
+    <Compile Include="Menu\Frm_Editar_Perfil_Main.Designer.cs">
       <DependentUpon>Frm_Editar_Perfil_Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_Examenes_Medicos.cs">
+    <Compile Include="Examenes_Medicos\Frm_Examenes_Medicos.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Examenes_Medicos.Designer.cs">
+    <Compile Include="Examenes_Medicos\Frm_Examenes_Medicos.Designer.cs">
       <DependentUpon>Frm_Examenes_Medicos.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_Empleados.cs">
+    <Compile Include="Empleados\Frm_Empleados.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Empleados.Designer.cs">
+    <Compile Include="Empleados\Frm_Empleados.Designer.cs">
       <DependentUpon>Frm_Empleados.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_Examen_Med_Main.cs">
+    <Compile Include="Examenes_Medicos\Frm_Examen_Med_Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Examen_Med_Main.Designer.cs">
+    <Compile Include="Examenes_Medicos\Frm_Examen_Med_Main.Designer.cs">
       <DependentUpon>Frm_Examen_Med_Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_Facturacion.cs">
+    <Compile Include="Facturacion\Frm_Facturacion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Facturacion.Designer.cs">
+    <Compile Include="Facturacion\Frm_Facturacion.Designer.cs">
       <DependentUpon>Frm_Facturacion.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_Main_Menu.cs">
+    <Compile Include="Menu\Frm_Main_Menu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Main_Menu.Designer.cs">
+    <Compile Include="Menu\Frm_Main_Menu.Designer.cs">
       <DependentUpon>Frm_Main_Menu.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_Medicos_Main.cs">
+    <Compile Include="Medicos\Frm_Medicos_Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Medicos_Main.Designer.cs">
+    <Compile Include="Medicos\Frm_Medicos_Main.Designer.cs">
       <DependentUpon>Frm_Medicos_Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_MiPerfil.cs">
+    <Compile Include="Seguridad\Frm_MiPerfil.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_MiPerfil.Designer.cs">
+    <Compile Include="Seguridad\Frm_MiPerfil.Designer.cs">
       <DependentUpon>Frm_MiPerfil.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_Nueva_Factura.cs">
+    <Compile Include="Facturacion\Frm_Nueva_Factura.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Nueva_Factura.Designer.cs">
+    <Compile Include="Facturacion\Frm_Nueva_Factura.Designer.cs">
       <DependentUpon>Frm_Nueva_Factura.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_Nuevo_Empleado_Main.cs">
+    <Compile Include="Empleados\Frm_Nuevo_Empleado_Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Nuevo_Empleado_Main.Designer.cs">
+    <Compile Include="Empleados\Frm_Nuevo_Empleado_Main.Designer.cs">
       <DependentUpon>Frm_Nuevo_Empleado_Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_Pacientes.cs">
+    <Compile Include="Pacientes\Frm_Pacientes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Pacientes.Designer.cs">
+    <Compile Include="Pacientes\Frm_Pacientes.Designer.cs">
       <DependentUpon>Frm_Pacientes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_Recuperar_Password.cs">
+    <Compile Include="Seguridad\Frm_Recuperar_Password.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Recuperar_Password.Designer.cs">
+    <Compile Include="Seguridad\Frm_Recuperar_Password.Designer.cs">
       <DependentUpon>Frm_Recuperar_Password.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_Reportes.cs">
+    <Compile Include="Reportes\Frm_Reportes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Reportes.Designer.cs">
+    <Compile Include="Reportes\Frm_Reportes.Designer.cs">
       <DependentUpon>Frm_Reportes.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_Restablecer_Password.cs">
+    <Compile Include="Seguridad\Frm_Restablecer_Password.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Restablecer_Password.Designer.cs">
+    <Compile Include="Seguridad\Frm_Restablecer_Password.Designer.cs">
       <DependentUpon>Frm_Restablecer_Password.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_Usuarios_Main.cs">
+    <Compile Include="Usuarios\Frm_Buscar_Personal.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Usuarios_Main.Designer.cs">
+    <Compile Include="Usuarios\Frm_Buscar_Personal.Designer.cs">
+      <DependentUpon>Frm_Buscar_Personal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Usuarios\Frm_Usuarios_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Usuarios\Frm_Usuarios_Main.Designer.cs">
       <DependentUpon>Frm_Usuarios_Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_Usuario_Main.cs">
+    <Compile Include="Usuarios\Frm_Usuario_Main.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Usuario_Main.Designer.cs">
+    <Compile Include="Usuarios\Frm_Usuario_Main.Designer.cs">
       <DependentUpon>Frm_Usuario_Main.cs</DependentUpon>
     </Compile>
-    <Compile Include="Frm_Validar_Pin.cs">
+    <Compile Include="Seguridad\Frm_Validar_Pin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Frm_Validar_Pin.Designer.cs">
+    <Compile Include="Seguridad\Frm_Validar_Pin.Designer.cs">
       <DependentUpon>Frm_Validar_Pin.cs</DependentUpon>
     </Compile>
-    <Compile Include="Login.cs">
+    <Compile Include="Seguridad\Login.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Login.Designer.cs">
+    <Compile Include="Seguridad\Login.Designer.cs">
       <DependentUpon>Login.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Cnt_Bitacora.resx">
+    <EmbeddedResource Include="Catalogo\Frm_Analisis_Crud.resx">
+      <DependentUpon>Frm_Analisis_Crud.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\Frm_Analisis_Main.resx">
+      <DependentUpon>Frm_Analisis_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Catalogo\Frm_Catalogo_Exam_Main.resx">
+      <DependentUpon>Frm_Catalogo_Exam_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seguridad\Cnt_Bitacora.resx">
       <DependentUpon>Cnt_Bitacora.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cnt_Editar_Datos_personales.resx">
+    <EmbeddedResource Include="Empleados\Cnt_Editar_Datos_personales.resx">
       <DependentUpon>Cnt_Editar_Datos_personales.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cnt_Editar_Usuario.resx">
+    <EmbeddedResource Include="Usuarios\Cnt_Editar_Usuario.resx">
       <DependentUpon>Cnt_Editar_Usuario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cnt_Especialidades.resx">
+    <EmbeddedResource Include="Especialidades\Cnt_Especialidades.resx">
       <DependentUpon>Cnt_Especialidades.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cnt_Inventario.resx">
+    <EmbeddedResource Include="Inventario\Cnt_Inventario.resx">
       <DependentUpon>Cnt_Inventario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cnt_Medicos.resx">
+    <EmbeddedResource Include="Medicos\Cnt_Medicos.resx">
       <DependentUpon>Cnt_Medicos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cnt_Permisos.resx">
+    <EmbeddedResource Include="Seguridad\Cnt_Permisos.resx">
       <DependentUpon>Cnt_Permisos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cnt_Roles.resx">
+    <EmbeddedResource Include="Seguridad\Cnt_Roles.resx">
       <DependentUpon>Cnt_Roles.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Cnt_Usuarios.resx">
+    <EmbeddedResource Include="Usuarios\Cnt_Usuarios.resx">
       <DependentUpon>Cnt_Usuarios.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Agregar_Paciente.resx">
+    <EmbeddedResource Include="Pacientes\Frm_Agregar_Paciente.resx">
       <DependentUpon>Frm_Agregar_Paciente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Bienvenida.resx">
+    <EmbeddedResource Include="Menu\Frm_Bienvenida.resx">
       <DependentUpon>Frm_Bienvenida.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Bitacora_Main.resx">
+    <EmbeddedResource Include="Seguridad\Frm_Bitacora_Main.resx">
       <DependentUpon>Frm_Bitacora_Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Buscar_Examen_Paciente.resx">
+    <EmbeddedResource Include="Pacientes\Frm_Buscar_Examen_Paciente.resx">
       <DependentUpon>Frm_Buscar_Examen_Paciente.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Calendario.resx">
+    <EmbeddedResource Include="Calendario\Frm_Calendario.resx">
       <DependentUpon>Frm_Calendario.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Catalogo_Examenes.resx">
+    <EmbeddedResource Include="Catalogo\Frm_Catalogo_Examenes.resx">
       <DependentUpon>Frm_Catalogo_Examenes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Catalogo_Examen_Main.resx">
+    <EmbeddedResource Include="Catalogo\Frm_Catalogo_Examen_Main.resx">
       <DependentUpon>Frm_Catalogo_Examen_Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Editar_Perfil_Main.resx">
+    <EmbeddedResource Include="Menu\Frm_Editar_Perfil_Main.resx">
       <DependentUpon>Frm_Editar_Perfil_Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Examenes_Medicos.resx">
+    <EmbeddedResource Include="Examenes_Medicos\Frm_Examenes_Medicos.resx">
       <DependentUpon>Frm_Examenes_Medicos.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Empleados.resx">
+    <EmbeddedResource Include="Empleados\Frm_Empleados.resx">
       <DependentUpon>Frm_Empleados.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Examen_Med_Main.resx">
+    <EmbeddedResource Include="Examenes_Medicos\Frm_Examen_Med_Main.resx">
       <DependentUpon>Frm_Examen_Med_Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Facturacion.resx">
+    <EmbeddedResource Include="Facturacion\Frm_Facturacion.resx">
       <DependentUpon>Frm_Facturacion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Main_Menu.resx">
+    <EmbeddedResource Include="Menu\Frm_Main_Menu.resx">
       <DependentUpon>Frm_Main_Menu.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Medicos_Main.resx">
+    <EmbeddedResource Include="Medicos\Frm_Medicos_Main.resx">
       <DependentUpon>Frm_Medicos_Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_MiPerfil.resx">
+    <EmbeddedResource Include="Seguridad\Frm_MiPerfil.resx">
       <DependentUpon>Frm_MiPerfil.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Nueva_Factura.resx">
+    <EmbeddedResource Include="Facturacion\Frm_Nueva_Factura.resx">
       <DependentUpon>Frm_Nueva_Factura.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Nuevo_Empleado_Main.resx">
+    <EmbeddedResource Include="Empleados\Frm_Nuevo_Empleado_Main.resx">
       <DependentUpon>Frm_Nuevo_Empleado_Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Pacientes.resx">
+    <EmbeddedResource Include="Pacientes\Frm_Pacientes.resx">
       <DependentUpon>Frm_Pacientes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Recuperar_Password.resx">
+    <EmbeddedResource Include="Seguridad\Frm_Recuperar_Password.resx">
       <DependentUpon>Frm_Recuperar_Password.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Reportes.resx">
+    <EmbeddedResource Include="Reportes\Frm_Reportes.resx">
       <DependentUpon>Frm_Reportes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Restablecer_Password.resx">
+    <EmbeddedResource Include="Seguridad\Frm_Restablecer_Password.resx">
       <DependentUpon>Frm_Restablecer_Password.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Usuarios_Main.resx">
+    <EmbeddedResource Include="Usuarios\Frm_Buscar_Personal.resx">
+      <DependentUpon>Frm_Buscar_Personal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Usuarios\Frm_Usuarios_Main.resx">
       <DependentUpon>Frm_Usuarios_Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Usuario_Main.resx">
+    <EmbeddedResource Include="Usuarios\Frm_Usuario_Main.resx">
       <DependentUpon>Frm_Usuario_Main.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Frm_Validar_Pin.resx">
+    <EmbeddedResource Include="Seguridad\Frm_Validar_Pin.resx">
       <DependentUpon>Frm_Validar_Pin.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Login.resx">
+    <EmbeddedResource Include="Seguridad\Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -478,6 +514,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\cancel_12px.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\eye_32px.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hide_32px.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
