@@ -31,11 +31,11 @@ namespace Presentacion
         {
             this.pnl_Titulo = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pnl_contenedor = new System.Windows.Forms.Panel();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
-            this.button2 = new System.Windows.Forms.Button();
+            this.pnl_contenedor = new System.Windows.Forms.Panel();
             this.pnl_Titulo.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -62,25 +62,31 @@ namespace Presentacion
             this.label1.TabIndex = 2;
             this.label1.Text = "Bitacora e Invetario";
             // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.White;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
+            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Image = global::Presentacion.Properties.Resources.delete_25px;
+            this.button2.Location = new System.Drawing.Point(3, 1);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(26, 26);
+            this.button2.TabIndex = 1;
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
-            this.panel1.Controls.Add(this.iconButton3);
             this.panel1.Controls.Add(this.iconButton1);
+            this.panel1.Controls.Add(this.iconButton3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 30);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(834, 30);
             this.panel1.TabIndex = 7;
-            // 
-            // pnl_contenedor
-            // 
-            this.pnl_contenedor.BackColor = System.Drawing.Color.White;
-            this.pnl_contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pnl_contenedor.Location = new System.Drawing.Point(0, 60);
-            this.pnl_contenedor.Name = "pnl_contenedor";
-            this.pnl_contenedor.Size = new System.Drawing.Size(834, 511);
-            this.pnl_contenedor.TabIndex = 8;
             // 
             // iconButton3
             // 
@@ -122,20 +128,14 @@ namespace Presentacion
             this.iconButton1.UseVisualStyleBackColor = false;
             this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
             // 
-            // button2
+            // pnl_contenedor
             // 
-            this.button2.BackColor = System.Drawing.Color.White;
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(192)))));
-            this.button2.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Image = global::Presentacion.Properties.Resources.delete_25px;
-            this.button2.Location = new System.Drawing.Point(3, 1);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(26, 26);
-            this.button2.TabIndex = 1;
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.pnl_contenedor.BackColor = System.Drawing.Color.White;
+            this.pnl_contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.pnl_contenedor.Location = new System.Drawing.Point(0, 60);
+            this.pnl_contenedor.Name = "pnl_contenedor";
+            this.pnl_contenedor.Size = new System.Drawing.Size(834, 511);
+            this.pnl_contenedor.TabIndex = 8;
             // 
             // Frm_Bitacora_Main
             // 

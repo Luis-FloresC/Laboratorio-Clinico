@@ -109,10 +109,10 @@ namespace Presentacion
                 }
                 else
                 {
-                    /*
+                    
                     var result = pacientesModel.NuevoPaciente(txtNombre.Text, txtApellido.Text, txtDni.Text, cmbGenero.Text,
                         DtpFechaNac.Value, TxtDireccion.Text, txtTelefono.Text);
-                    utilidades.AlertMessage(result, "I");*/
+                    utilidades.AlertMessage(result, "I");
                 }
 
               

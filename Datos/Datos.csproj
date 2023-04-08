@@ -86,7 +86,10 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="SqlServer\EmpleadosDao.cs" />
+    <Compile Include="SqlServer\EspecialidadesDao.cs" />
     <Compile Include="SqlServer\ExamenesDao.cs" />
+    <Compile Include="SqlServer\InventarioDao.cs" />
+    <Compile Include="SqlServer\MedicosDao.cs" />
     <Compile Include="SqlServer\PacientesDao.cs" />
     <Compile Include="SqlServer\SeguridadDao.cs" />
     <Compile Include="SqlServer\UserDao.cs" />

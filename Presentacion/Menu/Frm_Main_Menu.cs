@@ -18,6 +18,8 @@ namespace Presentacion
     {
     
 
+
+
         private int[,] locationButton = new int[, ]
         {
             {0,99},
@@ -38,21 +40,20 @@ namespace Presentacion
             InitializeComponent();
             security();
         
-            if (Cache_Usuario.Cargo != "Administrador")
-            {
+           
                 
                 ManagePermissions();
-            }
+            
 
             
 
           
 
         }
-
+        UserModel userModel = new UserModel();
         private void security()
         {
-            var userModel = new UserModel();
+            
             if (userModel.securityLogin() == false)
             {
                 MessageBox.Show("Error Fatal, se detectó que está intentando acceder al sistema sin credenciales, por favor inicie sesión e indentifiquese");
@@ -61,36 +62,70 @@ namespace Presentacion
         }
 
         private int CantidadBotonesAct = 0;
+
+        private bool HabilitarBoton(string nombre)
+        {
+            bool encontrado = false;
+            foreach (var item in Cache_Cargos.Permisos)
+            {
+
+                if (item.NombrePermiso == nombre && item.EstadoRol == 1)
+                {
+
+                    encontrado = true;
+                    break;
+                }
+
+            }
+
+            return encontrado;
+        }
+
+
+        private int PosicionYBoton(string nombre)
+        {
+            int encontrado = 0;
+            foreach (var item in Cache_Cargos.Permisos)
+            {
+
+                if (item.NombrePermiso == nombre && item.EstadoRol == 1)
+                {
+
+                    encontrado = item.PosY;
+                    break;
+                }
+
+            }
+            return encontrado;
+        }
         private void ActivarBotonesAutorizados()
         {
             int totalBotoon = 0;
-            
-            foreach (var Permiso in Cache_Usuario.Permisos)
+
+
+            foreach (Control c in pnl_Lateral.Controls)
             {
-                foreach (Control c in pnl_Lateral.Controls)
+                if (c is Button)
                 {
-                    if (c is Button)
+                    Button boton = (Button)c;
+
+
+                    if (HabilitarBoton(boton.Name))
                     {
-                        Button boton = (Button)c;
-                        if (boton.Name == Permiso)
-                        {
-                            boton.Visible = true;
-                            boton.Location = new Point(locationButton[totalBotoon, 0], locationButton[totalBotoon, 1]);
-                            CantidadBotonesAct++;
-                            totalBotoon++;
-                        }
-                        
-                        
+                        boton.Visible = true;
+                        boton.Location = new Point(0, PosicionYBoton(boton.Name));
                     }
+                    
                 }
             }
-            btn_Cerrar.Location = new Point(locationButton[CantidadBotonesAct,0], locationButton[CantidadBotonesAct, 1]);
+
         }
 
         private int LxB, LyB;
 
         private void ManagePermissions()
         {
+            userModel.ObtenerPermisosRol(Cache_Usuario.IdRol);
             CantidadBotonesAct = 0;
             DesactivadosBotones();
             ActivarBotonesAutorizados();
@@ -109,12 +144,7 @@ namespace Presentacion
                   
                         boton.Visible = false;
                         totalBotoon++;
-                    
-                      
-                    
                         
-                        
-                    
                 }
             }
             TotalBotones = totalBotoon;
@@ -126,12 +156,29 @@ namespace Presentacion
 
         private void Frm_Main_Menu_Load(object sender, EventArgs e)
         {
-            btn_nornal.Visible = false;
-            
-            lbl_nombre.Text = Cache_Usuario.NombreEmpleado + " " + Cache_Usuario.ApellidoEmpleado;
-            lbl_cargo.Text = Cache_Usuario.Cargo;
+            try
+            {
+                btn_nornal.Visible = false;
 
-            lbl_email.Text = utilidades.LimitarCadena(Cache_Usuario.CorreoElectronicoUsuario,17);
+                lbl_nombre.Text = Cache_Usuario.NombreEmpleado + " " + Cache_Usuario.ApellidoEmpleado;
+                lbl_cargo.Text = Cache_Usuario.Cargo;
+
+                if (Cache_Usuario.CorreoElectronicoUsuario.Length >= 17)
+                {
+                    lbl_email.Text = utilidades.LimitarCadena(Cache_Usuario.CorreoElectronicoUsuario, 17);
+                }
+                else
+                {
+                    lbl_email.Text = Cache_Usuario.CorreoElectronicoUsuario;
+                }
+            }
+            catch (Exception exception)
+            {
+                Console.WriteLine(exception);
+                throw;
+            }
+       
+           
 
 
         }
@@ -423,10 +470,9 @@ namespace Presentacion
                 Frm_Usuarios_Main.BackColor = Color.FromArgb(4, 41, 68);
             }
 
-            if (Cache_Usuario.Cargo != "Administrador")
-            {
+        
                 ManagePermissions();
-            }
+            
 
             lbl_nombre.Text = Cache_Usuario.NombreEmpleado + " " + Cache_Usuario.ApellidoEmpleado;
             lbl_cargo.Text = Cache_Usuario.Cargo;

@@ -321,33 +321,8 @@ namespace Datos
                 }
             }
         }
-        /// <summary>
-        /// Funcion para obtener todos los permisos
-        /// </summary>
-        public void obtenerPermisos()
-        {
-            Cache_Cargos.Permisos.Clear();
-            using (var connection = GetConnection())
-            {
-                connection.Open();
-                using (var command = new SqlCommand())
-                {
-                    command.Connection = connection;
-                    command.CommandText = "Select * from Permisos";
-                    command.CommandType = CommandType.Text;
-                    SqlDataReader reader = command.ExecuteReader();
-                    if (reader.HasRows)
-                    {
-                        while (reader.Read())
-                        {
-                            Cache_Cargos.Permisos.Add(reader.GetString(1));
-                        }
-
-                    }
-
-                }
-            }
-        }
+       
+      
 
         /// <summary>
         /// Funcion para buscar Usuario por pin de recuperacion
@@ -616,25 +591,22 @@ namespace Datos
         /// <param name="idRol"></param>
         public void obtenerPermisosUsuario(int idRol)
         {
-            Cache_Usuario.Permisos.Clear();
+            Cache_Cargos.Permisos.Clear();
             using (var connection = GetConnection())
             {
                 connection.Open();
                 using (var command = new SqlCommand())
                 {
                     command.Connection = connection;
-                    command.CommandText = @"Select p.Permiso from Roles r
-                    join Roles_Permisos Rp on r.Id_Rol = Rp.Id_Rol
-                    join Permisos P on Rp.Id_Permiso = P.Id_Permiso
-                    where R.Id_Rol = @id";
-                    command.Parameters.AddWithValue("@id", idRol);
-                    command.CommandType = CommandType.Text;
+                    command.CommandText = @"[PermisoUsuario]";
+                    command.Parameters.AddWithValue("@idRol", idRol);
+                    command.CommandType = CommandType.StoredProcedure;
                     SqlDataReader reader = command.ExecuteReader();
                     if (reader.HasRows)
                     {
                         while (reader.Read())
                         {
-                            Cache_Usuario.Permisos.Add(reader.GetString(0));
+                            Cache_Cargos.Permisos.Add(new Seguridad(){IdPermiso = reader.GetInt32(1),NombrePermiso = reader.GetString(2),descripcion = reader.GetString(3),EstadoRol = reader.GetInt32(4),PosX = reader.GetInt32(6),PosY = reader.GetInt32(7),idPos = reader.GetInt32(5)});
                         }
 
                     }

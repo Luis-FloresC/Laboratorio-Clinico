@@ -75,7 +75,7 @@ namespace Presentacion
             this.pnl_contenedor.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_contenedor.Location = new System.Drawing.Point(0, 0);
             this.pnl_contenedor.Name = "pnl_contenedor";
-            this.pnl_contenedor.Size = new System.Drawing.Size(1100, 650);
+            this.pnl_contenedor.Size = new System.Drawing.Size(1100, 660);
             this.pnl_contenedor.TabIndex = 0;
             // 
             // pnl_hijo
@@ -85,7 +85,7 @@ namespace Presentacion
             this.pnl_hijo.Dock = System.Windows.Forms.DockStyle.Fill;
             this.pnl_hijo.Location = new System.Drawing.Point(250, 40);
             this.pnl_hijo.Name = "pnl_hijo";
-            this.pnl_hijo.Size = new System.Drawing.Size(850, 610);
+            this.pnl_hijo.Size = new System.Drawing.Size(850, 620);
             this.pnl_hijo.TabIndex = 2;
             this.pnl_hijo.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_hijo_Paint);
             this.pnl_hijo.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnl_hijo_MouseDown);
@@ -98,7 +98,7 @@ namespace Presentacion
             this.pictureBox1.Image = global::Presentacion.Properties.Resources.Imagen_de_WhatsApp_2023_02_24_a_las_19_44_29;
             this.pictureBox1.Location = new System.Drawing.Point(219, 161);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(465, 218);
+            this.pictureBox1.Size = new System.Drawing.Size(465, 228);
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
@@ -126,7 +126,7 @@ namespace Presentacion
             this.pnl_Lateral.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.pnl_Lateral.Location = new System.Drawing.Point(0, 40);
             this.pnl_Lateral.Name = "pnl_Lateral";
-            this.pnl_Lateral.Size = new System.Drawing.Size(250, 610);
+            this.pnl_Lateral.Size = new System.Drawing.Size(250, 620);
             this.pnl_Lateral.TabIndex = 1;
             this.pnl_Lateral.Paint += new System.Windows.Forms.PaintEventHandler(this.pnl_Lateral_Paint);
             this.pnl_Lateral.MouseDown += new System.Windows.Forms.MouseEventHandler(this.pnl_Lateral_MouseDown);
@@ -142,7 +142,7 @@ namespace Presentacion
             this.Frm_Usuarios_Main.ForeColor = System.Drawing.Color.White;
             this.Frm_Usuarios_Main.Image = global::Presentacion.Properties.Resources.user_25px;
             this.Frm_Usuarios_Main.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Frm_Usuarios_Main.Location = new System.Drawing.Point(0, 525);
+            this.Frm_Usuarios_Main.Location = new System.Drawing.Point(0, 522);
             this.Frm_Usuarios_Main.Name = "Frm_Usuarios_Main";
             this.Frm_Usuarios_Main.Size = new System.Drawing.Size(250, 45);
             this.Frm_Usuarios_Main.TabIndex = 13;
@@ -161,7 +161,7 @@ namespace Presentacion
             this.Frm_Bitacora.ForeColor = System.Drawing.Color.White;
             this.Frm_Bitacora.Image = global::Presentacion.Properties.Resources.saddle_stitched_booklet_25px;
             this.Frm_Bitacora.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Frm_Bitacora.Location = new System.Drawing.Point(0, 477);
+            this.Frm_Bitacora.Location = new System.Drawing.Point(0, 475);
             this.Frm_Bitacora.Name = "Frm_Bitacora";
             this.Frm_Bitacora.Size = new System.Drawing.Size(250, 45);
             this.Frm_Bitacora.TabIndex = 12;
@@ -180,7 +180,7 @@ namespace Presentacion
             this.Frm_Medico.ForeColor = System.Drawing.Color.White;
             this.Frm_Medico.Image = global::Presentacion.Properties.Resources.user_25px;
             this.Frm_Medico.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Frm_Medico.Location = new System.Drawing.Point(0, 383);
+            this.Frm_Medico.Location = new System.Drawing.Point(0, 381);
             this.Frm_Medico.Name = "Frm_Medico";
             this.Frm_Medico.Size = new System.Drawing.Size(250, 45);
             this.Frm_Medico.TabIndex = 11;
@@ -256,7 +256,7 @@ namespace Presentacion
             this.btn_Cerrar.ForeColor = System.Drawing.Color.White;
             this.btn_Cerrar.Image = global::Presentacion.Properties.Resources.logout_25px;
             this.btn_Cerrar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Cerrar.Location = new System.Drawing.Point(-3, 563);
+            this.btn_Cerrar.Location = new System.Drawing.Point(0, 569);
             this.btn_Cerrar.Name = "btn_Cerrar";
             this.btn_Cerrar.Size = new System.Drawing.Size(250, 45);
             this.btn_Cerrar.TabIndex = 14;
@@ -294,7 +294,7 @@ namespace Presentacion
             this.Frm_Reportes.ForeColor = System.Drawing.Color.White;
             this.Frm_Reportes.Image = global::Presentacion.Properties.Resources.report_file_25px;
             this.Frm_Reportes.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Frm_Reportes.Location = new System.Drawing.Point(0, 430);
+            this.Frm_Reportes.Location = new System.Drawing.Point(0, 428);
             this.Frm_Reportes.Name = "Frm_Reportes";
             this.Frm_Reportes.Size = new System.Drawing.Size(250, 45);
             this.Frm_Reportes.TabIndex = 6;
@@ -313,7 +313,7 @@ namespace Presentacion
             this.Frm_Facturacion.ForeColor = System.Drawing.Color.White;
             this.Frm_Facturacion.Image = global::Presentacion.Properties.Resources.project_25px;
             this.Frm_Facturacion.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Frm_Facturacion.Location = new System.Drawing.Point(0, 335);
+            this.Frm_Facturacion.Location = new System.Drawing.Point(0, 334);
             this.Frm_Facturacion.Name = "Frm_Facturacion";
             this.Frm_Facturacion.Size = new System.Drawing.Size(250, 45);
             this.Frm_Facturacion.TabIndex = 5;
@@ -472,7 +472,7 @@ namespace Presentacion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1100, 650);
+            this.ClientSize = new System.Drawing.Size(1100, 660);
             this.Controls.Add(this.pnl_contenedor);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.MinimumSize = new System.Drawing.Size(680, 500);

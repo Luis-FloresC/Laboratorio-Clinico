@@ -80,6 +80,30 @@
     <Compile Include="Catalogo\Frm_Catalogo_Exam_Main.Designer.cs">
       <DependentUpon>Frm_Catalogo_Exam_Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Especialidades\Frm_Asignar_Especialidades.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Especialidades\Frm_Asignar_Especialidades.Designer.cs">
+      <DependentUpon>Frm_Asignar_Especialidades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Especialidades\Frm_Especialidades_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Especialidades\Frm_Especialidades_Main.Designer.cs">
+      <DependentUpon>Frm_Especialidades_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Inventario\Frm_Productos_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventario\Frm_Productos_Main.Designer.cs">
+      <DependentUpon>Frm_Productos_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Medicos\Frm_Medicos_Crud.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Medicos\Frm_Medicos_Crud.Designer.cs">
+      <DependentUpon>Frm_Medicos_Crud.cs</DependentUpon>
+    </Compile>
     <Compile Include="Seguridad\Cnt_Bitacora.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -91,6 +115,18 @@
     </Compile>
     <Compile Include="Empleados\Cnt_Editar_Datos_personales.Designer.cs">
       <DependentUpon>Cnt_Editar_Datos_personales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Seguridad\Frm_Asignar_Permisos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Seguridad\Frm_Asignar_Permisos.Designer.cs">
+      <DependentUpon>Frm_Asignar_Permisos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Seguridad\Frm_Rol_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Seguridad\Frm_Rol_Main.Designer.cs">
+      <DependentUpon>Frm_Rol_Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Usuarios\Cnt_Editar_Usuario.cs">
       <SubType>UserControl</SubType>
@@ -301,11 +337,29 @@
     <EmbeddedResource Include="Catalogo\Frm_Catalogo_Exam_Main.resx">
       <DependentUpon>Frm_Catalogo_Exam_Main.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Especialidades\Frm_Asignar_Especialidades.resx">
+      <DependentUpon>Frm_Asignar_Especialidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Especialidades\Frm_Especialidades_Main.resx">
+      <DependentUpon>Frm_Especialidades_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventario\Frm_Productos_Main.resx">
+      <DependentUpon>Frm_Productos_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Medicos\Frm_Medicos_Crud.resx">
+      <DependentUpon>Frm_Medicos_Crud.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Seguridad\Cnt_Bitacora.resx">
       <DependentUpon>Cnt_Bitacora.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Empleados\Cnt_Editar_Datos_personales.resx">
       <DependentUpon>Cnt_Editar_Datos_personales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seguridad\Frm_Asignar_Permisos.resx">
+      <DependentUpon>Frm_Asignar_Permisos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Seguridad\Frm_Rol_Main.resx">
+      <DependentUpon>Frm_Rol_Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Usuarios\Cnt_Editar_Usuario.resx">
       <DependentUpon>Cnt_Editar_Usuario.cs</DependentUpon>

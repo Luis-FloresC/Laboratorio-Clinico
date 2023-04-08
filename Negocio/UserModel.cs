@@ -92,10 +92,7 @@ namespace Negocio
             userDao.obtenerCargos();
         }
 
-        public void ObtenerPermisos()
-        {
-            userDao.obtenerPermisos();
-        }
+     
 
         public void ObtenerPermisosRol(int idRol)
         {

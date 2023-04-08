@@ -137,7 +137,7 @@ namespace Datos.SqlServer
                                                       ,[Costo_Examen]
                                                       ,[Fecha_Registro]
                                                       ,[Fecha_Actualizacion]
-                                                  FROM [Laboratorio_clinico].[dbo].[Examenes] where Estatus_Exm = 1 and Id_Examen = @id";
+                                                  FROM [Laboratorio_clinico].[dbo].[Examenes] where Id_Examen = @id";
                         command.Parameters.AddWithValue("@id", id);
 
                         command.CommandType = CommandType.Text;

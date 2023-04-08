@@ -50,6 +50,7 @@ namespace Presentacion
             if (dg_Usuarios.SelectedRows.Count > 0)
             {
                 Cache_Usuario.IdUsuarioEdit = Convert.ToInt32(dg_Usuarios.CurrentRow.Cells["Código"].Value);
+
                 Frm_Usuario_Main user = new Frm_Usuario_Main("Editar");
                 user.Show();
                 user.FormClosed += CerrarSesion;

@@ -43,12 +43,12 @@ namespace Presentacion
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.pnl_Titulo = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
+            this.lblNombre = new System.Windows.Forms.Label();
+            this.btn_buscar = new FontAwesome.Sharp.IconButton();
             this.button2 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.txtDni = new System.Windows.Forms.TextBox();
-            this.btn_buscar = new FontAwesome.Sharp.IconButton();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblNombre = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label8 = new System.Windows.Forms.Label();
             this.pnl_Titulo.SuspendLayout();
@@ -212,6 +212,34 @@ namespace Presentacion
             this.label6.TabIndex = 2;
             this.label6.Text = "Nuevo Usuario";
             // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.ForeColor = System.Drawing.Color.White;
+            this.lblNombre.Location = new System.Drawing.Point(388, 5);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(129, 21);
+            this.lblNombre.TabIndex = 45;
+            this.lblNombre.Text = "Buscar Personal";
+            // 
+            // btn_buscar
+            // 
+            this.btn_buscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_buscar.BackColor = System.Drawing.Color.White;
+            this.btn_buscar.FlatAppearance.BorderSize = 0;
+            this.btn_buscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_buscar.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.btn_buscar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(121)))), ((int)(((byte)(186)))));
+            this.btn_buscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_buscar.IconSize = 25;
+            this.btn_buscar.Location = new System.Drawing.Point(352, 2);
+            this.btn_buscar.Name = "btn_buscar";
+            this.btn_buscar.Size = new System.Drawing.Size(30, 30);
+            this.btn_buscar.TabIndex = 44;
+            this.btn_buscar.UseVisualStyleBackColor = false;
+            this.btn_buscar.Click += new System.EventHandler(this.iconButton3_Click);
+            // 
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -247,23 +275,6 @@ namespace Presentacion
             this.txtDni.Size = new System.Drawing.Size(278, 27);
             this.txtDni.TabIndex = 24;
             // 
-            // btn_buscar
-            // 
-            this.btn_buscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_buscar.BackColor = System.Drawing.Color.White;
-            this.btn_buscar.FlatAppearance.BorderSize = 0;
-            this.btn_buscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_buscar.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.btn_buscar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(121)))), ((int)(((byte)(186)))));
-            this.btn_buscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_buscar.IconSize = 25;
-            this.btn_buscar.Location = new System.Drawing.Point(352, 2);
-            this.btn_buscar.Name = "btn_buscar";
-            this.btn_buscar.Size = new System.Drawing.Size(30, 30);
-            this.btn_buscar.TabIndex = 44;
-            this.btn_buscar.UseVisualStyleBackColor = false;
-            this.btn_buscar.Click += new System.EventHandler(this.iconButton3_Click);
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
@@ -287,17 +298,7 @@ namespace Presentacion
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(751, 475);
             this.panel1.TabIndex = 45;
-            // 
-            // lblNombre
-            // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.ForeColor = System.Drawing.Color.White;
-            this.lblNombre.Location = new System.Drawing.Point(388, 5);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(129, 21);
-            this.lblNombre.TabIndex = 45;
-            this.lblNombre.Text = "Buscar Personal";
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // groupBox1
             // 

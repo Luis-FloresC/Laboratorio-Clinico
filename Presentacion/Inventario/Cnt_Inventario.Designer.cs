@@ -35,16 +35,10 @@ namespace Presentacion
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
-            this.dg_pacientes = new System.Windows.Forms.DataGridView();
+            this.dg_inventario = new System.Windows.Forms.DataGridView();
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            ((System.ComponentModel.ISupportInitialize)(this.dg_pacientes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dg_inventario)).BeginInit();
             this.SuspendLayout();
             // 
             // iconButton4
@@ -59,7 +53,7 @@ namespace Presentacion
             this.iconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton4.IconSize = 30;
             this.iconButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton4.Location = new System.Drawing.Point(439, 429);
+            this.iconButton4.Location = new System.Drawing.Point(457, 432);
             this.iconButton4.Name = "iconButton4";
             this.iconButton4.Size = new System.Drawing.Size(211, 47);
             this.iconButton4.TabIndex = 43;
@@ -78,7 +72,7 @@ namespace Presentacion
             this.iconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton2.IconSize = 30;
             this.iconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton2.Location = new System.Drawing.Point(222, 429);
+            this.iconButton2.Location = new System.Drawing.Point(240, 432);
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Size = new System.Drawing.Size(211, 47);
             this.iconButton2.TabIndex = 42;
@@ -97,24 +91,25 @@ namespace Presentacion
             this.iconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconButton3.IconSize = 30;
             this.iconButton3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton3.Location = new System.Drawing.Point(5, 429);
+            this.iconButton3.Location = new System.Drawing.Point(23, 432);
             this.iconButton3.Name = "iconButton3";
             this.iconButton3.Size = new System.Drawing.Size(211, 47);
             this.iconButton3.TabIndex = 41;
             this.iconButton3.Text = "Nuevo Producto";
             this.iconButton3.UseVisualStyleBackColor = false;
+            this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
             // 
-            // dg_pacientes
+            // dg_inventario
             // 
-            this.dg_pacientes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dg_inventario.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dg_pacientes.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dg_pacientes.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
-            this.dg_pacientes.BackgroundColor = System.Drawing.Color.White;
-            this.dg_pacientes.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dg_pacientes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
-            this.dg_pacientes.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dg_inventario.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dg_inventario.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dg_inventario.BackgroundColor = System.Drawing.Color.White;
+            this.dg_inventario.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dg_inventario.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dg_inventario.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Century Gothic", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -122,20 +117,13 @@ namespace Presentacion
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(45)))), ((int)(((byte)(55)))), ((int)(((byte)(72)))));
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dg_pacientes.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.dg_pacientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            this.dg_pacientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column4,
-            this.Column5,
-            this.Column6,
-            this.Column3});
-            this.dg_pacientes.EnableHeadersVisualStyles = false;
-            this.dg_pacientes.GridColor = System.Drawing.Color.SteelBlue;
-            this.dg_pacientes.Location = new System.Drawing.Point(26, 60);
-            this.dg_pacientes.Name = "dg_pacientes";
-            this.dg_pacientes.ReadOnly = true;
+            this.dg_inventario.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dg_inventario.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
+            this.dg_inventario.EnableHeadersVisualStyles = false;
+            this.dg_inventario.GridColor = System.Drawing.Color.SteelBlue;
+            this.dg_inventario.Location = new System.Drawing.Point(16, 59);
+            this.dg_inventario.Name = "dg_inventario";
+            this.dg_inventario.ReadOnly = true;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -143,17 +131,17 @@ namespace Presentacion
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.SteelBlue;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dg_pacientes.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dg_pacientes.RowHeadersVisible = false;
+            this.dg_inventario.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dg_inventario.RowHeadersVisible = false;
             dataGridViewCellStyle3.BackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             dataGridViewCellStyle3.ForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.SteelBlue;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
-            this.dg_pacientes.RowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dg_pacientes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dg_pacientes.Size = new System.Drawing.Size(770, 331);
-            this.dg_pacientes.TabIndex = 40;
+            this.dg_inventario.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dg_inventario.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dg_inventario.Size = new System.Drawing.Size(792, 255);
+            this.dg_inventario.TabIndex = 40;
             // 
             // iconButton1
             // 
@@ -181,48 +169,6 @@ namespace Presentacion
             this.textBox1.TabIndex = 3;
             this.textBox1.Text = "Buscar Producto";
             // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "#";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Width = 47;
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Nombre del Producto";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            this.Column2.Width = 230;
-            // 
-            // Column4
-            // 
-            this.Column4.HeaderText = "Preco de Compra";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            this.Column4.Width = 197;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "Estado";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            this.Column5.Width = 95;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "Numero de Serie";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            this.Column6.Width = 183;
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Cantidad";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            this.Column3.Width = 122;
-            // 
             // Cnt_Inventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -232,10 +178,11 @@ namespace Presentacion
             this.Controls.Add(this.iconButton2);
             this.Controls.Add(this.iconButton3);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.dg_pacientes);
+            this.Controls.Add(this.dg_inventario);
             this.Name = "Cnt_Inventario";
             this.Size = new System.Drawing.Size(834, 511);
-            ((System.ComponentModel.ISupportInitialize)(this.dg_pacientes)).EndInit();
+            this.Load += new System.EventHandler(this.Cnt_Inventario_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dg_inventario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -246,14 +193,8 @@ namespace Presentacion
         private FontAwesome.Sharp.IconButton iconButton4;
         private FontAwesome.Sharp.IconButton iconButton2;
         private FontAwesome.Sharp.IconButton iconButton3;
-        private System.Windows.Forms.DataGridView dg_pacientes;
+        private System.Windows.Forms.DataGridView dg_inventario;
         private FontAwesome.Sharp.IconButton iconButton1;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
     }
 }

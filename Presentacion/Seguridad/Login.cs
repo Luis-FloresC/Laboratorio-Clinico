@@ -155,7 +155,7 @@ namespace Presentacion
                         {
                             //Obtenemos los cargos  y los permisos
                             user.ObtenerCargos();
-                            user.ObtenerPermisos();
+                          
                             user.ObtenerPermisosRol(Cache_Usuario.IdRol);
                             string descripcionEvento =
                                 "El Usuario " + Cache_Usuario.NombreUsuario + " Ingreso al Sistema.";

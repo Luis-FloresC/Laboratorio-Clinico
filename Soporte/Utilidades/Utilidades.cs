@@ -22,6 +22,19 @@ namespace Soporte.Utilidades
             return false;
         }
 
+        public string GenerarNumeroSerie()
+        {
+            string caracteres = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+            Random random = new Random();
+            char[] serie = new char[10];
+
+            for (int i = 0; i < serie.Length; i++)
+            {
+                serie[i] = caracteres[random.Next(caracteres.Length)];
+            }
+
+            return new string(serie);
+        }
         public bool ValidarPrecio(decimal precio)
         {
             if (precio < 0)
@@ -84,7 +97,24 @@ namespace Soporte.Utilidades
             }
         }
 
-    
+        public  bool ValidateDate(string date)
+        {
+            DateTime dt;
+            bool isValid = DateTime.TryParseExact(date, "dd/MM/yyyy", System.Globalization.CultureInfo.InvariantCulture, System.Globalization.DateTimeStyles.None, out dt);
+            return isValid;
+        }
+
+        public  bool CheckDates(DateTime date1, DateTime date2)
+        {
+            if (date1 > date2)
+            {
+                return false;
+            }
+            else
+            {
+                return true;
+            }
+        }
 
         public bool AlgoritmoContraseñaSegura(string password)
         {

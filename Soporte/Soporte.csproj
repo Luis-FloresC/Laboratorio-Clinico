@@ -53,9 +53,12 @@
     <Compile Include="Cache\Cache_Cargos.cs" />
     <Compile Include="Cache\Cache_Empleado.cs" />
     <Compile Include="Cache\Cache_Examenes.cs" />
+    <Compile Include="Cache\Cache_Medico.cs" />
     <Compile Include="Cache\Cache_Pacientes.cs" />
     <Compile Include="Cache\Cache_Usuario.cs" />
+    <Compile Include="Cache\Especialidades.cs" />
     <Compile Include="Cache\Recuperar_Contraseña.cs" />
+    <Compile Include="Cache\Seguridad.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utilidades\Utilidades.cs" />
   </ItemGroup>
