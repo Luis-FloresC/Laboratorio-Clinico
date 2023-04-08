@@ -51,8 +51,6 @@ namespace Presentacion.Seguridad
         private void marcar(int id)
         {
 
-
-         
             checkedListBox1.Items.Clear();
             listBox1.Items.Clear();
             seguridadModel.PermisosPorRol(id);

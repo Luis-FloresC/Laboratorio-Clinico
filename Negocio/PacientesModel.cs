@@ -14,6 +14,8 @@ namespace Negocio
         UserDao userDao = new UserDao();
         private PacientesDao pacientesDao = new PacientesDao();
 
+
+
         public DataTable ListaPacinetes()
         {
             return pacientesDao.DataTablePacientes();
