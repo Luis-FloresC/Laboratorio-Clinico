@@ -44,5 +44,12 @@ namespace Presentacion
             productos.Show();
             productos.FormClosed += CerrarForm;
         }
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            Frm_Editar_Inventario editarInventario = new Frm_Editar_Inventario();
+            editarInventario.Show();
+            editarInventario.FormClosed += CerrarForm;
+        }
     }
 }

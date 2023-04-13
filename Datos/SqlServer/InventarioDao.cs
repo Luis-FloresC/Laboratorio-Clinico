@@ -24,6 +24,7 @@ namespace Datos.SqlServer
                                     p.Cantidad_Stock 'Cantidad del Producto' ,
                                     p.Nombre_Proveedor 'Proveedor',
                                     p.Precio_Producto 'Precio',
+                                    i.Ubicacion_Almacenamiento 'Ubicación',
                                     i.Fecha_Compra 'Fecha de Compra',
                                     i.Fecha_Registro 'Fecha de Registro',
                                     i.Fecha_Actualizacion 'Fecha de Actualización'
@@ -74,6 +75,41 @@ namespace Datos.SqlServer
                         CMD.Parameters.AddWithValue("@numeroSerial", numeroSerial);
                         CMD.Parameters.AddWithValue("@ubicacion", ubicacion);
                         CMD.Parameters.AddWithValue("@fechaCompra", fechaCompra);
+                        CMD.Parameters.Add("@mensaje", SqlDbType.NVarChar, 150).Direction = ParameterDirection.Output;
+                        CMD.CommandType = CommandType.StoredProcedure;
+                        CMD.ExecuteNonQuery();
+                        return CMD.Parameters["@mensaje"].Value.ToString();
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+
+                return ex.Message.ToString();
+            }
+
+        }
+
+
+        public string EditarInventario(string nombre, string proveedor, int cantidad, decimal precio, string ubicacion, DateTime fechaCompra,int id)
+        {
+
+            try
+            {
+                using (var CN = GetConnection())
+                {
+                    CN.Open();
+                    using (var CMD = new SqlCommand())
+                    {
+                        CMD.Connection = CN;
+                        CMD.CommandText = "[editarInventario]";
+                        CMD.Parameters.AddWithValue("@nombreProducto", nombre);
+                        CMD.Parameters.AddWithValue("@nombreProveedor", proveedor);
+                        CMD.Parameters.AddWithValue("@cantidad", cantidad);
+                        CMD.Parameters.AddWithValue("@precio", precio);
+                        CMD.Parameters.AddWithValue("@ubicacion", ubicacion);
+                        CMD.Parameters.AddWithValue("@fechaCompra", fechaCompra);
+                        CMD.Parameters.AddWithValue("@id", id);
                         CMD.Parameters.Add("@mensaje", SqlDbType.NVarChar, 150).Direction = ParameterDirection.Output;
                         CMD.CommandType = CommandType.StoredProcedure;
                         CMD.ExecuteNonQuery();

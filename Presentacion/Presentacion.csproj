@@ -92,6 +92,12 @@
     <Compile Include="Especialidades\Frm_Especialidades_Main.Designer.cs">
       <DependentUpon>Frm_Especialidades_Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Inventario\Frm_Editar_Inventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Inventario\Frm_Editar_Inventario.Designer.cs">
+      <DependentUpon>Frm_Editar_Inventario.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inventario\Frm_Productos_Main.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -342,6 +348,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Especialidades\Frm_Especialidades_Main.resx">
       <DependentUpon>Frm_Especialidades_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Inventario\Frm_Editar_Inventario.resx">
+      <DependentUpon>Frm_Editar_Inventario.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Inventario\Frm_Productos_Main.resx">
       <DependentUpon>Frm_Productos_Main.cs</DependentUpon>

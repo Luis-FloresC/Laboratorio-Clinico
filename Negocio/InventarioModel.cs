@@ -23,5 +23,13 @@ namespace Negocio
             return inventario.NuevoInventario(nombre, proveedor, cantidad, numeroSerial, precio, ubicacion,
                 fechaCompra);
         }
+
+        public string EditarInventario(string nombre, string proveedor, int cantidad, 
+            decimal precio, string ubicacion, DateTime fechaCompra,int id)
+        {
+            return inventario.EditarInventario(nombre, proveedor, cantidad, precio, ubicacion,
+                fechaCompra,id);
+        }
+
     }
 }
