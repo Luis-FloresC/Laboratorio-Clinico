@@ -52,5 +52,10 @@ namespace Presentacion
             //Iniciamos el temporizador 1.
             timer1.Start();
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

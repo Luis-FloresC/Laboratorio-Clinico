@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Presentacion.Reportes;
 
 namespace Presentacion
 {
@@ -20,6 +21,12 @@ namespace Presentacion
         private void button2_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void iconButton7_Click(object sender, EventArgs e)
+        {
+            Frm_Reporte_Empleados reporteEmpleados = new Frm_Reporte_Empleados();
+            reporteEmpleados.Show();
         }
     }
 }

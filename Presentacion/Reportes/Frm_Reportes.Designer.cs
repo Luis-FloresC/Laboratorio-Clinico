@@ -214,6 +214,7 @@ namespace Presentacion
             this.iconButton7.TabIndex = 55;
             this.iconButton7.Text = "Listado de Empleados";
             this.iconButton7.UseVisualStyleBackColor = false;
+            this.iconButton7.Click += new System.EventHandler(this.iconButton7_Click);
             // 
             // iconButton8
             // 
