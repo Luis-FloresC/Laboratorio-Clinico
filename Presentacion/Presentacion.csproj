@@ -110,6 +110,12 @@
     <Compile Include="Especialidades\Frm_Especialidades_Main.Designer.cs">
       <DependentUpon>Frm_Especialidades_Main.cs</DependentUpon>
     </Compile>
+    <Compile Include="Examenes_Medicos\Cnt_Examenes_Medicos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Examenes_Medicos\Cnt_Examenes_Medicos.Designer.cs">
+      <DependentUpon>Cnt_Examenes_Medicos.cs</DependentUpon>
+    </Compile>
     <Compile Include="Inventario\Frm_Editar_Inventario.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -128,11 +134,35 @@
     <Compile Include="Medicos\Frm_Medicos_Crud.Designer.cs">
       <DependentUpon>Frm_Medicos_Crud.cs</DependentUpon>
     </Compile>
+    <Compile Include="Pacientes\Frm_Buscar_Paciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Pacientes\Frm_Buscar_Paciente.Designer.cs">
+      <DependentUpon>Frm_Buscar_Paciente.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\Frm_Reporte_Empleados.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Reportes\Frm_Reporte_Empleados.Designer.cs">
       <DependentUpon>Frm_Reporte_Empleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resultados_Examenes\Cnt_Resultados_Examenes.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Resultados_Examenes\Cnt_Resultados_Examenes.Designer.cs">
+      <DependentUpon>Cnt_Resultados_Examenes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resultados_Examenes\Frm_Buscar_Examen_Medico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resultados_Examenes\Frm_Buscar_Examen_Medico.Designer.cs">
+      <DependentUpon>Frm_Buscar_Examen_Medico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Resultados_Examenes\Frm_Resultado_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Resultados_Examenes\Frm_Resultado_Main.Designer.cs">
+      <DependentUpon>Frm_Resultado_Main.cs</DependentUpon>
     </Compile>
     <Compile Include="Seguridad\Cnt_Bitacora.cs">
       <SubType>UserControl</SubType>
@@ -374,6 +404,9 @@
     <EmbeddedResource Include="Especialidades\Frm_Especialidades_Main.resx">
       <DependentUpon>Frm_Especialidades_Main.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Examenes_Medicos\Cnt_Examenes_Medicos.resx">
+      <DependentUpon>Cnt_Examenes_Medicos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Inventario\Frm_Editar_Inventario.resx">
       <DependentUpon>Frm_Editar_Inventario.cs</DependentUpon>
     </EmbeddedResource>
@@ -383,9 +416,21 @@
     <EmbeddedResource Include="Medicos\Frm_Medicos_Crud.resx">
       <DependentUpon>Frm_Medicos_Crud.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Pacientes\Frm_Buscar_Paciente.resx">
+      <DependentUpon>Frm_Buscar_Paciente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Diseño_De_Informes\ReporteDeEmpleados.rdlc" />
     <EmbeddedResource Include="Reportes\Frm_Reporte_Empleados.resx">
       <DependentUpon>Frm_Reporte_Empleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resultados_Examenes\Cnt_Resultados_Examenes.resx">
+      <DependentUpon>Cnt_Resultados_Examenes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resultados_Examenes\Frm_Buscar_Examen_Medico.resx">
+      <DependentUpon>Frm_Buscar_Examen_Medico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resultados_Examenes\Frm_Resultado_Main.resx">
+      <DependentUpon>Frm_Resultado_Main.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Seguridad\Cnt_Bitacora.resx">
       <DependentUpon>Cnt_Bitacora.cs</DependentUpon>

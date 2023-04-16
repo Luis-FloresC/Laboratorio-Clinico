@@ -17,6 +17,11 @@ namespace Negocio
             return examenesDao.DataTableExamenes();
         }
 
+        public DataTable DataTableExamenesPorId(int idArea)
+        {
+            return examenesDao.DataTableExamenesPorId(idArea);
+        }
+
         public string NuevoExamen(string nombre, int idAnalisis, decimal precio)
         {
             return examenesDao.NuevoExamen(nombre, idAnalisis, precio);

@@ -21,5 +21,10 @@ namespace Soporte.Cache
         public static DateTime FechaActualizacionPaciente { get; set; }
 
         public static bool EstadoPaciente { get; set; }
+
+
+        public static string NombreCompletoPaciente { get; set; }
+        public static int IdPacienteSelected { get; set; }
+        public static string DniPacienteSelected { get; set; }
     }
 }

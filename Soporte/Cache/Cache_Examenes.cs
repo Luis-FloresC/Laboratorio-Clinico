@@ -16,5 +16,13 @@ namespace Soporte.Cache
         public static DateTime FechaRegistro { get; set; }
         public static DateTime FechaActualizacion { get; set; }
 
+
+        /// <summary>
+        /// Examenes Medicos
+        /// </summary>
+        public static int IdExamenMedico { get; set; }
+        public static string NombrePaciente { get; set; }
+        public static string NombreExamen { get; set; }
+
     }
 }

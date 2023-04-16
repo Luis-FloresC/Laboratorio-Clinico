@@ -23,7 +23,21 @@ namespace Datos.SqlServer
                 DataTable dataTable = new DataTable();
                 using (var conexion = GetConnection())
                 {
-                    string query = @"select * from Pacientes;";
+                    string query = @"select 
+                                    p.RowN as '#',
+                                    CONCAT(p.Nombre_Paciente,' ',p.Apellido_Paciente) as 'Nombre Completo',
+                                    p.Dni_Paciente 'Dni',
+                                    p.Telefono_Paciente as 'Telefono',
+                                    p.Genero as 'Genero',
+                                    p.Estatus_Us 'Activo',
+                                    p.Id_Paciente 'Código'
+                                    from (
+	                                    Select 
+	                                    ROW_NUMBER () over (Order by [Id_Paciente] desc) as 'RowN',
+	                                    *
+	                                    from Pacientes
+                                    ) p
+                                    order by Id_Paciente desc";
 
                     SqlCommand cmd = new SqlCommand(query, conexion);
                     SqlDataAdapter da = new SqlDataAdapter(cmd);

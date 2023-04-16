@@ -79,11 +79,14 @@
     <Compile Include="Empleado.cs" />
     <Compile Include="EmpleadosModel.cs" />
     <Compile Include="EspecialidadesModel.cs" />
+    <Compile Include="ExamenesMedicosModel.cs" />
     <Compile Include="ExamenesModel.cs" />
     <Compile Include="InventarioModel.cs" />
     <Compile Include="MedicosModel.cs" />
     <Compile Include="PacientesModel.cs" />
     <Compile Include="ReporteEmpleados.cs" />
+    <Compile Include="ResultadosExamenes.cs" />
+    <Compile Include="ResultadosExamenesMedicosModel.cs" />
     <Compile Include="SeguridadModel.cs" />
     <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="UserModel.cs" />

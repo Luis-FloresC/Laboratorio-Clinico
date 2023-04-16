@@ -19,7 +19,7 @@ namespace Datos.SqlServer
                 DataTable dataTable = new DataTable();
                 using (var conexion = GetConnection())
                 {
-                    string query = @"SELECT TOP (1000) [Id_Examen] 'Codigo'
+                    string query = @"SELECT  [Id_Examen] 'Codigo'
                                   ,E.[Nombre_Exm] 'Nombre del Examen'
                                   ,E.[Estatus_Exm] 'Activo'
 	                              ,A.Nombre_Analisis 'Área'
@@ -30,6 +30,31 @@ namespace Datos.SqlServer
                               join Analisis A on A.Id_Analisis = E.Id_analisis";
 
                     SqlCommand cmd = new SqlCommand(query, conexion);
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dataTable);
+                    return dataTable;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+        }
+
+        public DataTable DataTableExamenesPorId(int idArea)
+        {
+            try
+            {
+                DataTable dataTable = new DataTable();
+                using (var conexion = GetConnection())
+                {
+                    string query = @"select Id_Examen 'Codigo',Nombre_Exm 'Nombre' from Examenes where Id_analisis = @id";
+
+                    SqlCommand cmd = new SqlCommand(query, conexion);
+                    cmd.Parameters.AddWithValue("@id", idArea);
+                    cmd.CommandType = CommandType.Text;
                     SqlDataAdapter da = new SqlDataAdapter(cmd);
                     da.Fill(dataTable);
                     return dataTable;
