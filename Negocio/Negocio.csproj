@@ -76,15 +76,19 @@
   <ItemGroup>
     <Compile Include="AnalisisModel.cs" />
     <Compile Include="BitacoraModel.cs" />
+    <Compile Include="DetalleFactura.cs" />
     <Compile Include="Empleado.cs" />
     <Compile Include="EmpleadosModel.cs" />
     <Compile Include="EspecialidadesModel.cs" />
     <Compile Include="ExamenesMedicosModel.cs" />
     <Compile Include="ExamenesModel.cs" />
+    <Compile Include="FacturacionModel.cs" />
     <Compile Include="InventarioModel.cs" />
     <Compile Include="MedicosModel.cs" />
     <Compile Include="PacientesModel.cs" />
     <Compile Include="ReporteEmpleados.cs" />
+    <Compile Include="ReporteModel.cs" />
+    <Compile Include="Reportes.cs" />
     <Compile Include="ResultadosExamenes.cs" />
     <Compile Include="ResultadosExamenesMedicosModel.cs" />
     <Compile Include="SeguridadModel.cs" />
@@ -105,6 +109,7 @@
   <ItemGroup>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Empleado.datasource" />
+    <None Include="Properties\DataSources\Reportes.datasource" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="SqlServerTypes\readme.htm" />

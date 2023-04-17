@@ -108,6 +108,7 @@
     <Compile Include="SqlServer\EspecialidadesDao.cs" />
     <Compile Include="SqlServer\ExamenesDao.cs" />
     <Compile Include="SqlServer\ExamenesMedicosDao.cs" />
+    <Compile Include="SqlServer\FacturacionDao.cs" />
     <Compile Include="SqlServer\InventarioDao.cs" />
     <Compile Include="SqlServer\MedicosDao.cs" />
     <Compile Include="SqlServer\PacientesDao.cs" />

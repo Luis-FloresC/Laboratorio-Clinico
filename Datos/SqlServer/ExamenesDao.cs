@@ -68,6 +68,69 @@ namespace Datos.SqlServer
 
         }
 
+        public DataTable DataTableExamenesPorArea(string Area)
+        {
+            try
+            {
+                DataTable dataTable = new DataTable();
+                using (var conexion = GetConnection())
+                {
+                    string query = @"select 
+                                    e.Nombre_Exm 'Nombre del Examen',
+                                    e.Costo_Examen 'Precio del Examen'
+                                    ,e.Fecha_Registro 'Fecha de Registro'
+                                    from Examenes e
+                                    join Analisis a on a.Id_analisis = e.Id_analisis
+                                    where a.Nombre_Analisis = @nombre";
+
+                    SqlCommand cmd = new SqlCommand(query, conexion);
+                    cmd.Parameters.AddWithValue("@nombre", Area);
+                    cmd.CommandType = CommandType.Text;
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dataTable);
+                    return dataTable;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+        }
+
+        public DataTable DataTableExamenesTop()
+        {
+            try
+            {
+                DataTable dataTable = new DataTable();
+                using (var conexion = GetConnection())
+                {
+                    string query = @"select top 10
+                                    e.Nombre_Exm 'Nombre del Examen',
+                                    a.Nombre_Analisis 'Categoria',
+                                    (select count(*) from Examenes_Medicos_Detalles where Id_Examen = e.Id_Examen) 'Total de Examenes Realizados'
+                                    from Examenes e
+                                    join Analisis a on a.Id_Analisis = e.Id_analisis
+                                    where (select count(*) from Examenes_Medicos_Detalles where Id_Examen = e.Id_Examen) > 0
+                                    order by [Total de Examenes Realizados] desc";
+
+                    SqlCommand cmd = new SqlCommand(query, conexion);
+                    
+                    cmd.CommandType = CommandType.Text;
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dataTable);
+                    return dataTable;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+        }
+
 
         public string NuevoExamen(string nombre,int idAnalisis ,decimal precio)
         {

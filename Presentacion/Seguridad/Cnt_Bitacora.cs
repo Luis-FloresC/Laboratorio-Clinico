@@ -14,7 +14,7 @@ namespace Presentacion
 {
     public partial class Cnt_Bitacora : UserControl
     {
-        private int PagInicio = 1, indice = 0, numFilas = 10, pagFinal,pagActual=1;
+        private int PagInicio = 1, indice = 0, numFilas = 25, pagFinal,pagActual=1;
         public Cnt_Bitacora()
         {
             InitializeComponent();

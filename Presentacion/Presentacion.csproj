@@ -7,11 +7,27 @@
     <ProjectGuid>{49ED8794-554A-4CD3-B7C2-03C4D7682C82}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Presentacion</RootNamespace>
-    <AssemblyName>Presentacion</AssemblyName>
+    <AssemblyName>Laboratorio Clinico de Oriente</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\PcVision\OneDrive\Escritorio\Instalador SQL EXPRESS\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>3</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -31,6 +47,21 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>651D72375BEA0D0DE845C900F2D2A01C3B83A6F1</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>Presentacion_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="CircularProgressBar, Version=2.8.0.16, Culture=neutral, PublicKeyToken=310fd07b25df79b3, processorArchitecture=MSIL">
@@ -140,11 +171,53 @@
     <Compile Include="Pacientes\Frm_Buscar_Paciente.Designer.cs">
       <DependentUpon>Frm_Buscar_Paciente.cs</DependentUpon>
     </Compile>
+    <Compile Include="Reportes\Frm_ExamenesPorMes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Frm_ExamenesPorMes.Designer.cs">
+      <DependentUpon>Frm_ExamenesPorMes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Frm_ReporteDeVentas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Frm_ReporteDeVentas.Designer.cs">
+      <DependentUpon>Frm_ReporteDeVentas.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Frm_ReporteListadoUsuarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Frm_ReporteListadoUsuarios.Designer.cs">
+      <DependentUpon>Frm_ReporteListadoUsuarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Frm_Reportes_Examenes_Top.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Frm_Reportes_Examenes_Top.Designer.cs">
+      <DependentUpon>Frm_Reportes_Examenes_Top.cs</DependentUpon>
+    </Compile>
     <Compile Include="Reportes\Frm_Reporte_Empleados.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Reportes\Frm_Reporte_Empleados.Designer.cs">
       <DependentUpon>Frm_Reporte_Empleados.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Frm_Reporte_Inventario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Frm_Reporte_Inventario.Designer.cs">
+      <DependentUpon>Frm_Reporte_Inventario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Frm_Reporte_Listado_Medicos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Frm_Reporte_Listado_Medicos.Designer.cs">
+      <DependentUpon>Frm_Reporte_Listado_Medicos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Reportes\Frm_Ventas_Por_Mes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Reportes\Frm_Ventas_Por_Mes.Designer.cs">
+      <DependentUpon>Frm_Ventas_Por_Mes.cs</DependentUpon>
     </Compile>
     <Compile Include="Resultados_Examenes\Cnt_Resultados_Examenes.cs">
       <SubType>UserControl</SubType>
@@ -419,9 +492,37 @@
     <EmbeddedResource Include="Pacientes\Frm_Buscar_Paciente.resx">
       <DependentUpon>Frm_Buscar_Paciente.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Diseño_De_Informes\ListadoDeMedicos.rdlc" />
     <EmbeddedResource Include="Reportes\Diseño_De_Informes\ReporteDeEmpleados.rdlc" />
+    <EmbeddedResource Include="Reportes\Diseño_De_Informes\ReporteDeInventario.rdlc" />
+    <EmbeddedResource Include="Reportes\Diseño_De_Informes\ReporteDeUsuarios.rdlc" />
+    <EmbeddedResource Include="Reportes\Diseño_De_Informes\ReporteDeVentas.rdlc" />
+    <EmbeddedResource Include="Reportes\Diseño_De_Informes\ReporteExamenesPorCategoria.rdlc" />
+    <EmbeddedResource Include="Reportes\Diseño_De_Informes\ReporteExamenesTop.rdlc" />
+    <EmbeddedResource Include="Reportes\Diseño_De_Informes\ReporteVentasPorMes.rdlc" />
+    <EmbeddedResource Include="Reportes\Frm_ExamenesPorMes.resx">
+      <DependentUpon>Frm_ExamenesPorMes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Frm_ReporteDeVentas.resx">
+      <DependentUpon>Frm_ReporteDeVentas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Frm_ReporteListadoUsuarios.resx">
+      <DependentUpon>Frm_ReporteListadoUsuarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Frm_Reportes_Examenes_Top.resx">
+      <DependentUpon>Frm_Reportes_Examenes_Top.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reportes\Frm_Reporte_Empleados.resx">
       <DependentUpon>Frm_Reporte_Empleados.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Frm_Reporte_Inventario.resx">
+      <DependentUpon>Frm_Reporte_Inventario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Frm_Reporte_Listado_Medicos.resx">
+      <DependentUpon>Frm_Reporte_Listado_Medicos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reportes\Frm_Ventas_Por_Mes.resx">
+      <DependentUpon>Frm_Ventas_Por_Mes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Resultados_Examenes\Cnt_Resultados_Examenes.resx">
       <DependentUpon>Cnt_Resultados_Examenes.cs</DependentUpon>
@@ -554,7 +655,11 @@
       <DesignTime>True</DesignTime>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Presentacion_TemporaryKey.pfx" />
+    <None Include="Properties\DataSources\Negocio.ReporteModel.datasource" />
+    <None Include="Properties\DataSources\Negocio.Reportes.datasource" />
     <None Include="Properties\DataSources\Negocio.ReportesEmpleados.datasource" />
+    <None Include="Properties\DataSources\Negocio.SeguridadModel.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -653,7 +758,18 @@
   <ItemGroup>
     <None Include="Resources\cancel_12px.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 y x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
   <ItemGroup>
     <None Include="Resources\eye_32px.png" />
   </ItemGroup>
@@ -663,6 +779,10 @@
   <ItemGroup>
     <None Include="Resources\LogoFondo.png" />
     <None Include="Resources\LogoFondo1.png" />
+    <Content Include="logo.ico" />
+    <None Include="Resources\cancel_12px1.png" />
+    <None Include="Resources\cancel_50px.png" />
+    <None Include="Resources\cancel_20px.png" />
     <Content Include="SqlServerTypes\readme.htm" />
     <Content Include="SqlServerTypes\x64\msvcr120.dll">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

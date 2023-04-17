@@ -8,7 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Negocio;
 using Soporte.Cache;
+using Soporte.Utilidades;
 
 namespace Presentacion.Resultados_Examenes
 {
@@ -20,6 +22,9 @@ namespace Presentacion.Resultados_Examenes
         }
 
         private int IdExamenMedicoDetalle = 0;
+        private ResultadosExamenesMedicosModel resultadosExamenes = new ResultadosExamenesMedicosModel();
+        private Utilidades utilidades = new Utilidades();
+
         private void CargarDatos(object sender, FormClosedEventArgs e)
         {
             txtExamen.Text = Cache_Examenes.NombreExamen;
@@ -48,16 +53,50 @@ namespace Presentacion.Resultados_Examenes
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
             {
                 txtRuta.Text = openFileDialog1.FileName;
+                txtNombreArchivo.Text = "P - " + txtPaciente.Text + " - " + txtExamen.Text;
             }
         }
 
         private void iconButton3_Click(object sender, EventArgs e)
         {
-            byte[] archivo = null;
-            Stream myStream = openFileDialog1.OpenFile();
-            MemoryStream obj = new MemoryStream();
-            myStream.CopyTo(obj);
-            archivo = obj.ToArray();
+
+            if (utilidades.CampoVacio(txtNombreArchivo.Text) || utilidades.CampoVacio(txtExamen.Text))
+            {
+                utilidades.AlertMessage("Todos los Campos son Obligatorios","A");
+            }
+            else
+            {
+                byte[] archivo = null;
+                string extension = "";
+                Stream myStream = openFileDialog1.OpenFile();
+                MemoryStream obj = new MemoryStream();
+                myStream.CopyTo(obj);
+                archivo = obj.ToArray();
+                extension = openFileDialog1.SafeFileName;
+                txtNombreArchivo.Text = "P - " + txtPaciente.Text + " - " + txtExamen.Text;
+
+                var result = resultadosExamenes.NuevoResultadoExamenMedico(txtNombreArchivo.Text,
+                    Cache_Usuario.IdUsuario, archivo, IdExamenMedicoDetalle, extension);
+             
+                utilidades.AlertMessage(result,"I");
+                this.Close();
+
+            }
+
+          
+
+
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void iconButton4_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

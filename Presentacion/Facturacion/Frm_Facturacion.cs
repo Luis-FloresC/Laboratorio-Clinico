@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Negocio;
 
 namespace Presentacion
 {
@@ -26,6 +27,17 @@ namespace Presentacion
         {
             Frm_Nueva_Factura nuevaFactura = new Frm_Nueva_Factura();
             nuevaFactura.Show();
+        }
+
+        private FacturacionModel facturacion = new FacturacionModel();
+        private void Actualizar()
+        {
+            dg_facturacion.DataSource = facturacion.DataTableFactturacion();
+        }
+
+        private void Frm_Facturacion_Load(object sender, EventArgs e)
+        {
+            Actualizar();
         }
     }
 }

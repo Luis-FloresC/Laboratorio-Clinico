@@ -130,8 +130,9 @@ namespace Presentacion.Resultados_Examenes
             this.iconButton2.Name = "iconButton2";
             this.iconButton2.Size = new System.Drawing.Size(211, 47);
             this.iconButton2.TabIndex = 43;
-            this.iconButton2.Text = "Editar Examen";
+            this.iconButton2.Text = "Ver Examen";
             this.iconButton2.UseVisualStyleBackColor = false;
+            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
             // 
             // iconButton3
             // 

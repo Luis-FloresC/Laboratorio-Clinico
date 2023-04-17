@@ -73,6 +73,7 @@
     <Compile Include="Cache\Cache_Examenes.cs" />
     <Compile Include="Cache\Cache_Medico.cs" />
     <Compile Include="Cache\Cache_Pacientes.cs" />
+    <Compile Include="Cache\Cache_Resultado_Examen.cs" />
     <Compile Include="Cache\Cache_Usuario.cs" />
     <Compile Include="Cache\Especialidades.cs" />
     <Compile Include="Cache\Recuperar_Contraseña.cs" />

@@ -16,7 +16,7 @@ namespace Presentacion
     public partial class Frm_Pacientes : Form
     {
         private PacientesModel pacientes = new PacientesModel();
-        private int PagInicio = 1, indice = 0, numFilas = 10, pagFinal;
+        private int PagInicio = 1, indice = 0, numFilas = 2, pagFinal;
         public Frm_Pacientes()
         {
             InitializeComponent();
@@ -69,12 +69,11 @@ namespace Presentacion
             Utilidades utilidades = new Utilidades();
             try
             {
-                int pagina = Convert.ToInt32(CmbPag.Text);
+                int pagina = Convert.ToInt32(CmbPag.SelectedIndex) + 1;
                 indice = pagina - 1;
                 PagInicio = (pagina - 1) * numFilas + 1;
                 pagFinal = pagina * numFilas;
-                Console.WriteLine("Pagina:" + pagina + " Indice: " + indice);
-                MessageBox.Show("Pagina: " + CmbPag.Text + " Indice: " + indice);
+               
                 Actualizar();
             }
             catch (Exception exception)

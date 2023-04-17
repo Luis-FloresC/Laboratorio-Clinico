@@ -66,9 +66,9 @@ namespace Presentacion.Resultados_Examenes
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(-1, 2);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(164, 24);
+            this.label1.Size = new System.Drawing.Size(257, 24);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Nueva Factura";
+            this.label1.Text = "Resultado de Examenes";
             // 
             // button2
             // 
@@ -84,13 +84,14 @@ namespace Presentacion.Resultados_Examenes
             this.button2.Size = new System.Drawing.Size(26, 26);
             this.button2.TabIndex = 1;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label4
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(12, 246);
+            this.label4.Location = new System.Drawing.Point(8, 272);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(166, 21);
             this.label4.TabIndex = 49;
@@ -100,9 +101,9 @@ namespace Presentacion.Resultados_Examenes
             // 
             this.txtNombreArchivo.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreArchivo.ForeColor = System.Drawing.Color.Black;
-            this.txtNombreArchivo.Location = new System.Drawing.Point(12, 270);
+            this.txtNombreArchivo.Location = new System.Drawing.Point(8, 296);
             this.txtNombreArchivo.Name = "txtNombreArchivo";
-            this.txtNombreArchivo.Size = new System.Drawing.Size(324, 27);
+            this.txtNombreArchivo.Size = new System.Drawing.Size(354, 27);
             this.txtNombreArchivo.TabIndex = 48;
             // 
             // iconButton1
@@ -136,11 +137,13 @@ namespace Presentacion.Resultados_Examenes
             // 
             // txtRuta
             // 
+            this.txtRuta.Enabled = false;
             this.txtRuta.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtRuta.ForeColor = System.Drawing.Color.Black;
             this.txtRuta.Location = new System.Drawing.Point(12, 201);
+            this.txtRuta.Multiline = true;
             this.txtRuta.Name = "txtRuta";
-            this.txtRuta.Size = new System.Drawing.Size(324, 27);
+            this.txtRuta.Size = new System.Drawing.Size(324, 68);
             this.txtRuta.TabIndex = 45;
             // 
             // label2
@@ -216,6 +219,7 @@ namespace Presentacion.Resultados_Examenes
             this.iconButton4.TabIndex = 52;
             this.iconButton4.Text = "Cancelar";
             this.iconButton4.UseVisualStyleBackColor = false;
+            this.iconButton4.Click += new System.EventHandler(this.iconButton4_Click);
             // 
             // iconButton3
             // 
@@ -233,7 +237,7 @@ namespace Presentacion.Resultados_Examenes
             this.iconButton3.Name = "iconButton3";
             this.iconButton3.Size = new System.Drawing.Size(242, 37);
             this.iconButton3.TabIndex = 51;
-            this.iconButton3.Text = "Seleccionar";
+            this.iconButton3.Text = "Aceptar";
             this.iconButton3.UseVisualStyleBackColor = false;
             this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
             // 
@@ -259,7 +263,9 @@ namespace Presentacion.Resultados_Examenes
             this.Controls.Add(this.label3);
             this.Controls.Add(this.txtPaciente);
             this.Controls.Add(this.pnl_Titulo);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_Resultado_Main";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_Resultado_Main";
             this.Load += new System.EventHandler(this.Frm_Resultado_Main_Load);
             this.pnl_Titulo.ResumeLayout(false);

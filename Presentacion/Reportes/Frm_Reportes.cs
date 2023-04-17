@@ -28,5 +28,47 @@ namespace Presentacion
             Frm_Reporte_Empleados reporteEmpleados = new Frm_Reporte_Empleados();
             reporteEmpleados.Show();
         }
+
+        private void iconButton10_Click(object sender, EventArgs e)
+        {
+            Frm_ReporteListadoUsuarios reporteListadoUsuarios = new Frm_ReporteListadoUsuarios();
+            reporteListadoUsuarios.Show();
+        }
+
+        private void iconButton8_Click(object sender, EventArgs e)
+        {
+            Frm_Reporte_Inventario inventario = new Frm_Reporte_Inventario();
+            inventario.Show();
+        }
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            Frm_ExamenesPorMes examenesPorMes = new Frm_ExamenesPorMes();
+            examenesPorMes.Show();
+        }
+
+        private void iconButton3_Click(object sender, EventArgs e)
+        {
+            Frm_ReporteDeVentas ventas = new Frm_ReporteDeVentas();
+            ventas.Show();
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            Frm_Ventas_Por_Mes ventasPorMes = new Frm_Ventas_Por_Mes();
+            ventasPorMes.Show();
+        }
+
+        private void iconButton6_Click(object sender, EventArgs e)
+        {
+            Frm_Reportes_Examenes_Top examenesTop = new Frm_Reportes_Examenes_Top();
+            examenesTop.Show();
+        }
+
+        private void iconButton9_Click(object sender, EventArgs e)
+        {
+            Frm_Reporte_Listado_Medicos medicos = new Frm_Reporte_Listado_Medicos();
+            medicos.Show();
+        }
     }
 }

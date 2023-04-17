@@ -23,6 +23,7 @@ namespace Soporte.Cache
         public static int IdExamenMedico { get; set; }
         public static string NombrePaciente { get; set; }
         public static string NombreExamen { get; set; }
+        public static decimal PrecioExamen { get; set; }
 
     }
 }

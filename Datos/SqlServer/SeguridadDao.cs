@@ -38,6 +38,41 @@ namespace Datos.SqlServer
 
         }
 
+        public DataTable DataTableCalendario(DateTime fecha)
+        {
+            try
+            {
+                DataTable dataTable = new DataTable();
+                using (var conexion = GetConnection())
+                {
+                    string query = @"select 
+                                ROW_NUMBER() OVER(ORDER BY em.id_Examen_Med ASC) AS '#'
+                                ,e.Nombre_Exm 'Nombre del Examen'
+                                ,CONCAT(p.Nombre_Paciente,' ',p.Apellido_Paciente) 'Paciente'
+                                ,e.Costo_Examen 'Precio'
+                                ,em.Estatus_Examen 'Estado'
+                                from Examenes_Medicos em 
+                                join Pacientes p on p.Id_Paciente = em.Id_Paciente
+                                join Examenes_Medicos_Detalles emd on emd.Id_Examen_Med = em.Id_Examen_Med
+                                join Examenes e on e.Id_Examen = emd.Id_Examen
+                                where em.Fecha_Registro between @fecha and GETDATE() ";
+
+                    SqlCommand cmd = new SqlCommand(query, conexion);
+                    cmd.Parameters.AddWithValue("fecha", fecha);
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dataTable);
+                    return dataTable;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+        }
+
+
 
         public DataTable DataTableRoles()
         {

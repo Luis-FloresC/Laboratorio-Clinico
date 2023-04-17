@@ -54,7 +54,7 @@ namespace Presentacion.Resultados_Examenes
                 Cache_Examenes.IdExamenMedico = Convert.ToInt32(dg_examen.CurrentRow.Cells["Codigo"].Value);
                 Cache_Examenes.NombreExamen = (dg_examen.CurrentRow.Cells["Nombre del Examen"].Value.ToString());
                 Cache_Examenes.NombrePaciente = (dg_examen.CurrentRow.Cells["Paciente"].Value.ToString());
-               
+                Cache_Examenes.PrecioExamen = Convert.ToDecimal(dg_examen.CurrentRow.Cells["Precio"].Value);
                 this.Close();
             }
         }

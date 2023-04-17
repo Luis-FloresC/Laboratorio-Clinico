@@ -20,6 +20,11 @@ namespace Negocio
             return seguridadDao.DataTablePermisos();
         }
 
+
+        public DataTable DataTableCalendario(DateTime fecha)
+        {
+            return seguridadDao.DataTableCalendario(fecha);
+        }
         public string EdiatrRol(string nombre, bool estado, int id)
         {
             return seguridadDao.EdiatrRol(nombre, estado, id);

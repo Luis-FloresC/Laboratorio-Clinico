@@ -24,6 +24,7 @@ namespace Datos.SqlServer
                                     ,em.Fecha_Registro 'Fecha'
                                     ,em.Estatus_Examen 'Estado'
                                     ,a.Nombre_Analisis 'Tipo de Área'
+                                    ,e.Costo_Examen 'Precio'
                                     from Examenes_Medicos em
                                     join Pacientes p on p.Id_Paciente = em.Id_Paciente 
                                     join Examenes_Medicos_Detalles emd on emd.Id_Examen_Med = em.Id_Examen_Med
