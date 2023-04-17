@@ -56,5 +56,10 @@ namespace Presentacion
                 user.FormClosed += CerrarSesion;
             }
         }
+
+        private void iconButton4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
