@@ -187,7 +187,7 @@ namespace Presentacion.Reportes
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnl_Titulo);
             this.Name = "Frm_ReporteDeVentas";
-            this.Text = "Frm_ReporteDeVentas";
+            this.Text = "Reporte de Ventas";
             this.Load += new System.EventHandler(this.Frm_ReporteDeVentas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ReporteModelBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ReportesBindingSource)).EndInit();

@@ -21,7 +21,7 @@ namespace Datos.SqlServer
                                     f.Id_Facturacion 'Codigo'
                                     ,f.Fecha_Facturacion 'Fecha de Facturacion'
                                     ,(select CONCAT(Nombre_Paciente,' ',Apellido_Paciente) from Pacientes where Id_Paciente = f.Id_Paciente) 'Paciente'
-                                    ,coalesce(CONCAT(e.Nombre_Empleado,'',e.Apellido_Empleado) ,(select concat(Nombres,'',Apellidos) from Medicos where Dni = u.Dni_Us)) 'Empleado'
+                                    ,coalesce(CONCAT(e.Nombre_Empleado,' ',e.Apellido_Empleado) ,(select concat(Nombres,' ',Apellidos) from Medicos where Dni = u.Dni_Us)) 'Empleado'
                                     ,f.Sub_Total 'Sub Total'
                                     ,f.ISV 'ISV'
                                     ,f.descuento 'Descuento'

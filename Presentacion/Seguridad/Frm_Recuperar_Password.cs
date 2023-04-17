@@ -30,10 +30,15 @@ namespace Presentacion
             var user = new UserModel();
             var result = user.recoverPassword(textBox1.Text);
             MessageBox.Show(result, "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            this.Hide();
-            var validarPin = new Frm_Validar_Pin();
+            if (result != "Lo sentimos, no tiene una cuenta con  ese nombre de usuario o número de identidad")
+            {
+                this.Hide();
 
-            validarPin.ShowDialog();
+                var validarPin = new Frm_Validar_Pin();
+
+                validarPin.ShowDialog();
+            }
+   
         }
 
         private void pnl_Titulo_MouseDown(object sender, MouseEventArgs e)
@@ -51,6 +56,8 @@ namespace Presentacion
         private void iconButton2_Click(object sender, EventArgs e)
         {
             this.Close();
+            Login login = new Login();
+            login.Show();
         }
 
         private void button2_Click(object sender, EventArgs e)

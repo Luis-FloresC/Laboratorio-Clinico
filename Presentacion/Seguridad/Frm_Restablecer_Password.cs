@@ -21,6 +21,14 @@ namespace Presentacion
 
         private bool mayuscula, minuscula, numero, carespecial,min;
         private BitacoraModel bitacora = new BitacoraModel();
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+            Login login = new Login();
+            login.Show();
+        }
+
         private void iconButton1_Click(object sender, EventArgs e)
         {
             if (textBox1.Text != textBox2.Text)

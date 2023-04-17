@@ -43,9 +43,9 @@ namespace Presentacion
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.pnl_Titulo = new System.Windows.Forms.Panel();
             this.label6 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.lblNombre = new System.Windows.Forms.Label();
             this.btn_buscar = new FontAwesome.Sharp.IconButton();
-            this.button2 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.txtDni = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -60,7 +60,7 @@ namespace Presentacion
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(23, 291);
+            this.label4.Location = new System.Drawing.Point(19, 288);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(184, 21);
             this.label4.TabIndex = 17;
@@ -79,7 +79,7 @@ namespace Presentacion
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(23, 228);
+            this.label3.Location = new System.Drawing.Point(19, 228);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(103, 21);
             this.label3.TabIndex = 15;
@@ -98,7 +98,7 @@ namespace Presentacion
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(25, 101);
+            this.label2.Location = new System.Drawing.Point(19, 101);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(154, 21);
             this.label2.TabIndex = 13;
@@ -107,7 +107,7 @@ namespace Presentacion
             // txtCorreoElectronico
             // 
             this.txtCorreoElectronico.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtCorreoElectronico.Location = new System.Drawing.Point(27, 125);
+            this.txtCorreoElectronico.Location = new System.Drawing.Point(23, 125);
             this.txtCorreoElectronico.Name = "txtCorreoElectronico";
             this.txtCorreoElectronico.Size = new System.Drawing.Size(276, 27);
             this.txtCorreoElectronico.TabIndex = 12;
@@ -116,7 +116,7 @@ namespace Presentacion
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(26, 41);
+            this.label1.Location = new System.Drawing.Point(19, 41);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(158, 21);
             this.label1.TabIndex = 11;
@@ -125,7 +125,7 @@ namespace Presentacion
             // txtNombreUser
             // 
             this.txtNombreUser.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombreUser.Location = new System.Drawing.Point(30, 65);
+            this.txtNombreUser.Location = new System.Drawing.Point(23, 65);
             this.txtNombreUser.Name = "txtNombreUser";
             this.txtNombreUser.Size = new System.Drawing.Size(273, 27);
             this.txtNombreUser.TabIndex = 10;
@@ -135,7 +135,7 @@ namespace Presentacion
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(23, 356);
+            this.label5.Location = new System.Drawing.Point(19, 356);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(60, 21);
             this.label5.TabIndex = 21;
@@ -145,7 +145,7 @@ namespace Presentacion
             // 
             this.cmb_Cargos.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmb_Cargos.FormattingEnabled = true;
-            this.cmb_Cargos.Location = new System.Drawing.Point(25, 380);
+            this.cmb_Cargos.Location = new System.Drawing.Point(23, 380);
             this.cmb_Cargos.Name = "cmb_Cargos";
             this.cmb_Cargos.Size = new System.Drawing.Size(278, 29);
             this.cmb_Cargos.TabIndex = 22;
@@ -192,8 +192,6 @@ namespace Presentacion
             // 
             this.pnl_Titulo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
             this.pnl_Titulo.Controls.Add(this.label6);
-            this.pnl_Titulo.Controls.Add(this.lblNombre);
-            this.pnl_Titulo.Controls.Add(this.btn_buscar);
             this.pnl_Titulo.Controls.Add(this.button2);
             this.pnl_Titulo.Dock = System.Windows.Forms.DockStyle.Top;
             this.pnl_Titulo.Location = new System.Drawing.Point(0, 0);
@@ -212,34 +210,6 @@ namespace Presentacion
             this.label6.TabIndex = 2;
             this.label6.Text = "Nuevo Usuario";
             // 
-            // lblNombre
-            // 
-            this.lblNombre.AutoSize = true;
-            this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblNombre.ForeColor = System.Drawing.Color.White;
-            this.lblNombre.Location = new System.Drawing.Point(388, 5);
-            this.lblNombre.Name = "lblNombre";
-            this.lblNombre.Size = new System.Drawing.Size(129, 21);
-            this.lblNombre.TabIndex = 45;
-            this.lblNombre.Text = "Buscar Personal";
-            // 
-            // btn_buscar
-            // 
-            this.btn_buscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.btn_buscar.BackColor = System.Drawing.Color.White;
-            this.btn_buscar.FlatAppearance.BorderSize = 0;
-            this.btn_buscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btn_buscar.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.btn_buscar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(121)))), ((int)(((byte)(186)))));
-            this.btn_buscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btn_buscar.IconSize = 25;
-            this.btn_buscar.Location = new System.Drawing.Point(352, 2);
-            this.btn_buscar.Name = "btn_buscar";
-            this.btn_buscar.Size = new System.Drawing.Size(30, 30);
-            this.btn_buscar.TabIndex = 44;
-            this.btn_buscar.UseVisualStyleBackColor = false;
-            this.btn_buscar.Click += new System.EventHandler(this.iconButton3_Click);
-            // 
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -256,11 +226,39 @@ namespace Presentacion
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // lblNombre
+            // 
+            this.lblNombre.AutoSize = true;
+            this.lblNombre.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNombre.ForeColor = System.Drawing.Color.Black;
+            this.lblNombre.Location = new System.Drawing.Point(60, 6);
+            this.lblNombre.Name = "lblNombre";
+            this.lblNombre.Size = new System.Drawing.Size(129, 21);
+            this.lblNombre.TabIndex = 45;
+            this.lblNombre.Text = "Buscar Personal";
+            // 
+            // btn_buscar
+            // 
+            this.btn_buscar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btn_buscar.BackColor = System.Drawing.Color.White;
+            this.btn_buscar.FlatAppearance.BorderSize = 0;
+            this.btn_buscar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btn_buscar.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
+            this.btn_buscar.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(121)))), ((int)(((byte)(186)))));
+            this.btn_buscar.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btn_buscar.IconSize = 25;
+            this.btn_buscar.Location = new System.Drawing.Point(24, 3);
+            this.btn_buscar.Name = "btn_buscar";
+            this.btn_buscar.Size = new System.Drawing.Size(30, 30);
+            this.btn_buscar.TabIndex = 44;
+            this.btn_buscar.UseVisualStyleBackColor = false;
+            this.btn_buscar.Click += new System.EventHandler(this.iconButton3_Click);
+            // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(26, 166);
+            this.label7.Location = new System.Drawing.Point(19, 166);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(35, 21);
             this.label7.TabIndex = 25;
@@ -270,7 +268,7 @@ namespace Presentacion
             // 
             this.txtDni.Enabled = false;
             this.txtDni.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtDni.Location = new System.Drawing.Point(25, 190);
+            this.txtDni.Location = new System.Drawing.Point(23, 190);
             this.txtDni.Name = "txtDni";
             this.txtDni.Size = new System.Drawing.Size(278, 27);
             this.txtDni.TabIndex = 24;
@@ -279,7 +277,9 @@ namespace Presentacion
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.groupBox1);
+            this.panel1.Controls.Add(this.lblNombre);
             this.panel1.Controls.Add(this.iconButton2);
+            this.panel1.Controls.Add(this.btn_buscar);
             this.panel1.Controls.Add(this.iconButton1);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.txtCorreoElectronico);
@@ -305,7 +305,7 @@ namespace Presentacion
             this.groupBox1.Controls.Add(this.label8);
             this.groupBox1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.groupBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.groupBox1.Location = new System.Drawing.Point(318, 180);
+            this.groupBox1.Location = new System.Drawing.Point(318, 95);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(421, 122);
             this.groupBox1.TabIndex = 46;

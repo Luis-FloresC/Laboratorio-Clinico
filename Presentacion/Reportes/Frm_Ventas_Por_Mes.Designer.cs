@@ -32,19 +32,27 @@ namespace Presentacion.Reportes
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            this.ReportesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.ReporteModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.pnl_Titulo = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.ReportesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.ReporteModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.panel1.SuspendLayout();
-            this.pnl_Titulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ReportesBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ReporteModelBindingSource)).BeginInit();
+            this.panel1.SuspendLayout();
+            this.pnl_Titulo.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // ReportesBindingSource
+            // 
+            this.ReportesBindingSource.DataSource = typeof(Negocio.Reportes);
+            // 
+            // ReporteModelBindingSource
+            // 
+            this.ReporteModelBindingSource.DataSource = typeof(Negocio.ReporteModel);
             // 
             // panel1
             // 
@@ -132,14 +140,6 @@ namespace Presentacion.Reportes
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // ReportesBindingSource
-            // 
-            this.ReportesBindingSource.DataSource = typeof(Negocio.Reportes);
-            // 
-            // ReporteModelBindingSource
-            // 
-            this.ReporteModelBindingSource.DataSource = typeof(Negocio.ReporteModel);
-            // 
             // Frm_Ventas_Por_Mes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -148,13 +148,13 @@ namespace Presentacion.Reportes
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnl_Titulo);
             this.Name = "Frm_Ventas_Por_Mes";
-            this.Text = "Frm_Ventas_Por_Mes";
+            this.Text = "Ventas Por Mes";
             this.Load += new System.EventHandler(this.Frm_Ventas_Por_Mes_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.ReportesBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ReporteModelBindingSource)).EndInit();
             this.panel1.ResumeLayout(false);
             this.pnl_Titulo.ResumeLayout(false);
             this.pnl_Titulo.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.ReportesBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ReporteModelBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

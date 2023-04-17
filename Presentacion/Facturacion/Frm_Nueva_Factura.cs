@@ -166,6 +166,11 @@ namespace Presentacion
             }
         }
 
+        private void iconButton4_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
         private void dg_detalle_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 

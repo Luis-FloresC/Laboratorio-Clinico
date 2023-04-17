@@ -136,6 +136,7 @@ namespace Presentacion.Medicos
             this.iconButton2.TabIndex = 36;
             this.iconButton2.Text = "Cancelar";
             this.iconButton2.UseVisualStyleBackColor = false;
+            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
             // 
             // iconButton1
             // 
@@ -256,6 +257,7 @@ namespace Presentacion.Medicos
             this.button2.Size = new System.Drawing.Size(26, 26);
             this.button2.TabIndex = 1;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // checkBox1
             // 
@@ -291,7 +293,9 @@ namespace Presentacion.Medicos
             this.Controls.Add(this.txtApellido);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtNombre);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Frm_Medicos_Crud";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Frm_Medicos_Crud";
             this.Load += new System.EventHandler(this.Frm_Medicos_Crud_Load);
             this.pnl_Titulo.ResumeLayout(false);

@@ -16,7 +16,7 @@ namespace Presentacion
     public partial class Frm_Pacientes : Form
     {
         private PacientesModel pacientes = new PacientesModel();
-        private int PagInicio = 1, indice = 0, numFilas = 2, pagFinal;
+        private int PagInicio = 1, indice = 0, numFilas = 10, pagFinal;
         public Frm_Pacientes()
         {
             InitializeComponent();

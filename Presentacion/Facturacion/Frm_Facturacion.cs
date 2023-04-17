@@ -27,6 +27,12 @@ namespace Presentacion
         {
             Frm_Nueva_Factura nuevaFactura = new Frm_Nueva_Factura();
             nuevaFactura.Show();
+            nuevaFactura.FormClosed += CerrarForm;
+        }
+
+        private void CerrarForm(object sender, FormClosedEventArgs e)
+        {
+            Actualizar();
         }
 
         private FacturacionModel facturacion = new FacturacionModel();

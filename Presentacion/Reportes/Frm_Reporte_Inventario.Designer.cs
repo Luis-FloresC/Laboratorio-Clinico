@@ -32,12 +32,20 @@ namespace Presentacion.Reportes
             this.components = new System.ComponentModel.Container();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
             Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             this.ReporteModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ReportesBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.ReporteModelBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ReportesBindingSource)).BeginInit();
             this.SuspendLayout();
+            // 
+            // ReporteModelBindingSource
+            // 
+            this.ReporteModelBindingSource.DataSource = typeof(Negocio.ReporteModel);
+            // 
+            // ReportesBindingSource
+            // 
+            this.ReportesBindingSource.DataSource = typeof(Negocio.Reportes);
             // 
             // reportViewer1
             // 
@@ -55,14 +63,6 @@ namespace Presentacion.Reportes
             this.reportViewer1.Size = new System.Drawing.Size(932, 450);
             this.reportViewer1.TabIndex = 0;
             // 
-            // ReporteModelBindingSource
-            // 
-            this.ReporteModelBindingSource.DataSource = typeof(Negocio.ReporteModel);
-            // 
-            // ReportesBindingSource
-            // 
-            this.ReportesBindingSource.DataSource = typeof(Negocio.Reportes);
-            // 
             // Frm_Reporte_Inventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -70,7 +70,7 @@ namespace Presentacion.Reportes
             this.ClientSize = new System.Drawing.Size(932, 450);
             this.Controls.Add(this.reportViewer1);
             this.Name = "Frm_Reporte_Inventario";
-            this.Text = "Frm_Reporte_Inventario";
+            this.Text = "Listado de Inventario";
             this.Load += new System.EventHandler(this.Frm_Reporte_Inventario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ReporteModelBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.ReportesBindingSource)).EndInit();

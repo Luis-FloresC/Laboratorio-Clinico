@@ -98,6 +98,7 @@ namespace Presentacion
             this.iconButton2.TabIndex = 42;
             this.iconButton2.Text = "Cancelar";
             this.iconButton2.UseVisualStyleBackColor = false;
+            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
             // 
             // iconButton1
             // 

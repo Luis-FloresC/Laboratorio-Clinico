@@ -27,6 +27,8 @@ namespace Presentacion
         private void iconButton2_Click(object sender, EventArgs e)
         {
             this.Close();
+            Login login = new Login();
+            login.Show();
         }
 
         private void iconButton1_Click(object sender, EventArgs e)

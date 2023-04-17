@@ -68,5 +68,15 @@ namespace Presentacion.Inventario
         {
             Guardar();
         }
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

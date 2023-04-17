@@ -30,21 +30,29 @@ namespace Presentacion.Reportes
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource5 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource6 = new Microsoft.Reporting.WinForms.ReportDataSource();
-            this.pnl_Titulo = new System.Windows.Forms.Panel();
-            this.label8 = new System.Windows.Forms.Label();
-            this.button2 = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource1 = new Microsoft.Reporting.WinForms.ReportDataSource();
+            Microsoft.Reporting.WinForms.ReportDataSource reportDataSource2 = new Microsoft.Reporting.WinForms.ReportDataSource();
             this.ReporteModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.ReportesBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pnl_Titulo.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.pnl_Titulo = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.button2 = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.reportViewer1 = new Microsoft.Reporting.WinForms.ReportViewer();
             ((System.ComponentModel.ISupportInitialize)(this.ReporteModelBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.ReportesBindingSource)).BeginInit();
+            this.pnl_Titulo.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // ReporteModelBindingSource
+            // 
+            this.ReporteModelBindingSource.DataSource = typeof(Negocio.ReporteModel);
+            // 
+            // ReportesBindingSource
+            // 
+            this.ReportesBindingSource.DataSource = typeof(Negocio.Reportes);
             // 
             // pnl_Titulo
             // 
@@ -69,6 +77,15 @@ namespace Presentacion.Reportes
             this.label8.TabIndex = 2;
             this.label8.Text = "Examenes Por Categoria";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(267, 3);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(263, 21);
+            this.comboBox1.TabIndex = 47;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
             // button2
             // 
             this.button2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
@@ -85,15 +102,6 @@ namespace Presentacion.Reportes
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(267, 3);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(263, 21);
-            this.comboBox1.TabIndex = 47;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
             // panel1
             // 
             this.panel1.Controls.Add(this.reportViewer1);
@@ -106,26 +114,18 @@ namespace Presentacion.Reportes
             // reportViewer1
             // 
             this.reportViewer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            reportDataSource5.Name = "Examenes";
-            reportDataSource5.Value = this.ReporteModelBindingSource;
-            reportDataSource6.Name = "ListaExamenes";
-            reportDataSource6.Value = this.ReportesBindingSource;
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource5);
-            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource6);
+            reportDataSource1.Name = "Examenes";
+            reportDataSource1.Value = this.ReporteModelBindingSource;
+            reportDataSource2.Name = "ListaExamenes";
+            reportDataSource2.Value = this.ReportesBindingSource;
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource1);
+            this.reportViewer1.LocalReport.DataSources.Add(reportDataSource2);
             this.reportViewer1.LocalReport.ReportEmbeddedResource = "Presentacion.Reportes.Diseño_De_Informes.ReporteExamenesPorCategoria.rdlc";
             this.reportViewer1.Location = new System.Drawing.Point(0, 0);
             this.reportViewer1.Name = "reportViewer1";
             this.reportViewer1.ServerReport.BearerToken = null;
             this.reportViewer1.Size = new System.Drawing.Size(691, 411);
             this.reportViewer1.TabIndex = 0;
-            // 
-            // ReporteModelBindingSource
-            // 
-            this.ReporteModelBindingSource.DataSource = typeof(Negocio.ReporteModel);
-            // 
-            // ReportesBindingSource
-            // 
-            this.ReportesBindingSource.DataSource = typeof(Negocio.Reportes);
             // 
             // Frm_ExamenesPorMes
             // 
@@ -135,13 +135,13 @@ namespace Presentacion.Reportes
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnl_Titulo);
             this.Name = "Frm_ExamenesPorMes";
-            this.Text = "Frm_ExamenesPorMes";
+            this.Text = "Examenes Por Categoria";
             this.Load += new System.EventHandler(this.Frm_ExamenesPorMes_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.ReporteModelBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ReportesBindingSource)).EndInit();
             this.pnl_Titulo.ResumeLayout(false);
             this.pnl_Titulo.PerformLayout();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.ReporteModelBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.ReportesBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -91,6 +91,8 @@ namespace Presentacion
             {
                 txtPassword.Text = "";
                 txtPassword.UseSystemPasswordChar = true;
+                MostrarPaasword.Visible = true;
+                hidePassword.Visible = false;
             }
 
         }
@@ -104,6 +106,8 @@ namespace Presentacion
             {
                 txtPassword.Text = "Contraseña";
                 txtPassword.UseSystemPasswordChar = false;
+                MostrarPaasword.Visible = false;
+                hidePassword.Visible = true;
             }
         }
 
@@ -249,7 +253,9 @@ namespace Presentacion
             recoverPassword.ShowDialog();
         }
 
-     
+        private void Login_Load(object sender, EventArgs e)
+        {
 
+        }
     }
 }

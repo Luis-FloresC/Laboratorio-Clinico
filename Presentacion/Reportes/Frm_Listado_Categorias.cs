@@ -21,12 +21,14 @@ namespace Presentacion.Reportes
         private void Frm_Listado_Categorias_Load(object sender, EventArgs e)
         {
 
-            this.reportViewer1.RefreshReport();
+           
 
             ReporteModel reporteModel = new ReporteModel();
             reporteModel.ReporteListaCategorias();
             ReporteModelBindingSource.DataSource = reporteModel;
             ReportesBindingSource.DataSource = reporteModel.ListaCategorias;
+
+            this.reportViewer1.RefreshReport();
         }
     }
 }

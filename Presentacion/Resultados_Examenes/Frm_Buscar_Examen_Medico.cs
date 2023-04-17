@@ -58,5 +58,10 @@ namespace Presentacion.Resultados_Examenes
                 this.Close();
             }
         }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

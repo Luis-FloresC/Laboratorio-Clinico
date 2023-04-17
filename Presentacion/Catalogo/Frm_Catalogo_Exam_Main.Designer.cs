@@ -33,11 +33,9 @@ namespace Presentacion.Catalogo
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dg_examenes = new System.Windows.Forms.DataGridView();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.iconButton4 = new FontAwesome.Sharp.IconButton();
             this.iconButton2 = new FontAwesome.Sharp.IconButton();
             this.iconButton3 = new FontAwesome.Sharp.IconButton();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.dg_examenes)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,7 +61,7 @@ namespace Presentacion.Catalogo
             this.dg_examenes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dg_examenes.EnableHeadersVisualStyles = false;
             this.dg_examenes.GridColor = System.Drawing.Color.SteelBlue;
-            this.dg_examenes.Location = new System.Drawing.Point(16, 67);
+            this.dg_examenes.Location = new System.Drawing.Point(16, 20);
             this.dg_examenes.Name = "dg_examenes";
             this.dg_examenes.ReadOnly = true;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -82,18 +80,8 @@ namespace Presentacion.Catalogo
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.Color.White;
             this.dg_examenes.RowsDefaultCellStyle = dataGridViewCellStyle3;
             this.dg_examenes.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dg_examenes.Size = new System.Drawing.Size(799, 327);
+            this.dg_examenes.Size = new System.Drawing.Size(799, 374);
             this.dg_examenes.TabIndex = 41;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(37, 19);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(250, 27);
-            this.textBox1.TabIndex = 39;
-            this.textBox1.Text = "Buscar Examen";
             // 
             // iconButton4
             // 
@@ -155,22 +143,6 @@ namespace Presentacion.Catalogo
             this.iconButton3.UseVisualStyleBackColor = false;
             this.iconButton3.Click += new System.EventHandler(this.iconButton3_Click);
             // 
-            // iconButton1
-            // 
-            this.iconButton1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.iconButton1.BackColor = System.Drawing.Color.White;
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.MagnifyingGlass;
-            this.iconButton1.IconColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(121)))), ((int)(((byte)(186)))));
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 25;
-            this.iconButton1.Location = new System.Drawing.Point(302, 16);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(30, 30);
-            this.iconButton1.TabIndex = 40;
-            this.iconButton1.UseVisualStyleBackColor = false;
-            // 
             // Frm_Catalogo_Exam_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -179,14 +151,11 @@ namespace Presentacion.Catalogo
             this.Controls.Add(this.iconButton2);
             this.Controls.Add(this.iconButton3);
             this.Controls.Add(this.dg_examenes);
-            this.Controls.Add(this.iconButton1);
-            this.Controls.Add(this.textBox1);
             this.Name = "Frm_Catalogo_Exam_Main";
             this.Size = new System.Drawing.Size(834, 511);
             this.Load += new System.EventHandler(this.Frm_Catalogo_Exam_Main_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dg_examenes)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -196,7 +165,5 @@ namespace Presentacion.Catalogo
         private FontAwesome.Sharp.IconButton iconButton2;
         private FontAwesome.Sharp.IconButton iconButton3;
         private System.Windows.Forms.DataGridView dg_examenes;
-        private FontAwesome.Sharp.IconButton iconButton1;
-        private System.Windows.Forms.TextBox textBox1;
     }
 }

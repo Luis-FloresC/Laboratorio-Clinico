@@ -57,6 +57,7 @@ namespace Presentacion.Seguridad
             this.iconButton2.TabIndex = 48;
             this.iconButton2.Text = "Cancelar";
             this.iconButton2.UseVisualStyleBackColor = false;
+            this.iconButton2.Click += new System.EventHandler(this.iconButton2_Click);
             // 
             // iconButton1
             // 
@@ -131,6 +132,7 @@ namespace Presentacion.Seguridad
             this.button2.Size = new System.Drawing.Size(30, 30);
             this.button2.TabIndex = 1;
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // chEstado
             // 

@@ -30,6 +30,7 @@ namespace Presentacion.Medicos
             InitializeComponent();
             txtDni.Enabled = true;
             Mode = mode;
+            label8.Text = "Editar Medico";
             var existe = medicosModel.BuscarMedicoId(Cache_Medico.IdMedico);
             if (existe)
             {
@@ -86,6 +87,16 @@ namespace Presentacion.Medicos
         private void Frm_Medicos_Crud_Load(object sender, EventArgs e)
         {
             checkBox1.Visible = Mode == "Nuevo" ? false:true;
+        }
+
+        private void iconButton2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
