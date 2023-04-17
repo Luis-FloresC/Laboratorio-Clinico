@@ -70,5 +70,17 @@ namespace Presentacion
             Frm_Reporte_Listado_Medicos medicos = new Frm_Reporte_Listado_Medicos();
             medicos.Show();
         }
+
+        private void iconButton4_Click(object sender, EventArgs e)
+        {
+            Frm_Examenes_Top_Precios topPrecios = new Frm_Examenes_Top_Precios();
+            topPrecios.Show();
+        }
+
+        private void iconButton5_Click(object sender, EventArgs e)
+        {
+            Frm_Listado_Categorias categorias = new Frm_Listado_Categorias();
+            categorias.Show();
+        }
     }
 }

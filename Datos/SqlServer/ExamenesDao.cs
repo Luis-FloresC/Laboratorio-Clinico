@@ -43,6 +43,34 @@ namespace Datos.SqlServer
 
         }
 
+        public DataTable DataTableExamenesTopPrecios()
+        {
+            try
+            {
+                DataTable dataTable = new DataTable();
+                using (var conexion = GetConnection())
+                {
+                    string query = @"select top 10 
+                                    Nombre_Exm 'Nombre del Examen'
+                                    ,(select Nombre_Analisis from Analisis where Id_analisis = e.Id_analisis) 'Categoria'
+                                    ,e.Costo_Examen
+                                    from Examenes e order by Costo_Examen desc";
+
+                    SqlCommand cmd = new SqlCommand(query, conexion);
+                    SqlDataAdapter da = new SqlDataAdapter(cmd);
+                    da.Fill(dataTable);
+                    return dataTable;
+                }
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+
+        }
+
+
         public DataTable DataTableExamenesPorId(int idArea)
         {
             try

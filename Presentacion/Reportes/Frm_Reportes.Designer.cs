@@ -116,7 +116,7 @@ namespace Presentacion
             this.iconButton7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton7.Location = new System.Drawing.Point(345, 287);
             this.iconButton7.Name = "iconButton7";
-            this.iconButton7.Size = new System.Drawing.Size(256, 93);
+            this.iconButton7.Size = new System.Drawing.Size(453, 93);
             this.iconButton7.TabIndex = 55;
             this.iconButton7.Text = "Listado de Empleados";
             this.iconButton7.UseVisualStyleBackColor = false;
@@ -176,10 +176,11 @@ namespace Presentacion
             this.iconButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton4.Location = new System.Drawing.Point(247, 188);
             this.iconButton4.Name = "iconButton4";
-            this.iconButton4.Size = new System.Drawing.Size(321, 93);
+            this.iconButton4.Size = new System.Drawing.Size(551, 93);
             this.iconButton4.TabIndex = 52;
-            this.iconButton4.Text = "Listado de Pacientes por Edad";
+            this.iconButton4.Text = "10 Examenes con Mayor Precio";
             this.iconButton4.UseVisualStyleBackColor = false;
+            this.iconButton4.Click += new System.EventHandler(this.iconButton4_Click);
             // 
             // iconButton5
             // 
@@ -197,8 +198,9 @@ namespace Presentacion
             this.iconButton5.Name = "iconButton5";
             this.iconButton5.Size = new System.Drawing.Size(321, 93);
             this.iconButton5.TabIndex = 51;
-            this.iconButton5.Text = "Listado de Pacientes por Region";
+            this.iconButton5.Text = "Listado de Categorias";
             this.iconButton5.UseVisualStyleBackColor = false;
+            this.iconButton5.Click += new System.EventHandler(this.iconButton5_Click);
             // 
             // iconButton6
             // 

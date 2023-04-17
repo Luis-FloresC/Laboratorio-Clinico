@@ -22,13 +22,16 @@ namespace Negocio
         private MedicosDao medicosDao = new MedicosDao();
         private SeguridadModel seguridadModel = new SeguridadModel();
         private FacturacionDao facturacion = new FacturacionDao();
-
+        private AnalisisDao analisis = new AnalisisDao();
         private InventarioDao inventario = new InventarioDao();
+
         public List<Reportes> ListUsuarios = new List<Reportes>();
+        public List<Reportes> ListaExamenesTopPrecios = new List<Reportes>();
         public List<Reportes> VentasPorPeriodo = new List<Reportes>();
         public List<Reportes> VentasPorMes = new List<Reportes>();
         public List<Reportes> ListExamenesTop = new List<Reportes>();
         public List<Reportes> ListMedicos = new List<Reportes>();
+        public List<Reportes> ListaCategorias = new List<Reportes>();
         public string Categoria { get; set; }
         public List<Reportes> ListaExamenesPorArea = new List<Reportes>();
 
@@ -93,6 +96,28 @@ namespace Negocio
             }
         }
 
+
+        public void ReporteListaDeExamenesPorTopPrecio()
+        {
+            reportDate = DateTime.Now;
+            
+            var result = examenes.DataTableExamenesTopPrecios();
+
+            ListaExamenesTopPrecios = new List<Reportes>();
+
+            foreach (System.Data.DataRow row in result.Rows)
+            {
+                var newExamen = new Reportes()
+                {
+                    NombreExamen = row[0].ToString(),
+                    PrecioExamen = Convert.ToDecimal(row[2]),
+                    CategoriaExamen = Convert.ToString(row[1])
+                };
+
+                ListaExamenesTopPrecios.Add(newExamen);
+                
+            }
+        }
 
         /**
          *   i.Id_Inventario 'Codigo',
@@ -269,6 +294,38 @@ namespace Negocio
 
                 ListMedicos.Add(newMeddico);
               
+            }
+        }
+
+
+        /**
+         * SELECT [Id_Analisis] 'Codigo'
+                                  ,[Nombre_Analisis] 'Nombre'
+	                              ,coalesce((Select count(*) from Examenes where Id_analisis = A.Id_Analisis),0) 'Cantidad de Examenes'
+                                  ,[Estatus_Analisis] 'Activo'
+                                  ,[Fecha_Registro] 'Registro'
+                                  ,[Fecha_Actualizacion] 'Actualización'
+                              FROM [Laboratorio_clinico].[dbo].[Analisis] A
+         */
+        public void ReporteListaCategorias()
+        {
+            reportDate = DateTime.Now;
+            var result = analisis.DataTableAnalisis();
+
+            ListaCategorias = new List<Reportes>();
+
+            foreach (System.Data.DataRow row in result.Rows)
+            {
+                var newCategoria = new Reportes()
+                {
+                    CategoriaExamen = Convert.ToString(row[1]),
+                    Total = Convert.ToDecimal(row[2]),
+                    EstadoUsuario = Convert.ToBoolean(row[3]) ? "Activo" : "Inactivo" ,
+                   
+                };
+
+                ListaCategorias.Add(newCategoria);
+
             }
         }
     }
